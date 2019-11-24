@@ -3,5 +3,6 @@ CitizenMP.Server.exe.config
 NLog.config
 /cache/
 /resources/\[local\]/
+/resources/database.sh
 /zipfiles/
 server-private.cfg

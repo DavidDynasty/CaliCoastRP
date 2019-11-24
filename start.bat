@@ -1,0 +1,1 @@
+call ..\run.cmd +exec server.cfg

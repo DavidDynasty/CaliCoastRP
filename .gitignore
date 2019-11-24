@@ -4,3 +4,4 @@ NLog.config
 /cache/
 /resources/\[local\]/
 /zipfiles/
+server-private.cfg

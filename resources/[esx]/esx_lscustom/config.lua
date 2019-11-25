@@ -42,6 +42,15 @@ Config.Zones = {
 	},
 
 	ls5 = {
+		Pos   = { x = -210.18, y = -1323.45, z = 30.52},
+		Size  = {x = 3.0, y = 3.0, z = 0.2},
+		Color = {r = 204, g = 204, b = 0},
+		Marker= 1,
+		Name  = _U('blip_name'),
+		Hint  = _U('press_custom')
+	},
+
+	ls6 = {
 		Pos   = { x = 110.99, y = 6626.39, z = 30.89},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
 		Color = {r = 204, g = 204, b = 0},

@@ -18,8 +18,8 @@ body {
 }
 
 .logo {
-    width: 320px;
-    width: 320px;
+    width: 350px;
+    width: 350px;
 }
 
 .loadbar {
@@ -28,11 +28,11 @@ body {
     background-color: var(--loadbar-color);
     height: var(--loadbar-height);
     box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-    margin-left: 2px;
-    margin-right: 3px;
+    margin-left: 10px;
+    margin-right: 5px;
 
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin-top: 750px;
+    margin-bottom: 1px;
 
     overflow: hidden;
 

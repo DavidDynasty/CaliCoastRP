@@ -1,13 +1,14 @@
-ESX                      = {}
-ESX.Players              = {}
+ESX = {}
+ESX.Players = {}
 ESX.UsableItemsCallbacks = {}
-ESX.Items                = {}
-ESX.ServerCallbacks      = {}
-ESX.TimeoutCount         = -1
-ESX.CancelledTimeouts    = {}
-ESX.LastPlayerData       = {}
-ESX.Pickups              = {}
-ESX.PickupId             = 0
+ESX.Items = {}
+ESX.ServerCallbacks = {}
+ESX.TimeoutCount = -1
+ESX.CancelledTimeouts = {}
+ESX.LastPlayerData = {}
+ESX.Pickups = {}
+ESX.PickupId = 0
+ESX.Jobs = {}
 
 AddEventHandler('esx:getSharedObject', function(cb)
 	cb(ESX)
@@ -19,15 +20,39 @@ end
 
 MySQL.ready(function()
 	MySQL.Async.fetchAll('SELECT * FROM items', {}, function(result)
-		for i=1, #result, 1 do
-			ESX.Items[result[i].name] = {
-				label     = result[i].label,
-				limit     = result[i].limit,
-				rare      = (result[i].rare       == 1 and true or false),
-				canRemove = (result[i].can_remove == 1 and true or false),
+		for k,v in ipairs(result) do
+			ESX.Items[v.name] = {
+				label = v.label,
+				weight = v.weight,
+				rare = v.rare,
+				canRemove = v.can_remove
 			}
 		end
 	end)
+
+	local result = MySQL.Sync.fetchAll('SELECT * FROM jobs', {})
+
+	for i=1, #result do
+		ESX.Jobs[result[i].name] = result[i]
+		ESX.Jobs[result[i].name].grades = {}
+	end
+
+	local result2 = MySQL.Sync.fetchAll('SELECT * FROM job_grades', {})
+
+	for i=1, #result2 do
+		if ESX.Jobs[result2[i].job_name] then
+			ESX.Jobs[result2[i].job_name].grades[tostring(result2[i].grade)] = result2[i]
+		else
+			print(('es_extended: invalid job "%s" from table job_grades ignored!'):format(result2[i].job_name))
+		end
+	end
+
+	for k,v in pairs(ESX.Jobs) do
+		if next(v.grades) == nil then
+			ESX.Jobs[v.name] = nil
+			print(('es_extended: ignoring job "%s" due to missing job grades!'):format(v.name))
+		end
+	end
 end)
 
 AddEventHandler('esx:playerLoaded', function(source)

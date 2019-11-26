@@ -2,7 +2,7 @@ Config = {}
 
 Config.Locale = 'en'
 
-Config.EnableAntiSpam = false
-Config.WaitingTime = 20
+Config.EnableAntiSpam = true
+Config.WaitingTime = 05
 Config.CommunityLink = ''
 Config.PlayersToStartRocade = 32

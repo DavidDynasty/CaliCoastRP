@@ -2,7 +2,7 @@ Config              = {}
 Config.DrawDistance = 100
 Config.Size         = {x = 1.5, y = 1.5, z = 1.5}
 Config.Color        = {r = 0, g = 128, b = 255}
-Config.Type         = 1
+Config.Type         = 27
 Config.Locale       = 'en'
 
 Config.Zones = {
@@ -39,7 +39,7 @@ Config.Zones = {
 	LTDgasoline = {
 		Items = {},
 		Pos = {
-			{x = -48.519,   y = -1757.514, z = 28.421},
+			{x = -48.519,   y = -1757.514, z = 28.40},
 			{x = 1163.373,  y = -323.801,  z = 68.205},
 			{x = -707.501,  y = -914.260,  z = 18.215},
 			{x = -1820.523, y = 792.518,   z = 137.118},

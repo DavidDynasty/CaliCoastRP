@@ -57,7 +57,7 @@ AddEventHandler('esx_shops:buyItem', function(itemName, amount, zone)
 	-- can the player afford this item?
 	if xPlayer.getMoney() >= price then
 		-- can the player carry the said amount of x item?
-		if xPlayer.canCarryItem(itemName, amount) then
+		if xPlayer.canCarryItem(item, amount) then
 			xPlayer.removeMoney(price)
 			xPlayer.addInventoryItem(itemName, amount)
 			xPlayer.showNotification(_U('bought', amount, itemLabel, ESX.Math.GroupDigits(price)))

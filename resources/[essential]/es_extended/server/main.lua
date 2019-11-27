@@ -24,17 +24,19 @@ AddEventHandler('es:playerLoaded', function(source, _player)
 
 		-- Get accounts
 		table.insert(tasks, function(cb)
-			MySQL.Async.fetchAll('SELECT name, money FROM user_accounts WHERE identifier = @identifier', {
+			MySQL.Async.fetchAll('SELECT * FROM user_accounts WHERE identifier = @identifier', {
 				['@identifier'] = player.getIdentifier()
 			}, function(accounts)
-				local validAccounts = ESX.Table.Set(Config.Accounts)
-				for k,v in ipairs(accounts) do
-					if validAccounts[v.name] then
-						table.insert(userData.accounts, {
-							name  = v.name,
-							money = v.money,
-							label = Config.AccountLabels[v.name]
-						})
+				for i=1, #Config.Accounts, 1 do
+					for j=1, #accounts, 1 do
+						if accounts[j].name == Config.Accounts[i] then
+							table.insert(userData.accounts, {
+								name  = accounts[j].name,
+								money = accounts[j].money,
+								label = Config.AccountLabels[accounts[j].name]
+							})
+							break
+						end
 					end
 				end
 
@@ -42,7 +44,7 @@ AddEventHandler('es:playerLoaded', function(source, _player)
 			end)
 		end)
 
-		-- Get inventory
+         -- Get inventory
 		table.insert(tasks, function(cb)
 
 			MySQL.Async.fetchAll('SELECT item, count FROM user_inventory WHERE identifier = @identifier', {
@@ -54,9 +56,7 @@ AddEventHandler('es:playerLoaded', function(source, _player)
 					local item = ESX.Items[v.item]
 
 					if item then
-						foundItems[v.item] = true
-
-						table.insert(userData.inventory, {
+						    table.insert(userData.inventory, {
 							name = v.item,
 							count = v.count,
 							label = item.label,
@@ -70,16 +70,25 @@ AddEventHandler('es:playerLoaded', function(source, _player)
 					end
 				end
 
-				for itemName,item in pairs(ESX.Items) do
-					if not foundItems[itemName] then
+				for k,v in pairs(ESX.Items) do
+					local found = false
+
+					for j=1, #userData.inventory do
+						if userData.inventory[j].name == k then
+							found = true
+							break
+						end
+					end
+
+					if not found then
 						table.insert(userData.inventory, {
-							name = itemName,
+							name = k,
 							count = 0,
-							label = item.label,
-							weight = item.weight,
-							usable = ESX.UsableItemsCallbacks[itemName] ~= nil,
-							rare = item.rare,
-							canRemove = item.canRemove
+							label = ESX.Items[k].label,
+							weight = ESX.Items[k].weight,
+							usable = ESX.UsableItemsCallbacks[k] ~= nil,
+							rare = ESX.Items[k].rare,
+							canRemove = ESX.Items[k].canRemove
 						})
 
 						local scope = function(item, identifier)
@@ -94,8 +103,9 @@ AddEventHandler('es:playerLoaded', function(source, _player)
 							end)
 						end
 
-						scope(itemName, player.getIdentifier())
+						scope(k, player.getIdentifier())
 					end
+
 				end
 
 				Async.parallelLimit(tasks2, 5, function(results) end)
@@ -197,6 +207,7 @@ AddEventHandler('es:playerLoaded', function(source, _player)
 
 			xPlayer.getMissingAccounts(function(missingAccounts)
 				if #missingAccounts > 0 then
+
 					for i=1, #missingAccounts, 1 do
 						table.insert(xPlayer.accounts, {
 							name  = missingAccounts[i],
@@ -426,15 +437,12 @@ AddEventHandler('esx:onPickup', function(id)
 	if pickup.type == 'item_standard' then
 		if xPlayer.canCarryItem(pickup.name, pickup.count) then
 			xPlayer.addInventoryItem(pickup.name, pickup.count)
-			ESX.Pickups[id] = nil
 			TriggerClientEvent('esx:removePickup', -1, id)
 		end
 	elseif pickup.type == 'item_money' then
-		ESX.Pickups[id] = nil
 		TriggerClientEvent('esx:removePickup', -1, id)
 		xPlayer.addMoney(pickup.count)
 	elseif pickup.type == 'item_account' then
-		ESX.Pickups[id] = nil
 		TriggerClientEvent('esx:removePickup', -1, id)
 		xPlayer.addAccountMoney(pickup.name, pickup.count)
 	end

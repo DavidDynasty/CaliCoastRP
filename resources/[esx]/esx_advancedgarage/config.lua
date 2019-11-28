@@ -34,7 +34,7 @@ Config.UsePrivateCarGarages = true -- Allows use of Private Car Garages.
 Config.UseJobCarGarages     = true -- Allows use of Job Garages.
 
 Config.DontShowPoundCarsInGarage = true -- If set to true it won't show Cars at the Pound in the Garage.
-Config.ShowVehicleLocation       = false -- If set to true it will show the Location of the Vehicle in the Pound/Garage in the Garage menu.
+Config.ShowVehicleLocation       = true -- If set to true it will show the Location of the Vehicle in the Pound/Garage in the Garage menu.
 Config.UseVehicleNamesLua        = true -- Must setup a vehicle_names.lua for Custom Addon Vehicles.
 
 Config.ShowGarageSpacer1 = true -- If true it shows Spacer 1 in the List.

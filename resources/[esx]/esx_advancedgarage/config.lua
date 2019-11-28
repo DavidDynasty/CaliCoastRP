@@ -44,32 +44,32 @@ Config.ShowGarageSpacer3 = true -- If true it shows Spacer 3 in the List | Don't
 Config.ShowPoundSpacer2 = false -- If true it shows Spacer 2 in the List | Don't use if spacer3 is set to true.
 Config.ShowPoundSpacer3 = true -- If true it shows Spacer 3 in the List | Don't use if Spacer2 is set to true.
 
-Config.MarkerType   = 1
-Config.DrawDistance = 100.0
+Config.MarkerType   = 27
+Config.DrawDistance = 500.0
 
 Config.BlipGarage = {
-	Sprite = 290,
+	Sprite = 524,
 	Color = 38,
 	Display = 2,
-	Scale = 1.0
+	Scale = 0.9
 }
 
 Config.BlipGaragePrivate = {
-	Sprite = 290,
+	Sprite = 525,
 	Color = 53,
 	Display = 2,
 	Scale = 1.0
 }
 
 Config.BlipPound = {
-	Sprite = 67,
+	Sprite = 237,
 	Color = 64,
 	Display = 2,
-	Scale = 1.0
+	Scale = 0.8
 }
 
 Config.BlipJobPound = {
-	Sprite = 67,
+	Sprite = 525,
 	Color = 49,
 	Display = 2,
 	Scale = 1.0
@@ -132,9 +132,9 @@ Config.AmbulancePounds = {
 
 Config.CarGarages = {
 	Garage_CentralLS = {
-		GaragePoint = { x = 215.800, y = -810.057, z = 29.727 },
-		SpawnPoint = { x = 229.700, y = -800.1149, z = 29.5722, h = 157.84 },
-		DeletePoint = { x = 223.797, y = -760.415, z = 29.646 }
+		GaragePoint = { x = 387.0, y = -1680.69, z = 26.30 },
+		SpawnPoint = { x = 384.27, y = -1653.76, z = 26.95, h = 142.57 },
+		DeletePoint = { x = 384.27, y = -1653.76, z = 26.30 }
 	},
 	Garage_Sandy = {
 		GaragePoint = { x = 1737.59, y = 3710.2, z = 33.14 },
@@ -146,7 +146,12 @@ Config.CarGarages = {
 		SpawnPoint = { x = 128.7822, y = 6622.9965, z = 30.7828, h = 315.01 },
 		DeletePoint = { x = 126.3572, y = 6608.4150, z = 30.8565 }
 	},
-	Garage_Prison = {
+	Garage_MazeBankBuilding = {
+		GaragePoint = { x = -85.76, y = -815.37, z = 35.00 },
+		SpawnPoint = { x = -84.02, y = -821.22, z = 35.00, h = 346.7 },
+		DeletePoint = { x = -84.02, y = -821.22, z = 35.00 }
+	}
+	--[[Garage_Prison = {
 		GaragePoint = { x = 1846.56, y = 2585.86, z = 44.67 },
 		SpawnPoint = { x = 1855.11, y = 2592.72, z = 44.67, h = 274.8 },
 		DeletePoint = { x = 1855.21, y = 2615.3, z = 34.67 } -- z = 44.67
@@ -155,7 +160,7 @@ Config.CarGarages = {
 		GaragePoint = { x = 1212.32, y = 339.94, z = 80.99 },
 		SpawnPoint = { x = 1199.02, y = 330.92, z = 80.99, h = 144.86 },
 		DeletePoint = { x = 1207.9, y = 343.8, z = 80.99 }
-	}
+	}]]
 }
 
 Config.CarPounds = {
@@ -164,8 +169,8 @@ Config.CarPounds = {
 		SpawnPoint = { x = 405.64, y = -1643.4, z = 27.61, h = 229.54 }
 	},
 	Pound_Sandy = {
-		PoundPoint = { x = 1651.38, y = 3804.84, z = 37.65 },
-		SpawnPoint = { x = 1627.84, y = 3788.45, z = 33.77, h = 308.53 }
+		PoundPoint = { x = 1777.04, y = 3327.7, z = 40.0 },
+		SpawnPoint = { x = 1776.93, y = 3336.67, z = 40.0, h = 306.0 }
 	},
 	Pound_Paleto = {
 		PoundPoint = { x = -234.82, y = 6198.65, z = 30.94 },
@@ -177,7 +182,7 @@ Config.CarPounds = {
 -- Start of Boats
 
 Config.BoatGarages = {
-	Garage_LSDock = {
+	--[[Garage_LSDock = {
 		GaragePoint = { x = -735.87, y = -1325.08, z = 0.6 },
 		SpawnPoint = { x = -718.87, y = -1320.18, z = -0.47477427124977, h = 45.0 },
 		DeletePoint = { x = -731.15, y = -1334.71, z = -0.47477427124977 }
@@ -191,11 +196,11 @@ Config.BoatGarages = {
 		GaragePoint = { x = -283.74, y = 6629.51, z = 6.3 },
 		SpawnPoint = { x = -290.46, y = 6622.72, z = -0.47477427124977, h = 52.0 },
 		DeletePoint = { x = -304.66, y = 6607.36, z = -0.47477427124977 }
-	}
+	}]]
 }
 
 Config.BoatPounds = {
-	Pound_LSDock = {
+	--[[Pound_LSDock = {
 		PoundPoint = { x = -738.67, y = -1400.43, z = 4.0 },
 		SpawnPoint = { x = -738.33, y = -1381.51, z = 0.12, h = 137.85 }
 	},
@@ -206,14 +211,14 @@ Config.BoatPounds = {
 	Pound_PaletoDock = {
 		PoundPoint = { x = -270.2, y = 6642.43, z = 6.36 },
 		SpawnPoint = { x = -290.38, y = 6638.54, z = -0.47477427124977, h = 130.0 }
-	}
+	}]]
 }
 
 -- End of Boats
 -- Start of Aircrafts
 
 Config.AircraftGarages = {
-	Garage_LSAirport = {
+	--[[Garage_LSAirport = {
 		GaragePoint = { x = -1617.14, y = -3145.52, z = 12.99 },
 		SpawnPoint = { x = -1657.99, y = -3134.38, z = 12.99, h = 330.11 },
 		DeletePoint = { x = -1642.12, y = -3144.25, z = 12.99 }
@@ -227,14 +232,14 @@ Config.AircraftGarages = {
 		GaragePoint = { x = 2152.83, y = 4797.03, z = 40.19 },
 		SpawnPoint = { x = 2122.72, y = 4804.85, z = 40.78, h = 115.04 },
 		DeletePoint = { x = 2082.36, y = 4806.06, z = 40.07 }
-	}
+	}]]
 }
 
 Config.AircraftPounds = {
-	Pound_LSAirport = {
+	--[[Pound_LSAirport = {
 		PoundPoint = { x = -1243.0, y = -3391.92, z = 12.94 },
 		SpawnPoint = { x = -1272.27, y = -3382.46, z = 12.94, h = 330.25 }
-	}
+	}]]
 }
 
 -- End of Aircrafts
@@ -242,17 +247,11 @@ Config.AircraftPounds = {
 
 Config.PrivateCarGarages = {
 	-- Maze Bank Building Garages
-	Garage_MazeBankBuilding = {
-		Private = "MazeBankBuilding",
-		GaragePoint = { x = -60.38, y = -790.31, z = 43.23 },
-		SpawnPoint = { x = -44.031, y = -787.363, z = 43.186, h = 254.322 },
-		DeletePoint = { x = -58.88, y = -778.625, z = 43.175 }
-	},
 	Garage_OldSpiceWarm = {
 		Private = "OldSpiceWarm",
 		GaragePoint = { x = -60.38, y = -790.31, z = 43.23 },
-		SpawnPoint = { x = -44.031, y = -787.363, z = 43.186, h = 254.322 },
-		DeletePoint = { x = -58.88, y = -778.625, z = 43.175 }
+		SpawnPoint = { x = -60.38, y = -790.31, z = 43.0, h = 343.84 },
+		DeletePoint = { x = -60.38, y = -790.31, z = 43.0 }
 	},
 	Garage_OldSpiceClassical = {
 		Private = "OldSpiceClassical",
@@ -681,6 +680,7 @@ Config.PrivateCarGarages = {
 		DeletePoint = { x = -621.128, y = 52.691, z = 42.735 }
 	},
 	-- End of Single Garages
+
 	-- Start of VENT Custom Garages
 	Garage_MedEndApartment1 = {
 		Private = "MedEndApartment1",

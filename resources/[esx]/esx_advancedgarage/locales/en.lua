@@ -1,9 +1,9 @@
 Locales['en'] = {
 	-- Global
 	['custom_kick'] = 'INPUT CUSTOM KICK MESSAGE',
-	['blip_garage'] = 'Garage | Public',
+	['blip_garage'] = 'Public Garage',
 	['blip_garage_private'] = 'Garage | Private',
-	['blip_pound'] = 'Garage | Pound',
+	['blip_pound'] = 'Impound',
 	['blip_police_pound'] = 'Garage | Policing Pound',
 	['blip_ambulance_pound'] = 'Garage | Ambulance Pound',
 	['garage'] = 'Garage',

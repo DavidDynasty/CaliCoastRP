@@ -7,7 +7,7 @@ var config = {
     /* Insert the Youtube Video ID below */
     "videoID": "L8MZPc9To2Y",
     /* Music Volume (0%-100%) | Lower is Quieter, Higher is Louder */
-    "musicVolume": 40,
+    "musicVolume": 30,
     "text": {
         "title": "",
         "link": "",

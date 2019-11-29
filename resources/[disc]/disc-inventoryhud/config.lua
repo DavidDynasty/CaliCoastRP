@@ -20,7 +20,7 @@ Config.Shops = {
         blipColour = 2,
         blipSprite = 52,
         msg = 'Open Shop ~INPUT_CONTEXT~',
-        enableBlip = true,
+        enableBlip = false,
         job = 'all'
     }
 }

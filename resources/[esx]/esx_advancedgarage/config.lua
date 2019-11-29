@@ -62,10 +62,10 @@ Config.BlipGaragePrivate = {
 }
 
 Config.BlipPound = {
-	Sprite = 237,
+	Sprite = 68,
 	Color = 64,
 	Display = 2,
-	Scale = 0.8
+	Scale = 0.7
 }
 
 Config.BlipJobPound = {
@@ -165,7 +165,7 @@ Config.CarGarages = {
 
 Config.CarPounds = {
 	Pound_LosSantos = {
-		PoundPoint = { x = 408.61, y = -1625.47, z = 28.29 },
+		PoundPoint = { x = 419.87, y = -1622.41, z = 28.30 },
 		SpawnPoint = { x = 405.64, y = -1643.4, z = 27.61, h = 229.54 }
 	},
 	Pound_Sandy = {

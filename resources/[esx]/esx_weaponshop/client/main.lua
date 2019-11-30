@@ -58,7 +58,7 @@ function OpenShopMenu(zone)
 		local item = Config.Zones[zone].Items[i]
 
 		table.insert(elements, {
-			label = ('%s - <span style="color: white;">%s</span>'):format(item.label, _U('shop_menu_item', ESX.Math.GroupDigits(item.price))),
+			label = ('%s <span style="color: white;">%s</span>'):format(item.label, _U('shop_menu_item', ESX.Math.GroupDigits(item.price))),
 			price = item.price,
 			weaponName = item.item
 		})
@@ -68,8 +68,7 @@ function OpenShopMenu(zone)
 	PlaySoundFrontend(-1, 'BACK', 'HUD_AMMO_SHOP_SOUNDSET', false)
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'shop', {
-		css = 'ammu'
-		title = _U('shop_menu_title'),
+		css = 'ammu',
 		align = 'top-left',
 		elements = elements
 	}, function(data, menu)
@@ -120,7 +119,7 @@ function DisplayBoughtScaleform(weaponName, price)
 end
 
 AddEventHandler('esx_weaponshop:hasEnteredMarker', function(zone)
-	if zone == 'GunShop' or zone == 'BlackWeashop' then
+	if zone == 'GunShop1' or zone == 'GunShop2' or zone == 'GunShop3' or zone == 'GunShop4' or zone == 'GunShop5' or zone == 'GunShop6' or zone == 'GunShop7' or zone == 'GunShop8' or zone == 'GunShop9' or zone == 'BlackWeashop' then
 		CurrentAction     = 'shop_menu'
 		CurrentActionMsg  = _U('shop_menu_prompt')
 		CurrentActionData = { zone = zone }

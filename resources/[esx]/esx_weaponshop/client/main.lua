@@ -58,7 +58,7 @@ function OpenShopMenu(zone)
 		local item = Config.Zones[zone].Items[i]
 
 		table.insert(elements, {
-			label = ('%s - <span style="color: green;">%s</span>'):format(item.label, _U('shop_menu_item', ESX.Math.GroupDigits(item.price))),
+			label = ('%s - <span style="color: white;">%s</span>'):format(item.label, _U('shop_menu_item', ESX.Math.GroupDigits(item.price))),
 			price = item.price,
 			weaponName = item.item
 		})
@@ -68,6 +68,7 @@ function OpenShopMenu(zone)
 	PlaySoundFrontend(-1, 'BACK', 'HUD_AMMO_SHOP_SOUNDSET', false)
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'shop', {
+		css = 'ammu'
 		title = _U('shop_menu_title'),
 		align = 'top-left',
 		elements = elements

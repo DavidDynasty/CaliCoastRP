@@ -160,7 +160,7 @@ AddEventHandler('esx_vehicleshop:getStockItem', function(itemName, count)
 		if count > 0 and item.count >= count then
 
 			-- can the player carry the said amount of x item?
-			ifxPlayer. canCarryItem(itemName, count) then
+			if xPlayer. canCarryItem(itemName, count) then
 				inventory.removeItem(itemName, count)
 				xPlayer.addInventoryItem(itemName, count)
 				xPlayer.showNotification(_U('have_withdrawn', count, item.label))

@@ -96,7 +96,15 @@ Config.Zones = {
 		Legal = false,
 		Items = {},
 		Locations = {
-			vector3(-1306.2, -394.0, 35.6)
+			vector3(2369.35, 3154.50, 48.05)
+		}
+	},
+
+	BlackWeashop = {
+		Legal = false,
+		Items = {},
+		Locations = {
+			vector3(2369.35, 3154.50, 48.05)
 		}
 	}
 

@@ -471,7 +471,6 @@ Config.Menus = {
 		modBrakes		= _U('brakes'),
 		modTransmission	= _U('transmission'),
 		modSuspension	= _U('suspension'),
-		modArmor		= _U('armor'),
 		modTurbo		= _U('turbo')
 	},
 	modEngine = {
@@ -498,12 +497,7 @@ Config.Menus = {
 		modType = 15,
 		price = {3.72, 7.44, 14.88, 29.77, 40.2}
 	},
-	modArmor = {
-		label = _U('armor'),
-		parent = 'upgrades',
-		modType = 16,
-		price = {69.77, 116.28, 130.00, 150.00, 180.00, 190.00}
-	},
+
 	modTurbo = {
 		label = _U('turbo'),
 		parent = 'upgrades',
@@ -520,30 +514,7 @@ Config.Menus = {
 		resprays			= _U('respray'),
 		modXenon			= _U('headlights'),
 		plateIndex			= _U('licenseplates'),
-		wheels				= _U('wheels'),
-		modPlateHolder		= _U('modplateholder'),
-		modVanityPlate		= _U('modvanityplate'),
-		modTrimA			= _U('interior'),
-		modOrnaments		= _U('trim'),
-		modDashboard		= _U('dashboard'),
-		modDial				= _U('speedometer'),
-		modDoorSpeaker		= _U('door_speakers'),
-		modSeats			= _U('seats'),
-		modSteeringWheel	= _U('steering_wheel'),
-		modShifterLeavers	= _U('gear_lever'),
-		modAPlate			= _U('quarter_deck'),
-		modSpeakers			= _U('speakers'),
-		modTrunk			= _U('trunk'),
-		modHydrolic			= _U('hydraulic'),
-		modEngineBlock		= _U('engine_block'),
-		modAirFilter		= _U('air_filter'),
-		modStruts			= _U('struts'),
-		modArchCover		= _U('arch_cover'),
-		modAerials			= _U('aerials'),
-		modTrimB			= _U('wings'),
-		modTank				= _U('fuel_tank'),
-		modWindows			= _U('windows'),
-		modLivery			= _U('stickers')
+		wheels				= _U('wheels')
 	},
 
 	modPlateHolder = {

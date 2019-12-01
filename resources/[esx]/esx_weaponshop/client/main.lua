@@ -6,6 +6,33 @@ local CurrentActionMsg = ''
 local CurrentActionData = {}
 local ShopOpen = false
 
+local shops = {
+	"GunShop1",
+	"GunShop2",
+	"GunShop3",
+	"GunShop4",
+	"GunShop5",
+	"GunShop6",
+	"GunShop7",
+	"GunShop8",
+	"GunShop9",
+	"BlackWeashop"
+}
+
+local CustomCss = {
+	["BlackWeashop"] = "lscustom",
+	["GunShop"] = "ammu"
+}
+
+local function has_value (tab, val)
+    for index, value in ipairs(tab) do
+        if value == val then
+            return true
+        end
+    end
+    return false
+end
+
 Citizen.CreateThread(function()
 	while ESX == nil do
 		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
@@ -58,7 +85,7 @@ function OpenShopMenu(zone)
 		local item = Config.Zones[zone].Items[i]
 
 		table.insert(elements, {
-			label = ('%s <span style="color: white;">%s</span>'):format(item.label, _U('shop_menu_item', ESX.Math.GroupDigits(item.price))),
+			label = ('%s <span class="not-selected">%s</span>'):format(item.label, _U('shop_menu_item', ESX.Math.GroupDigits(item.price))),
 			price = item.price,
 			weaponName = item.item
 		})
@@ -67,8 +94,14 @@ function OpenShopMenu(zone)
 	ESX.UI.Menu.CloseAll()
 	PlaySoundFrontend(-1, 'BACK', 'HUD_AMMO_SHOP_SOUNDSET', false)
 
+	customcss = CustomCss["GunShop"]
+
+	if CustomCss[zone] ~= nil then
+		customcss = CustomCss[zone]
+	end
+
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'shop', {
-		css = 'ammu',
+		css = customcss,
 		align = 'top-left',
 		elements = elements
 	}, function(data, menu)
@@ -119,7 +152,7 @@ function DisplayBoughtScaleform(weaponName, price)
 end
 
 AddEventHandler('esx_weaponshop:hasEnteredMarker', function(zone)
-	if zone == 'GunShop1' or zone == 'GunShop2' or zone == 'GunShop3' or zone == 'GunShop4' or zone == 'GunShop5' or zone == 'GunShop6' or zone == 'GunShop7' or zone == 'GunShop8' or zone == 'GunShop9' or zone == 'BlackWeashop' then
+	if has_value(shops, zone) then
 		CurrentAction     = 'shop_menu'
 		CurrentActionMsg  = _U('shop_menu_prompt')
 		CurrentActionData = { zone = zone }

@@ -92,7 +92,7 @@ Config.Zones = {
 		}
 	},
 
-	BlackWeashop = {
+	--[[BlackWeashop = {
 		Legal = false,
 		Items = {},
 		Locations = {
@@ -106,6 +106,6 @@ Config.Zones = {
 		Locations = {
 			vector3(2369.35, 3154.50, 48.05)
 		}
-	}
+	}]]
 
 }

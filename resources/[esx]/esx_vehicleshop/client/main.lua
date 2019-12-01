@@ -175,13 +175,14 @@ function OpenShopMenu()
 	end
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'vehicle_shop', {
-		title    = _U('car_dealer'),
+		css = 'Inventaire',
 		align    = 'top-left',
 		elements = elements
 	}, function(data, menu)
 		local vehicleData = vehiclesByCategory[data.current.name][data.current.value + 1]
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'shop_confirm', {
+			css = 'Inventaire',
 			title = _U('buy_vehicle_shop', vehicleData.name, ESX.Math.GroupDigits(vehicleData.price)),
 			align = 'top-left',
 			elements = {

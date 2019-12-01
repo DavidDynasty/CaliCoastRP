@@ -1,0 +1,49 @@
+"Disclaimer" Do NOT reupload this mod without permission! Please credit me.
+
+Hello, its ya boy CodyTheDev! Ever wondered why there wasn't any pumps at the gas station in Harmony? Wonder no more!
+
+What have I added... 
+
+- Working Pump
+- Working Lights 
+- Other Fun Props (ATM)
+ 
+
+This is the second map mod I've made. It wont be perfect.. Please give positive feed back as this is my second map mod, and will encourage me to create more! 
+
+-------------------
+How To Install: 
+-------------------
+
+GTA 5 SP/LSPDFR - Go to (mods) - update - x64 - dlcpacks - custom_maps - dlc.rpf - x64 - levels - gta5 - _citye - maps - custom_maps.rpf 
+
+**Pumps do not work in Single Player, except with the Fuel Mod!**
+
+
+FiveM - Dedicated Server [VPS] and Home Hosted
+
+Instructions 1 
+1. Download the HarmonyGasStationEnhanced.zip 
+2. Unzip the file onto your desktop 
+3. Simply move the folder to your resources folder within your server. 
+4. add the following lines to your config 
+start HarmonyGasStationEnhanced
+5. Head to Harmony. 
+6 Enjoy 
+
+Instructions 2 
+1. Download the HarmonyGasStationEnhanced.zip 
+2. Unzip the file onto your desktop 
+3. Keep the same line of text you added to the server.cfg 
+4. Enjoy 
+
+Any bugs you experience please leave a comment below and also like. 
+Anything you think you would like added leave a comment. 
+Any Donations Are Welcome And Very Much Appreciated!!! 
+Thanks 
+
+
+Paypal - MuddyCreek01@gmail.com
+Discord - https://discord.gg/u5975hx
+Discord Message - D-01 | CodyTheDev™#9853
+

@@ -168,7 +168,7 @@ Locales['en'] = {
   ['gadget_parachute'] = 'parachute',
   ['weapon_flare'] = 'flare gun',
   ['weapon_doubleaction'] = 'double-Action Revolver',
-  ['disc_ammo_pistol'] = 'disc_ammo_pistol',
+  ['disc_ammo_pistol'] = '9MM Ammo',
 
 
   -- Weapon Components

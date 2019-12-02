@@ -51,7 +51,7 @@ Config.BlipGarage = {
 	Sprite = 524,
 	Color = 38,
 	Display = 2,
-	Scale = 0.9
+	Scale = 0.7
 }
 
 Config.BlipGaragePrivate = {

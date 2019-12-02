@@ -51,7 +51,7 @@ function CreateBlips()
 		if property.entering then
 			Blips[property.name] = AddBlipForCoord(property.entering.x, property.entering.y, property.entering.z)
 
-			SetBlipSprite (Blips[property.name], 375)
+			SetBlipSprite (Blips[property.name], 5)
 			SetBlipDisplay(Blips[property.name], 4)
 			SetBlipScale  (Blips[property.name], 0.9)
 			SetBlipAsShortRange(Blips[property.name], true)

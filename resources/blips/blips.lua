@@ -1,8 +1,11 @@
 local blips = {
     -- Example {title="", colour=, id=, x=, y=, z=},
 
-     {title="NightClub", colour=83, id=590, x = 192.21, y = -3166.95, z = 5.79}
-     --{title="Example 2", colour=30, id=108, x = 260.130, y = 204.308, z = 109.287}
+     {title="NightClub", colour=83, id=590, x = 192.21, y = -3166.95, z = 5.79},
+     {title="Diamond Casino", colour=67, id=58, x = 924.74, y = 46.61, z = 81.11}
+     --{title="Diamond Casino", colour=67, id=58, x = 924.74, y = 46.61, z = 81.11}
+     --{title="Diamond Casino", colour=67, id=58, x = 924.74, y = 46.61, z = 81.11}
+     --{title="Diamond Casino", colour=67, id=58, x = 924.74, y = 46.61, z = 81.11}
   }
       
 Citizen.CreateThread(function()

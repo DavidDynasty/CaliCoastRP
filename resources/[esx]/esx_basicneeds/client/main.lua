@@ -96,7 +96,7 @@ AddEventHandler('esx_basicneeds:onEat', function(prop_name)
 		prop_name = prop_name or 'prop_cs_burger_01'
 		IsAnimated = true
 
-		Citizen.CreateThread(function()
+		--[[Citizen.CreateThread(function()
 			local playerPed = PlayerPedId()
 			local x,y,z = table.unpack(GetEntityCoords(playerPed))
 			local prop = CreateObject(GetHashKey(prop_name), x, y, z + 0.2, true, true, true)
@@ -111,7 +111,7 @@ AddEventHandler('esx_basicneeds:onEat', function(prop_name)
 				ClearPedSecondaryTask(playerPed)
 				DeleteObject(prop)
 			end)
-		end)
+		end)]]--
 
 	end
 end)

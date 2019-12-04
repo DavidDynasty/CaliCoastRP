@@ -2,9 +2,9 @@ key_to_teleport = 38
 
 positions = {
 	-- Clubhouses
- 	{{2471.757, 4110.815, 36.500, 66.281}, {997.256, -3158.109, -40.500, 268.836}, "Press E to Teleport | Grapeseed Biker Clubhouse"},
- 	{{2466.457, 4101.402, 36.800, 81.567}, {998.828, -3164.342, -40.150, 266.851}, "Press E to Teleport | Grapeseed Biker Clubhouse Garage"},
- 	{{-355.334, 6067.529, 30.300, 45.678}, {1110.144, -3164.258, -38.750, 356.001}, "Press E to Teleport | Paleto Bay Biker Clubhouse Garage"},
+ 	--{{2471.757, 4110.815, 36.500, 66.281}, {997.256, -3158.109, -40.500, 268.836}, "Press E to Teleport | Grapeseed Biker Clubhouse"},
+ 	--{{2466.457, 4101.402, 36.800, 81.567}, {998.828, -3164.342, -40.150, 266.851}, "Press E to Teleport | Grapeseed Biker Clubhouse Garage"},
+ 	--{{-355.334, 6067.529, 30.300, 45.678}, {1110.144, -3164.258, -38.750, 356.001}, "Press E to Teleport | Paleto Bay Biker Clubhouse Garage"},
 }
 
 -----------------------------------------------------------------------------

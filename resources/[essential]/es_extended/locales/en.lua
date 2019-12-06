@@ -168,7 +168,16 @@ Locales['en'] = {
   ['gadget_parachute'] = 'parachute',
   ['weapon_flare'] = 'flare gun',
   ['weapon_doubleaction'] = 'double-Action Revolver',
-  ['disc_ammo_pistol'] = '9MM Ammo',
+  ['disc_ammo_pistol'] = 'Pistol Ammo',
+  ['disc_ammo_pistol_large'] = 'Large Pistol Ammo',
+  ['disc_ammo_rifle'] = 'Rifle Ammo',
+  ['disc_ammo_rifle_large'] = 'Large Rifle Ammo',
+  ['disc_ammo_shotgun'] = 'Birdshot Ammo',
+  ['disc_ammo_shotgun_large'] = 'Slug Ammo',
+  ['disc_ammo_smg'] = 'SMG Ammo',
+  ['disc_ammo_smg_large'] = 'Large SMG Ammo',
+  ['disc_ammo_snp'] = 'Sniper Rifle Ammo',
+  ['disc_ammo_snp_large'] = '.50 Cal Ammo',
 
 
   -- Weapon Components

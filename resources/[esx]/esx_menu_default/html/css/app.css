@@ -479,4 +479,42 @@ padding: 0 10px;
   color: white;
 }
 
+/* CaliCoastRP Custom Headers */
+/* SMG Weapon Shop */
+.menu .head_smgshop {
+  font-family: SignPainter;  
+  font-size: 59px;
 
+  background-image: url("../img/header/smgshop.png");
+  text-align      : center;
+  height          : 90px;
+  line-height     : 105px;
+  color : white;
+  font-style: oblique;
+}
+
+/* Rifle Weapon Shop */
+.menu .head_rifleshop {
+  font-family: SignPainter;  
+  font-size: 59px;
+
+  background-image: url("../img/header/rifleshop.jpg");
+  text-align      : center;
+  height          : 90px;
+  line-height     : 105px;
+  color : white;
+  font-style: oblique;
+}
+
+/* Armor Weapon Shop */
+.menu .head_vestarmor {
+  font-family: SignPainter;  
+  font-size: 59px;
+
+  background-image: url("../img/header/vestarmor.jpg");
+  text-align      : center;
+  height          : 90px;
+  line-height     : 105px;
+  color : white;
+  font-style: oblique;
+}

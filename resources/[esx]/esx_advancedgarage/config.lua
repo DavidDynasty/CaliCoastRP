@@ -37,7 +37,7 @@ Config.DontShowPoundCarsInGarage = true -- If set to true it won't show Cars at 
 Config.ShowVehicleLocation       = true -- If set to true it will show the Location of the Vehicle in the Pound/Garage in the Garage menu.
 Config.UseVehicleNamesLua        = true -- Must setup a vehicle_names.lua for Custom Addon Vehicles.
 
-Config.ShowGarageSpacer1 = true -- If true it shows Spacer 1 in the List.
+Config.ShowGarageSpacer1 = false -- If true it shows Spacer 1 in the List.
 Config.ShowGarageSpacer2 = false -- If true it shows Spacer 2 in the List | Don't use if spacer3 is set to true.
 Config.ShowGarageSpacer3 = true -- If true it shows Spacer 3 in the List | Don't use if Spacer2 is set to true.
 

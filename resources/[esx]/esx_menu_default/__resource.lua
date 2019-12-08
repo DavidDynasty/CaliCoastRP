@@ -49,11 +49,14 @@ files {
 	'html/img/header/moderation.jpg',
 	'html/img/header/poleemploi.png',
 	'html/img/header/Quincaillerie.jpg',
+	'html/img/header/rifleshop.jpg',
 	'html/img/header/skin_menu.png',
+	'html/img/header/smgshop.png',
 	'html/img/header/suburban.png',
 	'html/img/header/universite.jpg',
 	'html/img/header/valider.png',
 	'html/img/header/vehicle.png',
+	'html/img/header/vestarmor.jpg',
 	'html/img/header/vestiaire.jpg'
 
 }

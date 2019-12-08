@@ -16,12 +16,20 @@ local shops = {
 	"GunShop7",
 	"GunShop8",
 	"GunShop9",
-	"BlackWeashop"
+	"BlackWeashop",
+	"Rifle_shop",
+	"Bulletproof_Vest_shop",
+	"SMG_shop"
+
+
 }
 
 local CustomCss = {
 	["BlackWeashop"] = "lscustom",
-	["GunShop"] = "ammu"
+	["Rifle_shop"] = "rifleshop",
+	["GunShop"] = "ammu",
+	["Bulletproof_Vest_shop"] = "vestarmor",
+	["SMG_shop"] = "smgshop"
 }
 
 local function has_value (tab, val)

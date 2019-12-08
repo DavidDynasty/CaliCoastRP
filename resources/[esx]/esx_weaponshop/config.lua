@@ -96,15 +96,36 @@ Config.Zones = {
 		Legal = false,
 		Items = {},
 		Locations = {
-			vector3(2369.35, 3154.50, 48.05)
+			vector3(2369.51, 3155.0, 48.0)
 		}
 	},
 
-	BlackWeashop = {
+	Rifle_shop = {
 		Legal = false,
 		Items = {},
 		Locations = {
-			vector3(2369.35, 3154.50, 48.05)
+			vector3(-1124.29, 4892.45, 217.40),
+		    vector3(13.58, 3724.66, 38.50),
+		    vector3(741.82, 4170.94, 40.0),
+		}
+	},
+
+	SMG_shop = {
+		Legal = false,
+		Items = {},
+		Locations = {
+			vector3(-1666.28, -1084.54, 12.0),
+			vector3(953.03, -196.63, 78.20),
+			vector3(2327.34, 2573.53, 45.60),
+		}
+	},
+
+	Bulletproof_Vest_shop = {
+		Legal = false,
+		Items = {},
+		Locations = {
+			vector3(-318.33, -2718.13, 7.55),
+			vector3(1538.71, 6321.92, 25.07),
 		}
 	}
 

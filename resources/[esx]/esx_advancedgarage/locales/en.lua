@@ -12,7 +12,7 @@ Locales['en'] = {
 	['return'] = 'Return',
 	['store_vehicles'] = 'Store Vehicle in Garage.',
 	['press_to_enter'] = 'Press ~INPUT_PICKUP~ to take Vehicle out of Garage.',
-	['press_to_delete'] = 'Press ~INPUT_PICKUP~ to store Vehicle in the Garage.',
+	['press_to_delete'] = 'Store Vehicle In Garage.',
 	['press_to_impound'] = 'Press ~INPUT_PICKUP~ to access the Impound.',
 	['spacer1'] = 'If Vehicle is NOT here Check Impound!!!',
 	['spacer2'] = '| Plate | Vehicle Name | Location |',
@@ -29,7 +29,7 @@ Locales['en'] = {
 	-- Cars
 	['garage_cars'] = 'Car Garage',
 	['pound_cars'] = 'Car Pound',
-	['list_owned_cars'] = 'List Owned Cars.',
+	['list_owned_cars'] = 'Stored Vehicles.',
 	['store_owned_cars'] = 'Store Owned Car in Garage.',
 	['return_owned_cars'] = 'Return Owned Cars.',
 	['garage_nocars'] = 'You dont own any Cars!',

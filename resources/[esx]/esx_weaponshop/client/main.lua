@@ -20,8 +20,6 @@ local shops = {
 	"Rifle_shop",
 	"Bulletproof_Vest_shop",
 	"SMG_shop"
-
-
 }
 
 local CustomCss = {

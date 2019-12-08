@@ -2,13 +2,40 @@ ESX = nil
 local hasAlreadyEnteredMarker, lastZone
 local currentAction, currentActionMsg, currentActionData = nil, nil, {}
 
+local shops = {
+	"TwentyFourSeven",
+	"RobsLiquor",
+	"LTDgasoline",
+	"ExtraItemsShop",
+	"VanillaUnicorn",
+	"BahamaMama",
+	"TequilaLaLa"
+
+
+}
+
+local CustomCss = {
+	["TwentyFourSeven"] = "lscustom",
+	["RobsLiquor"] = "rifleshop",
+	["LTDgasoline"] = "ammu",
+	["ExtraItemsShop"] = "vestarmor",
+	["VanillaUnicorn"] = "smgshop"
+}
+
+local function has_value (tab, val)
+    for index, value in ipairs(tab) do
+        if value == val then
+            return true
+        end
+    end
+    return false
+end
+
 Citizen.CreateThread(function()
 	while ESX == nil do
 		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 		Citizen.Wait(0)
 	end
-
-	Citizen.Wait(5000)
 
 	ESX.TriggerServerCallback('esx_shops:requestDBItems', function(ShopItems)
 		for k,v in pairs(ShopItems) do
@@ -23,7 +50,7 @@ function OpenShopMenu(zone)
 		local item = Config.Zones[zone].Items[i]
 
 		table.insert(elements, {
-			label      = ('%s - <span style="color:green;">%s</span>'):format(item.label, _U('shop_item', ESX.Math.GroupDigits(item.price))),
+			label      = ('%s  <span style="color:white;">%s</span>'):format(item.label, _U('shop_item', ESX.Math.GroupDigits(item.price))),
 			itemLabel = item.label,
 			item       = item.item,
 			price      = item.price,
@@ -38,7 +65,14 @@ function OpenShopMenu(zone)
 
 	ESX.UI.Menu.CloseAll()
 
+	customcss = CustomCss["TwentyFourSeven"]
+
+	if CustomCss[zone] ~= nil then
+		customcss = CustomCss[zone]
+	end
+
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'shop', {
+		css = customcss,
 		title    = _U('shop'),
 		align    = 'bottom-right',
 		elements = elements

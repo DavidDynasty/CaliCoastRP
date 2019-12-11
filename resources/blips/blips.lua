@@ -5,10 +5,11 @@ local blips = {
      {title="Diamond Casino", colour=67, id=58, x = 924.74, y = 46.61, z = 81.11},
      {title="Vanilla Unicorn", colour=8, id=121, x = 128.7, y = -1298.6, z = 29.23},
      {title="Local Bars", colour=48, id=93, x = -564.49, y = 276.09, z = 83.12},
-     {title="Life Invader", colour=26, id=102, x = -1081.99, y = -259.96, z = 37.81},
      {title="Local Bars", colour=48, id=93, x = -430.15, y = 261.88, z = 83.0},
      {title="Local Bars", colour=48, id=93, x = -1388.42, y = -586.93, z = 30.22},
-     {title="Local Bars", colour=48, id=93, x = 1990.87, y = 3053.75, z = 47.21}
+     {title="Local Bars", colour=48, id=93, x = 1990.87, y = 3053.75, z = 47.21},
+     {title="Life Invader", colour=26, id=102, x = -1081.99, y = -259.96, z = 37.81},
+     {title="Trucking", colour=2, id=477, x = -60.04, y = -2518.06, z = 7.4}
   }
       
 Citizen.CreateThread(function()
@@ -20,7 +21,7 @@ Citizen.CreateThread(function()
       SetBlipScale(info.blip, 0.8)
       SetBlipColour(info.blip, info.colour)
       SetBlipAsShortRange(info.blip, true)
-	  BeginTextCommandSetBlipName("STRING")
+	    BeginTextCommandSetBlipName("STRING")
       AddTextComponentString(info.title)
       EndTextCommandSetBlipName(info.blip)
     end

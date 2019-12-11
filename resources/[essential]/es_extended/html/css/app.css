@@ -13,6 +13,7 @@ html {
 }
 
 #hud {
+	display: none;
 	position: absolute;
 	font-family: 'Pricedown';
 	font-size: 35px;

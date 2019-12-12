@@ -135,14 +135,15 @@ Citizen.CreateThread(function()
 end)
 
 function init()
-    -- BLIP.company = AddBlipForCoord(TruckingCompany[0]["x"], TruckingCompany[0]["y"], TruckingCompany[0]["z"])
-    -- SetBlipSprite(BLIP.company, 477)
-    -- SetBlipDisplay(BLIP.company, 4)
-    -- SetBlipScale(BLIP.company, 0.8)
+    BLIP.company = AddBlipForCoord(TruckingCompany[0]["x"], TruckingCompany[0]["y"], TruckingCompany[0]["z"])
+    SetBlipSprite(BLIP.company, 477)
+    SetBlipDisplay(BLIP.company, 4)
+    SetBlipScale(BLIP.company, 0.8)
+    SetBlipColour(BLIP.company, 2)
 
-    -- BeginTextCommandSetBlipName('STRING')
-	-- AddTextComponentString('Trucking')
-	-- EndTextCommandSetBlipName('Trucking')
+    BeginTextCommandSetBlipName('STRING')
+	AddTextComponentString('Trucking')
+	EndTextCommandSetBlipName(BLIP.company)
     Citizen.Trace("Truck Blip added.")
    -- GUI.loaded = true
 end
@@ -333,7 +334,7 @@ end
 ---------------------------------------  
 ---------------------------------------
 function GUI.drawStartText()
-    TriggerEvent("mt:missiontext", "Press ~g~E ~w~ to start.", 100)
+    TriggerEvent("mt:missiontext", "Press ~g~E ~w~ to start.", 500)
     --GUI.showStartText = true
 end
 
@@ -345,25 +346,15 @@ end
 
 function GUI.init()
     GUI.loaded = true
+    GUI.addTitle("So.. you want to drive a truck?", 0.425, 0.19, 0.45, 0.07 )
+    GUI.addDesc("Here you go,\njust sign the contract.", 0.575, 0.375, 0.15, 0.30 )
 
     --menu, title, function, position
     GUI.addButton(0, "Sign Delivery Contract", GUI.optionMisson, 0.35, 0.25, 0.3, 0.05 )
-    -- GUI.addButton(0, "Tanker", GUI.optionMisson, 0.35, 0.25, 0.3, 0.05 )
-    -- GUI.addButton(0, "Container", GUI.optionMisson, 0.35, 0.30, 0.3, 0.05 )
-    -- GUI.addButton(0, "Articulated", GUI.optionMisson, 0.35, 0.35, 0.3, 0.05 )
-    -- GUI.addButton(0, "Logger", GUI.optionMisson, 0.35, 0.40, 0.3, 0.05 )
-    -- GUI.addButton(0, " ", GUI.null, 0.35, 0.45, 0.3, 0.05)
+    GUI.addButton(0, " ", GUI.null, 0.35, 0.30, 0.3, 0.05)
     GUI.addButton(0, "Leave Computer", GUI.exit, 0.35, 0.35, 0.3, 0.05 )
     
     GUI.buttonCount = 0
-    
-    -- GUI.addButton(1, "Route  1", GUI.mission, 0.35, 0.25, 0.3, 0.05)
-    -- GUI.addButton(1, "Route  2", GUI.mission, 0.35, 0.30, 0.3, 0.05)
-    -- GUI.addButton(1, "Route  3", GUI.mission, 0.35, 0.35, 0.3, 0.05)
-    -- GUI.addButton(1, "Route  4", GUI.mission, 0.35, 0.40, 0.3, 0.05)
-    -- GUI.addButton(1, "Route  5", GUI.mission, 0.35, 0.45, 0.3, 0.05)
-    -- GUI.addButton(1, " ", GUI.mission, 0.35, 0.50, 0.3, 0.05)
-    -- GUI.addButton(1, "Leave Computer", GUI.exit, 0.35, 0.55, 0.3, 0.05)
 end
 
 --Render stuff
@@ -500,13 +491,10 @@ function GUI.updateSelectionMenu(menu)
             --remember variable GUI.selected[menu]
             
             --call mission functions
-            GUI.button[menu][GUI.selected[menu]]["func"](math.random(4))
-            
-            GUI.menu = 1
-            GUI.selected[menu] = 0
-            if( not GUI.menu ) then
-                GUI.menu = -1
-            end
+            GUI.optionMisson(math.random(4))
+            Wait(200)
+            GUI.mission(math.random(5))
+
             Wait(100)
             
             --GUI.button[menu][GUI.selected[menu]]["func"](GUI.selected[menu])

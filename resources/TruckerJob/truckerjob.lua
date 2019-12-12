@@ -135,10 +135,14 @@ Citizen.CreateThread(function()
 end)
 
 function init()
-    BLIP.company = AddBlipForCoord(TruckingCompany[0]["x"], TruckingCompany[0]["y"], TruckingCompany[0]["z"])
-    SetBlipSprite(BLIP.company, 67)
-    SetBlipDisplay(BLIP.company, 4)
-    SetBlipScale(BLIP.company, 0.8)
+    -- BLIP.company = AddBlipForCoord(TruckingCompany[0]["x"], TruckingCompany[0]["y"], TruckingCompany[0]["z"])
+    -- SetBlipSprite(BLIP.company, 477)
+    -- SetBlipDisplay(BLIP.company, 4)
+    -- SetBlipScale(BLIP.company, 0.8)
+
+    -- BeginTextCommandSetBlipName('STRING')
+	-- AddTextComponentString('Trucking')
+	-- EndTextCommandSetBlipName('Trucking')
     Citizen.Trace("Truck Blip added.")
    -- GUI.loaded = true
 end

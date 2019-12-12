@@ -4,13 +4,13 @@ local currentAction, currentActionMsg, currentActionData = nil, nil, {}
 local shops = {
 	"TwentyfourSeven",
 	"RobsLiquor",
-	"LTDgasoline"
+	"LTDgasoline",
 }
 
 local CustomCss = {
-	["TwentyfourSeven"] = "247",
-	["RobsLiquor"] = "superete",
-	["LTDgasoline"] = "Inventaire"
+	["TwentyfourSeven"] = "superete",
+	["RobsLiquor"] = "identity",
+	["LTDgasoline"] = "Inventaire",
 }
 
 local function has_value (tab, val)
@@ -92,7 +92,7 @@ function OpenShopMenu(zone)
 	end
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'shop', {
-		css = customcss;
+		css = customcss,
 		title    = _U('shop'),
 		align    = 'bottom-right',
 		elements = elements
@@ -103,7 +103,8 @@ function OpenShopMenu(zone)
 			elements = {
 				{label = _U('no'),  value = 'no'},
 				{label = _U('yes'), value = 'yes'}
-		}}, function(data2, menu2)
+			}
+		}, function(data2, menu2)
 			if data2.current.value == 'yes' then
 				TriggerServerEvent('esx_shops:buyItem', data.current.item, data.current.value, zone)
 			end

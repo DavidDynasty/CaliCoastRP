@@ -9,7 +9,6 @@ local blips = {
      {title="Local Bars", colour=48, id=93, x = -1388.42, y = -586.93, z = 30.22},
      {title="Local Bars", colour=48, id=93, x = 1990.87, y = 3053.75, z = 47.21},
      {title="Life Invader", colour=26, id=102, x = -1081.99, y = -259.96, z = 37.81},
-     {title="Trucking", colour=2, id=477, x = -60.04, y = -2518.06, z = 7.4}
   }
       
 Citizen.CreateThread(function()

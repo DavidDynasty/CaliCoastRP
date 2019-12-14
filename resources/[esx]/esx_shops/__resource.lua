@@ -19,4 +19,7 @@ server_scripts {
 	'server/main.lua'
 }
 
-dependency 'es_extended'
+dependencies {
+	'es_extended',
+	'esx_menu_default'
+}

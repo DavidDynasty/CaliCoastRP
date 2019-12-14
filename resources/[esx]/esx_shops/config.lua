@@ -43,5 +43,25 @@ Config.Zones = {
 			{x = -1820.523, y = 792.51800, z = 137.118},
 			{x = 1698.3880, y = 4924.4040, z = 41.0630}
 		}
+	},
+
+	ExtraItemsShop = {
+		Items = {},
+		Pos = {}
+	},
+
+	VanillaUnicorn = {
+		Items = {},
+		Pos = {}
+	},
+
+	BahamaMama = {
+		Items = {},
+		Pos = {}
+	},
+
+	TequilaLaLa = {
+		Items = {},
+		Pos = {}
 	}
 }

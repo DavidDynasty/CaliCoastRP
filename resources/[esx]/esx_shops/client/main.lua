@@ -2,27 +2,6 @@ ESX = nil
 local hasAlreadyEnteredMarker, lastZone
 local currentAction, currentActionMsg, currentActionData = nil, nil, {}
 local shops = {
-	"TwentyfourSeven",
-	"RobsLiquor",
-	"LTDgasoline",
-}
-
-local CustomCss = {
-	["TwentyfourSeven"] = "superete",
-	["RobsLiquor"] = "identity",
-	["LTDgasoline"] = "Inventaire",
-}
-
-local function has_value (tab, val)
-    for index, value in ipairs(tab) do
-        if value == val then
-            return true
-        end
-    end
-    return false
-end
-
-local shops = {
 	"TwentyFourSeven",
 	"RobsLiquor",
 	"LTDgasoline",
@@ -34,7 +13,7 @@ local shops = {
 
 local CustomCss = {
 	["TwentyFourSeven"] = "lscustom",
-	["RobsLiquor"] = "rifleshop",
+	["RobsLiquor"] = "liquorstore",
 	["LTDgasoline"] = "ammu",
 	["ExtraItemsShop"] = "vestarmor",
 	["VanillaUnicorn"] = "smgshop"
@@ -64,6 +43,12 @@ end)
 
 function OpenShopMenu(zone)
 	local elements = {}
+	local customcss = CustomCss["TwentyFourSeven"]
+
+	if CustomCss[zone] ~= nil then
+		customcss = CustomCss[zone]
+	end
+
 	for i=1, #Config.Zones[zone].Items, 1 do
 		local item = Config.Zones[zone].Items[i]
 
@@ -82,12 +67,6 @@ function OpenShopMenu(zone)
 	end
 
 	ESX.UI.Menu.CloseAll()
-
-	customcss = CustomCss["TwentyfourSeven"]
-
-	if CustomCss[zone] ~= nil then
-		customcss = CustomCss[zone]
-	end
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'shop', {
 		css = customcss,

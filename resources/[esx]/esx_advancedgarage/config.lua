@@ -44,8 +44,8 @@ Config.ShowGarageSpacer3 = false -- If true it shows Spacer 3 in the List | Don'
 Config.ShowPoundSpacer2 = false -- If true it shows Spacer 2 in the List | Don't use if spacer3 is set to true.
 Config.ShowPoundSpacer3 = false -- If true it shows Spacer 3 in the List | Don't use if Spacer2 is set to true.
 
-Config.MarkerType   = 27
-Config.DrawDistance = 500.0
+Config.MarkerType   = 36
+Config.DrawDistance = 40.0
 
 Config.BlipGarage = {
 	Sprite = 524,
@@ -77,12 +77,12 @@ Config.BlipJobPound = {
 
 Config.PointMarker = {
 	r = 0, g = 255, b = 0,     -- Green Color
-	x = 1.5, y = 1.5, z = 1.0  -- Standard Size Circle
+	x = 1.0, y = 1.0, z = 1.0  -- Standard Size Circle
 }
 
 Config.DeleteMarker = {
 	r = 255, g = 0, b = 0,     -- Red Color
-	x = 5.0, y = 5.0, z = 1.0  -- Big Size Circle
+	x = 2.0, y = 2.0, z = 2.0  -- Big Size Circle
 }
 
 Config.PoundMarker = {
@@ -132,9 +132,9 @@ Config.AmbulancePounds = {
 
 Config.CarGarages = {
 	Garage_CentralLS = {
-		GaragePoint = { x = 387.0, y = -1680.69, z = 26.30 },
+		GaragePoint = { x = 387.84, y = -1681.31, z = 28.25 },
 		SpawnPoint = { x = 384.27, y = -1653.76, z = 26.95, h = 142.57 },
-		DeletePoint = { x = 384.27, y = -1653.76, z = 26.30 }
+		DeletePoint = { x = 384.27, y = -1653.76, z = 27.30 }
 	},
 	Garage_1 = {
 		GaragePoint = { x = 1737.59, y = 3710.2, z = 33.14 },

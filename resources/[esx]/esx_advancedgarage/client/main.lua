@@ -1011,7 +1011,7 @@ Citizen.CreateThread(function()
 		
 		if Config.UseCarGarages then
 			for k,v in pairs(Config.CarGarages) do
-				if (GetDistanceBetweenCoords(coords, v.GaragePoint.x, v.GaragePoint.y, v.GaragePoint.z, true) < Config.PointMarker.x) then
+				if (GetDistanceBetweenCoords(coords, v.GaragePoint.x, v.GaragePoint.y, v.GaragePoint.z, true) < Config.PointMarker.x +1) then
 					isInMarker  = true
 					this_Garage = v
 					currentZone = 'car_garage_point'

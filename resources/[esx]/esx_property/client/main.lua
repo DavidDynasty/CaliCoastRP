@@ -51,9 +51,9 @@ function CreateBlips()
 		if property.entering then
 			Blips[property.name] = AddBlipForCoord(property.entering.x, property.entering.y, property.entering.z)
 
-			SetBlipSprite (Blips[property.name], 369)
+			SetBlipSprite (Blips[property.name], 350)
 			SetBlipDisplay(Blips[property.name], 4)
-			SetBlipScale  (Blips[property.name], 1.0)
+			SetBlipScale  (Blips[property.name], 0.8)
 			SetBlipAsShortRange(Blips[property.name], true)
 
 			BeginTextCommandSetBlipName("STRING")

@@ -80,14 +80,8 @@ Config.Zones = {
 		Legal = true,
 		Items = {},
 		Locations = {
-			vector3(-1117.5, 2698.6, 17.5)
-		}
-	},
-
-	GunShop9 = {
-		Legal = true,
-		Items = {},
-		Locations = {
+			vector3(-1117.5, 2698.6, 17.5),
+			vector3(-3171.29, 1087.6, 20.0),
 			vector3(-1306.2, -394.0, 35.6)
 		}
 	},

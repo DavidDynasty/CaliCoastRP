@@ -27,7 +27,7 @@ Locales['en'] = {
 	['no_vehicle_to_enter'] = 'There is no Vehicle to store in the Garage.',
 	['vehicle_in_garage'] = 'Your Vehicle is stored in the Garage.',
 	-- Cars
-	['garage_cars'] = 'Car Garage',
+	['garage_cars'] = 'Public Parking',
 	['pound_cars'] = 'Car Pound',
 	['list_owned_cars'] = 'Stored Vehicles.',
 	['store_owned_cars'] = 'Store Owned Car in Garage.',

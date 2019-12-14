@@ -23,6 +23,10 @@ local userProperties          = {}
 local this_Garage             = {}
 local privateBlips            = {}
 
+local CustomCss = {
+	["Public_Car_Garage"] = "pubcargarage",
+}
+
 Citizen.CreateThread(function()
 	while ESX == nil do
 		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
@@ -73,11 +77,14 @@ function OpenMenuGarage(PointType)
 	local elements = {}
 	
 	if PointType == 'car_garage_point' then
-		table.insert(elements, {label = _U('list_owned_cars'), value = 'list_owned_cars'})
+		-- table.insert(elements, {label = _U('list_owned_cars'), value = 'list_owned_cars'})
+		ListOwnedCarsMenu()
 	elseif PointType == 'boat_garage_point' then
-		table.insert(elements, {label = _U('list_owned_boats'), value = 'list_owned_boats'})
+		-- table.insert(elements, {label = _U('list_owned_boats'), value = 'list_owned_boats'})
+		ListOwnedBoatsMenu()
 	elseif PointType == 'aircraft_garage_point' then
-		table.insert(elements, {label = _U('list_owned_aircrafts'), value = 'list_owned_aircrafts'})
+		-- table.insert(elements, {label = _U('list_owned_aircrafts'), value = 'list_owned_aircrafts'})
+		ListOwnedAircraftsMenu()
 	elseif PointType == 'car_store_point' then
 		table.insert(elements, {label = _U('store_owned_cars'), value = 'store_owned_cars'})
 	elseif PointType == 'boat_store_point' then
@@ -147,6 +154,8 @@ function ListOwnedCarsMenu()
 	if Config.ShowGarageSpacer3 then
 		table.insert(elements, {label = _U('spacer3')})
 	end
+
+	table.insert(elements, {label = 'Public Parking'})
 	
 	ESX.TriggerServerCallback('esx_advancedgarage:getOwnedCars', function(ownedCars)
 		if #ownedCars == 0 then
@@ -162,15 +171,15 @@ function ListOwnedCarsMenu()
 					
 					if Config.ShowVehicleLocation then
 						if v.stored then
-							labelvehicle = '| '..plate..' | '..vehicleName..' | '.._U('loc_garage')..' |'
+							labelvehicle = vehicleName..' | '..plate..' | '.._U('loc_garage')
 						else
-							labelvehicle = '| '..plate..' | '..vehicleName..' | '.._U('loc_pound')..' |'
+							labelvehicle = vehicleName..' | '..plate..' | '.._U('loc_pound')
 						end
 					else
 						if v.stored then
-							labelvehicle = '| '..plate..' | '..vehicleName..' |'
+							labelvehicle = vehicleName..' | '..plate
 						else
-							labelvehicle = '| '..plate..' | '..vehicleName..' |'
+							labelvehicle = vehicleName..' | '..plate
 						end
 					end
 					
@@ -183,15 +192,15 @@ function ListOwnedCarsMenu()
 					
 					if Config.ShowVehicleLocation then
 						if v.stored then
-							labelvehicle = '| '..plate..' | '..vehicleName..' | '.._U('loc_garage')..' |'
+							labelvehicle = vehicleName..' | '..plate..' | '.._U('loc_garage')
 						else
-							labelvehicle = '| '..plate..' | '..vehicleName..' | '.._U('loc_pound')..' |'
+							labelvehicle = vehicleName..' | '..plate..' | '.._U('loc_pound')
 						end
 					else
 						if v.stored then
-							labelvehicle = '| '..plate..' | '..vehicleName..' |'
+							labelvehicle = vehicleName..' | '..plate
 						else
-							labelvehicle = '| '..plate..' | '..vehicleName..' |'
+							labelvehicle = vehicleName..' | '..plates
 						end
 					end
 					
@@ -199,9 +208,16 @@ function ListOwnedCarsMenu()
 				end
 			end
 		end
+
+		customcss = CustomCss["pubcargarage"]
+
+		if PointType ~= nil then
+			customcss = CustomCss["pubcargarage"]
+		end
 		
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'spawn_owned_car', {
-			title    = _U('garage_cars'),
+			css = customcss,
+			-- title    = _U('garage_cars'),
 			align    = 'top-left',
 			elements = elements
 		}, function(data, menu)

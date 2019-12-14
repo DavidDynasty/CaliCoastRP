@@ -16,7 +16,7 @@
 .menu {
   font-family: vo;
   min-width  : 400px;
-  max-width: 380px;
+  max-width  : 600px;
   color      : #fff;
   left: 40;
   top : 80; 
@@ -513,6 +513,19 @@ padding: 0 10px;
   font-size: 59px;
 
   background-image: url("../img/header/vestarmor.jpg");
+  text-align      : center;
+  height          : 90px;
+  line-height     : 105px;
+  color : white;
+  font-style: oblique;
+}
+
+/* Public Garage */
+.menu .head_pubcargarage {
+  font-family: SignPainter;  
+  font-size: 59px;
+
+  background-image: url("../img/header/autoecole.jpg");
   text-align      : center;
   height          : 90px;
   line-height     : 105px;

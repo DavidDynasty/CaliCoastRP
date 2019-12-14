@@ -93,7 +93,7 @@
   color : white;
   font-style: oblique;
 }
-.men
+
 .menu .head_dmv {
   font-family: SignPainter;  
   font-size: 59px;
@@ -436,28 +436,28 @@
   font-style: oblique;
 }
 
-
-.menu .categorie {
+.menu .category {
   font-family:  glitch;
   font-size       : 23px;
   height          : 30px;
   line-height     : 35px;
-    padding: 0 10px;
+  padding: 0 10px;
   color: white ;
   background-color: rgba(0, 0, 0, 1);
   text-transform: uppercase;
   font-size: 18px;
-font-weight: bold;
-padding: 0 10px;
-  position: left;
+  font-weight: bold;
+  padding: 0 10px;
+  position: center;
   top: 0px;
-
 }
+
 .menu .menu-items {
     max-height : 350px;
     overflow-y : hidden;
     background-color: rgba(0, 0, 0, 0.7);
 }
+
 .menu .menu-items .menu-item {
   display         : block;
   font-size       : 21px;
@@ -479,8 +479,16 @@ padding: 0 10px;
   color: white;
 }
 
-/* CaliCoastRP Custom Headers */
-/******************************/
+/*******************CaliCoastRP Custom Headers*******************/
+/* NOTE:                                                        */
+/* Don't forget to add the image file(s) to the __resources.lua!*/
+/****************************************************************/
+
+/* Hide Menu Title: add .(zone).title */
+.smgshop.title, .rifleshop.title, .vestarmor.title, .liquorstore.title, .lscustom.title {
+  display: none !important;
+}
+
 /* SMG Weapon Shop */
 .menu .head_smgshop {
   font-family: SignPainter;  
@@ -513,6 +521,19 @@ padding: 0 10px;
   font-size: 59px;
 
   background-image: url("../img/header/vestarmor.jpg");
+  text-align      : center;
+  height          : 90px;
+  line-height     : 105px;
+  color : white;
+  font-style: oblique;
+}
+
+/* Liquor Store */
+.menu .head_liquorstore {
+  font-family: SignPainter;  
+  font-size: 59px;
+
+  background-image: url("../img/header/liquorstore.png");
   text-align      : center;
   height          : 90px;
   line-height     : 105px;

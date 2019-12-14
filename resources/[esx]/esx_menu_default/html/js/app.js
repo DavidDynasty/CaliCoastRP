@@ -3,16 +3,16 @@
 	let MenuTpl =
 		'<div id="menu_{{_namespace}}_{{_name}}" class="menu{{#align}} align-{{align}}{{/align}}">' +
 			'<div class="head_{{{css}}}"><span></span></div>' +
-				//'<div class="categorie"><span>{{{title}}}</span></div>' +
-					'<div class="menu-items">' + 
-						'{{#elements}}' +
-							'<div class="menu-item {{#selected}}selected{{/selected}}">' +
-								'{{{label}}}{{#isSlider}} : &lt;{{{sliderLabel}}}&gt;{{/isSlider}}' +
-							'</div>' +
-						'{{/elements}}' +
-					'</div>'+
-				'</div>' +
-			'</div>'
+			'<div class="category {{{css}}} title"><span>{{{title}}}</span></div>' +
+				'<div class="menu-items">' + 
+					'{{#elements}}' +
+						'<div class="menu-item {{#selected}}selected{{/selected}}">' +
+							'{{{label}}}{{#isSlider}} : &lt;{{{sliderLabel}}}&gt;{{/isSlider}}' +
+						'</div>' +
+					'{{/elements}}' +
+				'</div>'+
+			'</div>' +
+		'</div>'
 	;
 
 	window.ESX_MENU       = {};

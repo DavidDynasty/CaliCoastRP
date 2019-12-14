@@ -41,6 +41,7 @@ files {
 	'html/img/header/gestionpatron.png',
 	'html/img/header/gpsrapide.jpg',
 	'html/img/header/identite.png',
+	'html/img/header/liquorstore.png',
 	'html/img/header/lscus.png',
 	'html/img/header/masque.jpg',
 	'html/img/header/Me_concernant.jpg',
@@ -58,7 +59,6 @@ files {
 	'html/img/header/vehicle.png',
 	'html/img/header/vestarmor.jpg',
 	'html/img/header/vestiaire.jpg'
-
 }
 
 dependencies {

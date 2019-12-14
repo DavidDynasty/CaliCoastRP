@@ -131,36 +131,37 @@ Config.AmbulancePounds = {
 -- Start of Cars
 
 Config.CarGarages = {
-	Garage_CentralLS = {
+	Garage_CentralLS = { -- Rancho
 		GaragePoint = { x = 387.84, y = -1681.31, z = 28.25 },
-		SpawnPoint = { x = 384.27, y = -1653.76, z = 26.95, h = 142.57 },
+		SpawnPoint = { x = 390.21, y = -1657.23, z = 24.13, h = 139.15 },
 		DeletePoint = { x = 384.27, y = -1653.76, z = 27.30 }
 	},
-	Garage_1 = {
-		GaragePoint = { x = 1737.59, y = 3710.2, z = 33.14 },
-		SpawnPoint = { x = 1737.84, y = 3719.28, z = 33.04, h = 21.22 },
-		DeletePoint = { x = 1722.66, y = 3713.74, z = 33.21 }
+	Garage_1 = { -- Rockford Hills
+		GaragePoint = { x = -1280.20, y = -213.60, z = 43.0 },
+		SpawnPoint = { x = -1266.47, y = -219.2, z = 40.45, h = 128.37 },
+		DeletePoint = { x = -1271.32, y = -213.49, z = 42.45 }
 	},
-	Garage_2 = {
-		GaragePoint = { x = 105.359, y = 6613.586, z = 31.3973 },
-		SpawnPoint = { x = 128.7822, y = 6622.9965, z = 30.7828, h = 315.01 },
-		DeletePoint = { x = 126.3572, y = 6608.4150, z = 30.8565 }
+	Garage_2 = { -- La Puerta Fwy
+		GaragePoint = { x = -329.38, y = -780.98, z = 35.0 },
+		SpawnPoint = { x = -340.87, y = -756.86, z = 30.0, h = 90.00 },
+		DeletePoint = { x = -341.66, y = -767.31, z = 33.97 }
 	},
-	Garage_3 = {
-		GaragePoint = { x = -85.76, y = -815.37, z = 35.00 },
-		SpawnPoint = { x = -84.02, y = -821.22, z = 35.00, h = 346.7 },
-		DeletePoint = { x = -84.02, y = -821.22, z = 35.00 }
+	Garage_3 = { -- Paleto Bay
+		GaragePoint = { x = -223.09, y = 6243.04, z = 32.80 },
+		SpawnPoint = { x = -222.83, y = 6250.06, z = 31.31, h = 46.64 },
+		DeletePoint = { x = -216.847, y = 6252.34, z = 31.00 }
 	},
-	Garage_4 = {
-		GaragePoint = { x = -143.49, y = -583.03, z = 31.45 },
-		SpawnPoint = { x = -144.26, y = -576.86, z = 31.45, h = 159.49 },
-		DeletePoint = { x = -144.26, y = -576.86, z = 31.45 }
+	Garage_4 = { -- Sandy Shores
+		GaragePoint = { x = 1738.06, y = 3709.05, z = 35.50 },
+		SpawnPoint = { x = 1723.31, y = 3713.51, z = 34.03, h = 19.03 },
+		DeletePoint = { x = 1729.86, y = 3712.71, z = 34.01 }
 	},
-	Garage_5 = {
-		GaragePoint = { x = -1367.66, y = -476.08, z = 30.60 },
-		SpawnPoint = { x = -1362.39, y = -472.04, z = 30.60, h = 101.3 },
-		DeletePoint = { x = -1362.39, y = -472.04, z = 30.60 }
-	}
+	Garage_5 = { -- Hawick
+		GaragePoint = { x = 484.2, y = -78.5, z = 78.65 },
+		SpawnPoint = { x = 472.96, y = -61.47, z = 77.0, h = 154.29 },
+		DeletePoint = { x = 467.02, y = -70.95, z = 77.46 }
+	},
+	
 }
 
 Config.CarPounds = {

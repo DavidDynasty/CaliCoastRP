@@ -45,7 +45,7 @@ RequestIpl("vw_casino_main")
 	--EnableInteriorProp(interiorID, "teste28") --"prop_beer_bottle ---- lixo????w"
 	EnableInteriorProp(interiorID, "teste29") --"bebidas no bar"
 	--EnableInteriorProp(interiorID, "teste30") --"pent_baloons" azul e branco
-	--EnableInteriorProp(interiorID, "teste31") --"leds bar"
+	EnableInteriorProp(interiorID, "teste31") --"leds bar"
 	EnableInteriorProp(interiorID, "teste32") --"pent_baloons_col"
 	EnableInteriorProp(interiorID, "teste33") --"baloons_col001"
 	EnableInteriorProp(interiorID, "teste34") --"baloons" vermelho e preto

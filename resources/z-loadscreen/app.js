@@ -75,9 +75,9 @@ const handlers = {
         document.querySelector('.yeet').style.width = ((thisCount / count) * 100) + '%';
     },
 
-    onLogLine(data) {
-        document.querySelector('.letni p').innerHTML = data.message + "..!";
-    }
+    // onLogLine(data) {
+    //     document.querySelector('.letni p').innerHTML = data.message + "..!";
+    // }
 };
 
 window.addEventListener('message', function (e) {

@@ -30,8 +30,6 @@ local shops = {
 	"VanillaUnicorn",
 	"BahamaMama",
 	"TequilaLaLa"
-
-
 }
 
 local CustomCss = {

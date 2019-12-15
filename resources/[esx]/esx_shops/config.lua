@@ -50,14 +50,27 @@ Config.Zones = {
 		Pos = {}
 	},
 
+	BurgerShot = {
+		Items = {},
+		Pos = {
+			{x = -1193.27, y = -892.33, z = 14.0}
+		}
+	},
+
 	VanillaUnicorn = {
 		Items = {},
-		Pos = {}
+		Pos = {
+			{x = 128.37, y = -1285.59, z = 29.28}, -- Front Bar
+		--	{x = -48.51900, y = -1757.514, z = 28.4000}
+		}
 	},
 
 	BahamaMama = {
 		Items = {},
-		Pos = {}
+		Pos = {
+			{x = -1380.2, y = -628.87, z = 30.28}, -- Back Bar
+			{x = -1391.43, y = -608.81, z = 30.32} -- Front Bar
+		}
 	},
 
 	TequilaLaLa = {

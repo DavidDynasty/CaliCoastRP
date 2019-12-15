@@ -64,7 +64,7 @@ function hasPhone (cb)
 end
 function ShowNoPhoneWarning () 
   if (ESX == nil) then return end
-  ESX.ShowNotification("Vous n'avez pas de ~r~téléphone~s~")
+  ESX.ShowNotification("You don't have a ~r~Phone~s~")
 end
 
 

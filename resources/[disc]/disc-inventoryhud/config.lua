@@ -1,7 +1,7 @@
 Config = {}
 
-Config.OpenControl = 289
-Config.TrunkOpenControl = 47
+Config.OpenControl = 311
+Config.TrunkOpenControl = 38
 Config.DeleteDropsOnStart = false
 
 Config.Shops = {

@@ -288,7 +288,7 @@ AddEventHandler('disc-hud:EnteredVehicle', function()
     Citizen.CreateThread(function()
         while IsPedInAnyVehicle(player) do
             Citizen.Wait(0)
-            if IsControlJustReleased(0, 48) then
+            if IsControlJustReleased(0, 182) then
                 local vehClass = GetVehicleClass(veh)
                 if vehClass ~= 8 and vehClass ~= 13 and vehClass ~= 14 then
                     if seatbeltIsOn then

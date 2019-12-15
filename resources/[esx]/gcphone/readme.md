@@ -23,7 +23,7 @@
 ## Configuration
 
 
-### Modifier le fichier /html/static/config/config.json
+### Edit the file /html/static/config/config.json
 ```json
 {
   "//": "Nom du reseau situé dans la barre du téléphone",

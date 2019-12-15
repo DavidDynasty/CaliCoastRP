@@ -44,10 +44,10 @@ end
 
 --[[
   Ouverture du téphone lié a un item
-  Un solution ESC basé sur la solution donnée par HalCroves
+  An ESC solution based on the solution given by HalCroves
   https://forum.fivem.net/t/tutorial-for-gcphone-with-call-and-job-message-other/177904
 --]]
---[[
+
 ESX = nil
 Citizen.CreateThread(function()
 	while ESX == nil do
@@ -66,7 +66,6 @@ function ShowNoPhoneWarning ()
   if (ESX == nil) then return end
   ESX.ShowNotification("Vous n'avez pas de ~r~téléphone~s~")
 end
---]]
 
 
 --====================================================================================
@@ -112,7 +111,7 @@ end)
 
 
 --====================================================================================
---  Active ou Deactive une application (appName => config.json)
+--  Activate or deactivate an application (appName => config.json)
 --====================================================================================
 RegisterNetEvent('gcPhone:setEnableApp')
 AddEventHandler('gcPhone:setEnableApp', function(appName, enable)
@@ -120,7 +119,7 @@ AddEventHandler('gcPhone:setEnableApp', function(appName, enable)
 end)
 
 --====================================================================================
---  Gestion des appels fixe
+--  Fixed call management
 --====================================================================================
 function startFixeCall (fixeNumber)
   local number = ''
@@ -150,7 +149,7 @@ AddEventHandler("gcPhone:notifyFixePhoneChange", function(_PhoneInCall)
 end)
 
 --[[
-  Affiche les imformations quant le joueurs est proche d'un fixe
+  Displays information when the player is close to a landline
 --]]
 function showFixePhoneHelper (coords)
   for number, data in pairs(FixePhone) do
@@ -159,7 +158,7 @@ function showFixePhoneHelper (coords)
       coords.x, coords.y, coords.z, 1)
     if dist <= 2.0 then
       SetTextComponentFormat("STRING")
-      AddTextComponentString("~g~" .. data.name .. ' ~o~' .. number .. '~n~~INPUT_PICKUP~~w~ Utiliser')
+      AddTextComponentString("~g~" .. data.name .. ' ~o~' .. number .. '~n~~INPUT_PICKUP~~w~ Use')
       DisplayHelpTextFromStringLabel(0, 0, 0, -1)
       if IsControlJustPressed(1, KeyTakeCall) then
         startFixeCall(number)
@@ -188,7 +187,7 @@ Citizen.CreateThread(function ()
           inRangedist = dist
           if (dist <= 1.5) then 
             SetTextComponentFormat("STRING")
-            AddTextComponentString("~INPUT_PICKUP~ Décrocher")
+            AddTextComponentString("~INPUT_PICKUP~ unhook")
             DisplayHelpTextFromStringLabel(0, 0, 1, -1)
             if IsControlJustPressed(1, KeyTakeCall) then
               PhonePlayCall(true)
@@ -272,10 +271,10 @@ AddEventHandler("gcPhone:allMessage", function(allmessages)
   messages = allmessages
 end)
 
-RegisterNetEvent("gcPhone:getBourse")
+--[[RegisterNetEvent("gcPhone:getBourse")
 AddEventHandler("gcPhone:getBourse", function(bourse)
   SendNUIMessage({event = 'updateBourse', bourse = bourse})
-end)
+end)]]--
 
 RegisterNetEvent("gcPhone:receiveMessage")
 AddEventHandler("gcPhone:receiveMessage", function(message)
@@ -360,7 +359,7 @@ end
 
 
 --====================================================================================
---  Function client | Appels
+--  Function client | call
 --====================================================================================
 local aminCall = false
 local inCall = false
@@ -438,7 +437,7 @@ end
   
 
 --====================================================================================
---  Event NUI - Appels
+--  Event NUI - Calls
 --====================================================================================
 
 RegisterNUICallback('startCall', function (data, cb)

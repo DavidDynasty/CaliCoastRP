@@ -13,18 +13,18 @@ function getPhoneRandomNumber()
 	return num
 end
 
---- Exemple pour les numero du style 06XXXXXXXX
+--- Example for style numbers 06XXXXXXXX
 -- function getPhoneRandomNumber()
 --     return '0' .. math.random(600000000,699999999)
 -- end
 
 
 --[[
-  Ouverture du téphone lié a un item
-  Un solution ESC basé sur la solution donnée par HalCroves
+  Opening of the telephone linked to an item
+  An ESC solution based on the solution given by HalCroves
   https://forum.fivem.net/t/tutorial-for-gcphone-with-call-and-job-message-other/177904
 --]]
---[[
+
 local ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) 
     ESX = obj 
@@ -39,7 +39,6 @@ TriggerEvent('esx:getSharedObject', function(obj)
         end
     end)
 end)
---]]
 
 
 
@@ -302,7 +301,7 @@ AddEventHandler('gcPhone:deleteALL', function()
 end)
 
 --====================================================================================
---  Gestion des appels
+--  Call management
 --====================================================================================
 local AppelsEnCours = {}
 local PhoneFixeInfo = {}
@@ -582,7 +581,7 @@ AddEventHandler('gcPhone:allUpdate', function()
     TriggerClientEvent("gcPhone:myPhoneNumber", sourcePlayer, num)
     TriggerClientEvent("gcPhone:contactList", sourcePlayer, getContacts(identifier))
     TriggerClientEvent("gcPhone:allMessage", sourcePlayer, getMessages(identifier))
-    TriggerClientEvent('gcPhone:getBourse', sourcePlayer, getBourse())
+  --TriggerClientEvent('gcPhone:getBourse', sourcePlayer, getBourse())
     sendHistoriqueCall(sourcePlayer, num)
 end)
 

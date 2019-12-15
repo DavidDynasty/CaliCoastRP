@@ -1,0 +1,1 @@
+Copy this folder into your servers resources folder and add "start burgershot" to your server.cfg and that's all you need to do.

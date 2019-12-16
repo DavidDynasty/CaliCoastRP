@@ -1,8 +1,8 @@
 Config = {}
 
 Config.OpenControl = 311
-Config.TrunkOpenControl = 38
-Config.DeleteDropsOnStart = false
+Config.TrunkOpenControl = 47
+Config.DeleteDropsOnStart = true
 
 Config.Shops = {
     ['My Shop Of Awesome Things'] = {

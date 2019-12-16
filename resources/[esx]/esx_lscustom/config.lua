@@ -5,7 +5,7 @@ Config.IsMechanicJobOnly = false
 
 Config.Zones = {
 
-	ls1 = {
+	ls1 = { -- Shop 1
 		Pos   = { x = -337.38, y = -136.92, z = 38.57},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
 		Color = {r = 204, g = 204, b = 0},
@@ -14,7 +14,7 @@ Config.Zones = {
 		Hint  = _U('press_custom')
 	},
 
-	ls2 = {
+	ls2 = { -- Shop 2
 		Pos   = { x = -1155.53, y = -2007.18, z = 12.74},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
 		Color = {r = 204, g = 204, b = 0},
@@ -23,7 +23,7 @@ Config.Zones = {
 		Hint  = _U('press_custom')
 	},
 
-	ls3 = {
+	ls3 = { -- Shop 3
 		Pos   = { x = 731.81, y = -1088.82, z = 21.73},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
 		Color = {r = 204, g = 204, b = 0},
@@ -32,7 +32,7 @@ Config.Zones = {
 		Hint  = _U('press_custom')
 	},
 
-	ls4 = {
+	ls4 = { -- Shop 4
 		Pos   = { x = 1175.04, y = 2640.21, z = 37.32},
 		Size  = {x = 3.0, y = 3.0, z = 0.2},
 		Color = {r = 204, g = 204, b = 0},

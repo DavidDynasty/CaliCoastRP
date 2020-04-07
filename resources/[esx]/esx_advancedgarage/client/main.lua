@@ -180,9 +180,9 @@ function OpenMenuGarage(PointType)
 					local labelvehicle
 					
 					if v.stored then
-						labelvehicle = vehicleName..' | '..plate..' | '..garage_location
+						labelvehicle = vehicleName..' | '..garage_location
 					else
-						labelvehicle = vehicleName..' | '..plate..' | '..pound_location
+						labelvehicle = vehicleName..' | '..pound_location
 					end
 
 					table.insert(elements, {label = labelvehicle, value = v})
@@ -331,7 +331,7 @@ function ReturnOwnedCarsMenu()
 				local plate        = v.plate
 				local labelvehicle
 				
-				labelvehicle = '| '..plate..' | '..vehicleName..' | '.._U('return')..' |'
+				labelvehicle = ..vehicleName..' | '.._U('return')..' |'
 				
 				table.insert(elements, {label = labelvehicle, value = v})
 			else
@@ -340,7 +340,7 @@ function ReturnOwnedCarsMenu()
 				local plate        = v.plate
 				local labelvehicle
 				
-				labelvehicle = '| '..plate..' | '..vehicleName..' | '.._U('return')..' |'
+				labelvehicle = vehicleName..' | '.._U('return')..' |'
 				
 				table.insert(elements, {label = labelvehicle, value = v})
 			end

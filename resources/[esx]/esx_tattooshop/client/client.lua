@@ -48,8 +48,7 @@ function OpenShopMenu()
 		DestroyCam(cam, false)
 	end
 
-	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'Tattoos_menu',
-	{
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'Tattoos_menu',{
 		title    = _U('tattoos'),
 		align    = 'bottom-right',
 		elements = elements,
@@ -60,7 +59,7 @@ function OpenShopMenu()
 			elements = {}
 			table.insert(elements, {label = _U('go_back_to_menu'), value = nil})
 			for i,k in pairs(tattoosList[data.current.value]) do
-				table.insert(elements, {label= _U('tattoo') .. ' n°'..i..' - ' .. _U('money_amount', k.price), value = i, price = k.price})
+				table.insert(elements, {label= i..' - ' .. _U('money_amount', k.price), value = i, price = k.price})
 			end
 
 			ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'Tattoos_Categories_menu',
@@ -236,8 +235,14 @@ function drawTattoo(current, collection)
 
 	local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1)))
 
-	SetCamCoord(cam, x+tattoosList[collection][current].addedX, y+tattoosList[collection][current].addedY, z+tattoosList[collection][current].addedZ)
-	SetCamRot(cam, 0.0, 0.0, tattoosList[collection][current].rotZ)
+	if tattoosList[collection][current].addedX ~= nil then
+		SetCamCoord(cam, x+tattoosList[collection][current].addedX, y+tattoosList[collection][current].addedY, z+tattoosList[collection][current].addedZ)
+		SetCamRot(cam, 0.0, 0.0, tattoosList[collection][current].rotZ)
+	elseif tattoosList[collection][current].position ~= nil then
+		SetCamCoord(cam, x+tattoosList[collection][current].position.addedX, y+tattoosList[collection][current].position.addedY, z+tattoosList[collection][current].position.addedZ)
+		SetCamRot(cam, 0.0, 0.0, tattoosList[collection][current].position.rotZ)
+	end
+
 end
 
 function cleanPlayer()

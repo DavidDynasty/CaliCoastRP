@@ -251,7 +251,7 @@ Config.DoorList = {
 	{
 		objName = 'v_ilev_rc_door2',
 		objCoords  = {x = 467.371, y = -1014.452, z = 26.536},
-		textCoords = {x = 468.09, y = -1014.452, z = 27.800},
+		textCoords = {x = 468.09, y = -1014.452, z = 27.850},
 		authorizedJobs = { 'police' },
 		locked = true,
 		distance = 2,
@@ -261,7 +261,7 @@ Config.DoorList = {
 	{
 		objName = 'v_ilev_rc_door2',
 		objCoords  = {x = 469.967, y = -1014.452, z = 26.536},
-		textCoords = {x = 469.35, y = -1014.452, z = 27.100},
+		textCoords = {x = 469.35, y = -1014.452, z = 27.850},
 		authorizedJobs = { 'police' },
 		locked = true,
 		distance = 2,
@@ -272,11 +272,11 @@ Config.DoorList = {
 	{
 		objName = 'hei_prop_station_gate',
 		objCoords  = {x = 488.894, y = -1017.210, z = 27.146},
-		textCoords = {x = 488.894, y = -1020.210, z = 30.00},
+		textCoords = {x = 488.800, y = -1023.000, z = 27.00},
 		authorizedJobs = { 'police' },
 		locked = true,
 		distance = 14,
-		size = 2
+		size = 1
 	},
 
 	--

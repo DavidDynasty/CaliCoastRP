@@ -4,8 +4,8 @@ Config.IncludeCash = true -- Include cash in inventory?
 Config.IncludeWeapons = true -- Include weapons in inventory?
 Config.IncludeAccounts = true -- Include accounts (bank, black money, ...)?
 Config.ExcludeAccountsList = {"bank"} -- List of accounts names to exclude from inventory
-Config.CheckOwnership = false -- If true, Only owner of vehicle can store items in trunk.
-Config.AllowPolice = false -- If true, police will be able to search players' trunks.
+Config.CheckOwnership = true -- If true, Only owner of vehicle can store items in trunk.
+Config.AllowPolice = true -- If true, police will be able to search players' trunks.
 Config.OpenControl = 289 -- Key for opening inventory. Edit html/js/config.js to change key for closing it.
 Config.OpenKey = 246 -- Key for opening trunk
 

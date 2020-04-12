@@ -7,7 +7,7 @@ Config.Locale       = 'en'
 
 Config.Zones = {
 
-	TwentyFourSeven = {
+	--[[TwentyFourSeven = {
 		Items = {},
 		Pos = {
 			{x = 373.87500, y = 325.8960, z = 102.566},
@@ -19,9 +19,9 @@ Config.Zones = {
 			{x = 2678.9160, y = 3280.671, z = 54.2410},
 			{x = 1729.2160, y = 6414.131, z = 34.0370}
 		}
-	},
+	},]]--
 
-	RobsLiquor = {
+	--[[RobsLiquor = {
 		Items = {},
 		Pos = {
 			{x = 1135.8080, y = -982.281,  z = 45.4150},
@@ -32,9 +32,9 @@ Config.Zones = {
 			{x = 1392.5620, y = 3604.684,  z = 33.9800},
 			{x = 25.750000, y = -1347.58,  z = 28.2800}
 		}
-	},
+	},]]--
 
-	LTDgasoline = {
+	--[[LTDgasoline = {
 		Items = {},
 		Pos = {
 			{x = -48.51900, y = -1757.514, z = 28.4000},
@@ -43,7 +43,7 @@ Config.Zones = {
 			{x = -1820.523, y = 792.51800, z = 137.118},
 			{x = 1698.3880, y = 4924.4040, z = 41.0630}
 		}
-	},
+	},]]--
 
 	ExtraItemsShop = {
 		Items = {},

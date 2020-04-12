@@ -223,6 +223,13 @@ input[type=number] {
 	float: left;
 }
 
+.control#quantity {
+    width: 154px;
+    background-color: transparent;
+    border: 2px transparent;
+    margin: 5px 5px -20px 5px;
+}
+
 .control.disabled {
     background-color: rgba(0, 0, 0, 0.1);
 }

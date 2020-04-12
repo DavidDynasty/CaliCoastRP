@@ -6,3 +6,4 @@ NLog.config
 /resources/database.sh
 /zipfiles/
 server-private.cfg
+*.cache

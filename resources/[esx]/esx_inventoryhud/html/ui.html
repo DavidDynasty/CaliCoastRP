@@ -32,6 +32,7 @@
                 <div class="info-div"></div>
                 <div class="weight-div"></div>
                 <div class="controls-div">
+                    <div class="control" id="quantity"></div>
                     <input type="number" class="control" id="count" value="1">
                     <div class="control" id="use"></div>
                     <div class="control" id="give"></div>
@@ -59,6 +60,7 @@
 
 <script>
     $(document).ready(function () {
+        $("#quantity").html(invLocale.quantity);
         $("#use").html(invLocale.useItem);
         $("#give").html(invLocale.giveItem);
         $("#drop").html(invLocale.dropItem);

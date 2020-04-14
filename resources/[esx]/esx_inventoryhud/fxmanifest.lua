@@ -2,7 +2,7 @@ fx_version 'adamant'
 
 game 'gta5'
 
-description 'MaoriRP Inventory'
+description 'CaliCoastRP Inventory'
 
 version '1.0'
 

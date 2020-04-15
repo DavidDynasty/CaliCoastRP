@@ -1,0 +1,1 @@
+Requires esx_basicneeds and modfreakz stress script or any stress script that uses the value "stress" to work

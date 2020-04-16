@@ -13,5 +13,5 @@ var config = {
         "link": "",
     },
     /* You dont have to include the '/imgs/' dir AND ALSO REMEMBER TO ADD THESE IMGS IN YOUR __resource.lua*/ 
-    "images": ['bg0.png']
+    "images": ['ccrp_load.mp4']
 }

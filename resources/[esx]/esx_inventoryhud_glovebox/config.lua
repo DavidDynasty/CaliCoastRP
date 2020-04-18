@@ -1,11 +1,11 @@
 Config = {}
 
-Config.CheckOwnership = false -- If true, Only owner of vehicle can store items in glovebox.
-Config.AllowPolice = false -- If true, police will be able to search players' glovebox.
+Config.CheckOwnership = true -- If true, Only owner of vehicle can store items in glovebox.
+Config.AllowPolice = true -- If true, police will be able to search players' glovebox.
 
 Config.Locale = 'en'
 
-Config.OpenKey = 246
+Config.OpenKey = 311
 
 -- Limit, unit can be whatever you want. Originally grams (as average people can hold 25kg)
 Config.Limit = 25000

@@ -95,7 +95,7 @@ Config.Shops = {
             {name = 'drugscales'}
     }},
 
-    --[[PrisonShop = {
+    PrisonShop = {
         Locations = {
             {x = 1728.41, y = 2584.31, z = 45.84},
         },
@@ -106,7 +106,7 @@ Config.Shops = {
             {name = 'lighter'},
             {name = 'sandwich'},
             {name = 'chips'}
-    }},]]--
+    }},
 
     WeaponShop = {
         Locations = {

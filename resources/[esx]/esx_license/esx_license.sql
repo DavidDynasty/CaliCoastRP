@@ -1,4 +1,4 @@
-USE `essentialmode`;
+USE `es_extended`;
 
 CREATE TABLE `licenses` (
 	`type` varchar(60) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE `licenses` (
 CREATE TABLE `user_licenses` (
 	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`type` varchar(60) NOT NULL,
-	`owner` varchar(60) NOT NULL,
+	`owner` varchar(40) NOT NULL,
 
 	PRIMARY KEY (`id`)
 );

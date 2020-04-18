@@ -563,15 +563,15 @@ end)
 --====================================================================================
 --  OnLoad
 --====================================================================================
--- AddEventHandler('es:playerLoaded',function(source)
-    -- local sourcePlayer = tonumber(source)
-    -- local identifier = getPlayerID(source)
-    -- getOrGeneratePhoneNumber(sourcePlayer, identifier, function (myPhoneNumber)
-        -- TriggerClientEvent("gcPhone:myPhoneNumber", sourcePlayer, myPhoneNumber)
-        -- TriggerClientEvent("gcPhone:contactList", sourcePlayer, getContacts(identifier))
-        -- TriggerClientEvent("gcPhone:allMessage", sourcePlayer, getMessages(identifier))
-    -- end)
--- end)
+AddEventHandler('esx:playerLoaded', function(playerId, xPlayer)
+    local sourcePlayer = tonumber(xPlayer.source)
+    local identifier = xPlayer.identifier
+    getOrGeneratePhoneNumber(sourcePlayer, identifier, function (myPhoneNumber)
+        TriggerClientEvent("gcPhone:myPhoneNumber", sourcePlayer, myPhoneNumber)
+        TriggerClientEvent("gcPhone:contactList", sourcePlayer, getContacts(identifier))
+        TriggerClientEvent("gcPhone:allMessage", sourcePlayer, getMessages(identifier))
+    end)
+end)
 
 -- Just For reload
 RegisterServerEvent('gcPhone:allUpdate')

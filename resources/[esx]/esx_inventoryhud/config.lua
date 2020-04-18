@@ -7,7 +7,7 @@ Config.ExcludeAccountsList = {"bank"} -- List of accounts names to exclude from 
 Config.CheckOwnership = true -- If true, Only owner of vehicle can store items in trunk.
 Config.AllowPolice = true -- If true, police will be able to search players' trunks.
 Config.OpenControl = 289 -- Key for opening inventory. Edit html/js/config.js to change key for closing it.
-Config.OpenKey = 246 -- Key for opening trunk
+Config.OpenKey = 311 -- Key for opening trunk
 
 -- List of item names that will close ui when used
 Config.CloseUiItems = {"headbag", "fishingrod", "tunerlaptop", "binoculars", "gps", "joint", "cigarette", "cigar", "fixkit", "rollingpaper", "cocaine", "meth"}
@@ -50,7 +50,8 @@ Config.Shops = {
         },
         Items = {
             {name = 'bread'},
-            {name = 'water'}
+			{name = 'water'},
+			{name = 'phone'}
      }},
 
     RobsLiquor = {
@@ -94,7 +95,7 @@ Config.Shops = {
             {name = 'drugscales'}
     }},
 
-    PrisonShop = {
+    --[[PrisonShop = {
         Locations = {
             {x = 1728.41, y = 2584.31, z = 45.84},
         },
@@ -105,7 +106,7 @@ Config.Shops = {
             {name = 'lighter'},
             {name = 'sandwich'},
             {name = 'chips'}
-    }},
+    }},]]--
 
     WeaponShop = {
         Locations = {

@@ -1,5 +1,5 @@
 FixePhone = {
-  -- Poste de police
+  -- Police station
   ['911'] = { name =  "Police", coords = { x = 441.2, y = -979.7, z = 30.58 } },
   
   -- Cabin next to the police station (??wtf)

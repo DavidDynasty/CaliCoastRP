@@ -49,7 +49,7 @@ Config.Shops = {
 		{x = 25.723,   y = -1346.966, z = 28.497}, 
         },
         Items = {
-            {name = 'bread'},
+            {name = 'bread', price = 2},
 			{name = 'water'},
 			{name = 'phone'},
             {name = 'binoculars'}

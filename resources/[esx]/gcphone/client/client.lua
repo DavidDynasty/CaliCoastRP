@@ -41,8 +41,8 @@ local soundDistanceMax = 8.0
 local TokoVoipID = nil
 
 --[[
-  Ouverture du téphone lié a un item
-  Un solution ESC basé sur la solution donnée par HalCroves
+  Opening of the telephone linked to an item
+  An ESC solution based on the solution given by HalCroves
   https://forum.fivem.net/t/tutorial-for-gcphone-with-call-and-job-message-other/177904
 --]]
 

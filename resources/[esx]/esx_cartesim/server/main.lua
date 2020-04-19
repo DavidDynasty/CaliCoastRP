@@ -99,7 +99,7 @@ function NewSim(source)
 						['@identifier']   = xPlayer.identifier,
 					},
 					function (rowsChanged)
-					TriggerClientEvent('esx:showNotification', source, "Yeni bir sim kartın var")
+					TriggerClientEvent('esx:showNotification', source, "You have a new sim card")
 					end
 				)
 		end)
@@ -127,8 +127,8 @@ AddEventHandler('esx_cartesim:sim_give', function (store, index)
   local simZ = store
   local cartesim = nil
   
-  TriggerClientEvent('esx:showNotification', _source, "Sim kartını verdin ~o~" .. simZ)
-  TriggerClientEvent('esx:showNotification', id, "Sim kartı aldınız~o~" .. simZ)
+  TriggerClientEvent('esx:showNotification', _source, "You gave the sim card ~o~" .. simZ)
+  TriggerClientEvent('esx:showNotification', id, "You bought a sim card ~o~" .. simZ)
 			
 	if simZ ~= nil then
 

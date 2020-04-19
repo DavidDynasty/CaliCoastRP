@@ -6,39 +6,6 @@ local CurrentActionMsg = ''
 local CurrentActionData = {}
 local ShopOpen = false
 
-local shops = {
-	"GunShop1",
-	"GunShop2",
-	"GunShop3",
-	"GunShop4",
-	"GunShop5",
-	"GunShop6",
-	"GunShop7",
-	"GunShop8",
-	"GunShop9",
-	"BlackWeashop",
-	"Rifle_shop",
-	"Bulletproof_Vest_shop",
-	"SMG_shop"
-}
-
-local CustomCss = {
-	["BlackWeashop"] = "lscustom",
-	["Rifle_shop"] = "rifleshop",
-	["GunShop"] = "ammu",
-	["Bulletproof_Vest_shop"] = "vestarmor",
-	["SMG_shop"] = "smgshop"
-}
-
-local function has_value (tab, val)
-    for index, value in ipairs(tab) do
-        if value == val then
-            return true
-        end
-    end
-    return false
-end
-
 Citizen.CreateThread(function()
 	while ESX == nil do
 		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
@@ -66,8 +33,8 @@ function OpenBuyLicenseMenu(zone)
 		title = _U('buy_license'),
 		align = 'top-left',
 		elements = {
-			{ label = _U('no'), value = 'no' },
-			{ label = _U('yes', ('<span style="color: green;">%s</span>'):format((_U('shop_menu_item', ESX.Math.GroupDigits(Config.LicensePrice))))), value = 'yes' },
+			{label = _U('no'), value = 'no'},
+			{label = _U('yes', ('<span style="color: green;">%s</span>'):format((_U('shop_menu_item', ESX.Math.GroupDigits(Config.LicensePrice))))), value = 'yes'},
 		}
 	}, function(data, menu)
 		if data.current.value == 'yes' then
@@ -91,7 +58,7 @@ function OpenShopMenu(zone)
 		local item = Config.Zones[zone].Items[i]
 
 		table.insert(elements, {
-			label = ('%s <span class="not-selected">%s</span>'):format(item.label, _U('shop_menu_item', ESX.Math.GroupDigits(item.price))),
+			label = ('%s - <span style="color: green;">%s</span>'):format(item.label, _U('shop_menu_item', ESX.Math.GroupDigits(item.price))),
 			price = item.price,
 			weaponName = item.item
 		})
@@ -100,14 +67,8 @@ function OpenShopMenu(zone)
 	ESX.UI.Menu.CloseAll()
 	PlaySoundFrontend(-1, 'BACK', 'HUD_AMMO_SHOP_SOUNDSET', false)
 
-	customcss = CustomCss["GunShop"]
-
-	if CustomCss[zone] ~= nil then
-		customcss = CustomCss[zone]
-	end
-
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'shop', {
-		css = customcss,
+		title = _U('shop_menu_title'),
 		align = 'top-left',
 		elements = elements
 	}, function(data, menu)
@@ -158,7 +119,7 @@ function DisplayBoughtScaleform(weaponName, price)
 end
 
 AddEventHandler('esx_weaponshop:hasEnteredMarker', function(zone)
-	if has_value(shops, zone) then
+	if zone == 'GunShop' or zone == 'BlackWeashop' then
 		CurrentAction     = 'shop_menu'
 		CurrentActionMsg  = _U('shop_menu_prompt')
 		CurrentActionData = { zone = zone }
@@ -187,8 +148,8 @@ Citizen.CreateThread(function()
 
 				SetBlipSprite (blip, 110)
 				SetBlipDisplay(blip, 4)
-				SetBlipScale  (blip, 0.9)
-				SetBlipColour (blip,75)
+				SetBlipScale  (blip, 1.0)
+				SetBlipColour (blip, 81)
 				SetBlipAsShortRange(blip, true)
 
 				BeginTextCommandSetBlipName("STRING")

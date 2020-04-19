@@ -404,16 +404,4 @@ Config.Weapons = {
 	{name = 'GADGET_PARACHUTE', label = _U('gadget_parachute'), components = {}},
 	{name = 'WEAPON_FLARE', label = _U('weapon_flare'), components = {}},
 	{name = 'WEAPON_DOUBLEACTION', label = _U('weapon_doubleaction'), components = {}},
-
-	-- disc-ammo
-	{name = 'DISC_AMMO_PISTOL', label = _U('disc_ammo_pistol'), components = {}},
-	{name = 'DISC_AMMO_PISTOL_LARGE', label = _U('disc_ammo_pistol_large'), components = {}},
-	{name = 'DISC_AMMO_RIFLE', label = _U('disc_ammo_rifle'), components = {}},
-	{name = 'DISC_AMMO_RIFLE_LARGE', label = _U('disc_ammo_rifle_large'), components = {}},
-	{name = 'DISC_AMMO_SHOTGUN', label = _U('disc_ammo_shotgun'), components = {}},
-	{name = 'DISC_AMMO_SHOTGUN_LARGE', label = _U('disc_ammo_shotgun_large'), components = {}},
-	{name = 'DISC_AMMO_SMG', label = _U('disc_ammo_smg'), components = {}},
-	{name = 'DISC_AMMO_SMG_LARGE', label = _U('disc_ammo_smg_large'), components = {}},
-	{name = 'DISC_AMMO_SNP', label = _U('disc_ammo_snp'), components = {}},
-	{name = 'DISC_AMMO_SNP_LARGE', label = _U('disc_ammo_snp_large'), components = {}},
 }

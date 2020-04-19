@@ -373,7 +373,7 @@ function loadPlayerInventory()
             if weight > Config.Limit then
                 exports['mythic_notify']:SendAlert('error', "You're carrying too much weight to walk!")
 				--[[TriggerEvent("pNotify:SendNotification",  {
-					text =  'Inventário Cheio! Não Consegues Andar',
+					text =  'Full Inventory! Can't Walk',
 					type = "error",
 					timeout = 2000,
 					layout = "centerLeft"

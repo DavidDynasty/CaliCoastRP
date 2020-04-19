@@ -28,7 +28,7 @@ Config.Color = 2
 Config.WeaponColor = 1
 
 Config.WeaponLiscence = {x = 12.47, y = -1105.5, z = 29.8}
-Config.LicensePrice = 5000
+Config.LicensePrice = 500
 
 Config.Shops = {
     RegularShop = {
@@ -49,7 +49,7 @@ Config.Shops = {
 		{x = 25.723,   y = -1346.966, z = 28.497}, 
         },
         Items = {
-            {name = 'bread', price = 2},
+            {name = 'bread',},
 			{name = 'water'},
 			{name = 'phone'},
             {name = 'binoculars'}
@@ -62,8 +62,8 @@ Config.Shops = {
 			{x = -1487.553, y = -379.107,  z = 39.163},
 			{x = -2968.243, y = 390.910,   z = 14.043},
 			{x = 1166.024,  y = 2708.930,  z = 37.157},
-			{x = 1392.562,  y = 3604.684,  z = 33.980},
-			{x = -1393.409, y = -606.624,  z = 29.319}
+			{x = 1392.562,  y = 3604.684,  z = 33.980}
+			--{x = -1393.409, y = -606.624,  z = 29.319}
         },
         Items = {
             {name = 'beer'}, -- Doesn't work
@@ -122,12 +122,125 @@ Config.Shops = {
             { x = 842.44, y = -1033.42, z = 27.19 },
         },
         Weapons = {
-            {name = "WEAPON_FLASHLIGHT", ammo = 1},
-            {name = "WEAPON_STUNGUN", ammo = 1},
-            {name = "WEAPON_KNIFE", ammo = 1},
-            {name = "WEAPON_BAT", ammo = 1},
-            {name = "WEAPON_PISTOL", ammo = 45},
-            {name = "WEAPON_PUMPSHOTGUN", ammo = 25}
+
+			--[[ Melee
+			{name = "WEAPON_DAGGER", ammo = 1},
+			{name = "WEAPON_BAT", ammo = 1},
+			{name = "WEAPON_BOTTLE", ammo = 1},
+			{name = "WEAPON_CROWBAR", ammo = 1},
+			{name = "WEAPON_FLASHLIGHT", ammo = 1},
+			{name = "WEAPON_GOLFCLUB", ammo = 1},
+			{name = "WEAPON_HAMMER", ammo = 1},
+			{name = "WEAPON_HATCHET", ammo = 1},
+			{name = "WEAPON_KNUCKLE", ammo = 1},
+			{name = "WEAPON_KNIFE", ammo = 1},
+			{name = "WEAPON_MACHETE", ammo = 1},
+			{name = "WEAPON_SWITCHBLADE", ammo = 1},
+			{name = "WEAPON_WRENCH", ammo = 1},
+			{name = "WEAPON_BATTLEAXE", ammo = 1},
+			{name = "WEAPON_POOLCUE", ammo = 1},]]
+
+            -- Handgus
+			{name = "WEAPON_PISTOL", ammo = 1},
+			{name = "WEAPON_PISTOL_MK2", ammo = 1},
+			{name = "WEAPON_COMBATPISTOL", ammo = 1},
+			{name = "WEAPON_APPISTOL", ammo = 1},
+			{name = "WEAPON_STUNGUN", ammo = 1},
+			{name = "WEAPON_PISTOL50", ammo = 1},
+			{name = "WEAPON_SNSPISTOL", ammo = 1},
+			{name = "WEAPON_SNSPISTOL_MK2", ammo = 1},
+			{name = "WEAPON_HEAVYPISTOL", ammo = 1},
+			{name = "WEAPON_VINTAGEPISTOL", ammo = 1},
+			{name = "WEAPON_FLAREGUN", ammo = 1},
+			{name = "WEAPON_MARKSMANPISTOL", ammo = 1},
+			{name = "WEAPON_REVOLVER", ammo = 1},
+			{name = "WEAPON_REVOLVER_MK2", ammo = 1},
+			{name = "WEAPON_DOUBLEACTION", ammo = 1},
+			{name = "WEAPON_RAYPISTOL", ammo = 1},
+			{name = "WEAPON_CERAMICPISTOL", ammo = 1},
+			{name = "WEAPON_NAVYREVOLVER", ammo = 1},
+
+			--[[ Submachine Guns
+			{name = "WEAPON_MICROSMG", ammo = 1},
+			{name = "WEAPON_SMG", ammo = 1},
+			{name = "WEAPON_SMG_MK2", ammo = 1},
+			{name = "WEAPON_ASSAULTSMG", ammo = 1},
+			{name = "WEAPON_COMBATPDW", ammo = 1},
+			{name = "WEAPON_MACHINEPISTOL", ammo = 1},
+			{name = "WEAPON_MINISMG", ammo = 1},
+			{name = "WEAPON_RAYCARBINE", ammo = 1},
+
+
+			--Shotguns
+			{name = "WEAPON_PUMPSHOTGUN", ammo = 1},
+			{name = "WEAPON_PUMPSHOTGUN_MK2", ammo = 1},
+			{name = "WEAPON_SAWNOFFSHOTGUN", ammo = 1},
+			{name = "WEAPON_ASSAULTSHOTGUN", ammo = 1},
+			{name = "WEAPON_BULLPUPSHOTGUN", ammo = 1},
+			{name = "WEAPON_MUSKET", ammo = 1},
+			{name = "WEAPON_HEAVYSHOTGUN", ammo = 1},
+			{name = "WEAPON_DBSHOTGUN", ammo = 1},
+			{name = "WEAPON_AUTOSHOTGUN", ammo = 1},
+
+
+			-- Assault Rifles
+			{name = "WEAPON_ASSAULTRIFE", ammo = 1},
+			{name = "WEAPON_ASSAULTRIFLE_MK2", ammo = 1},
+			{name = "WEAPON_CARBINERIFLE", ammo = 1},
+			{name = "WEAPON_CARBINERIFLE_MK2", ammo = 1},
+			{name = "WEAPON_ADVANCEDRIFLE", ammo = 1},
+			{name = "WEAPON_SPECIALCARBINE", ammo = 1},
+			{name = "WEAPON_SPECIALCARBINE_MK2", ammo = 1},
+			{name = "WEAPON_BULLPUPRIFLE", ammo = 1},
+			{name = "WEAPON_BULLPUPRIFLE_MKS", ammo = 1},
+			{name = "WEAPON_COMPACTRIFLE", ammo = 1},
+
+
+			-- Light Machine Guns
+			{name = "WEAPON_MG", ammo = 1},
+			{name = "WEAPON_COMBATMG", ammo = 1},
+			{name = "WEAPON_COMBATMG_MK2", ammo = 1},
+			{name = "WEAPON_GUSENBERG", ammo = 1},
+
+
+			-- Sniper Rifles
+			{name = "WEAPON_SNIPERRIFLE", ammo = 1},
+			{name = "WEAPON_HEAVYSNIPER", ammo = 1},
+			{name = "WEAPON_HEAVYSNIPER_MK2", ammo = 1},
+			{name = "WEAPON_MARKSMANRIFLE", ammo = 1},
+			{name = "WEAPON_MARKSMANRIFLE_MK2", ammo = 1},
+
+
+			-- Heavy Weapons
+			{name = "WEAPON_RPG", ammo = 1},
+			{name = "WEAPON_GRENADELAUNCHER", ammo = 1},
+			{name = "WEAPON_GRENADELAUNCHER_SMOKE", ammo = 1},
+			{name = "WEAPON_MINIGUN", ammo = 1},
+			{name = "WEAPON_FIREWORK", ammo = 1},
+			{name = "WEAPON_RAILGUN", ammo = 1},
+			{name = "WEAPON_HOMINGLAUNCHER", ammo = 1},
+			{name = "WEAPON_COMPACTLAUNCHER", ammo = 1},
+			{name = "WEAPON_RAYMINIGUN", ammo = 1},
+
+
+			-- Throwables
+			{name = "WEAPON_GRENADE", ammo = 2},
+			{name = "WEAPON_BZGAS", ammo = 2},
+			{name = "WEAPON_MOLOTOV", ammo = 3},
+			{name = "WEAPON_STICKYBOMB", ammo = 1},
+			{name = "WEAPON_PROXMINE", ammo = 1},
+			{name = "WEAPON_PIPEBOMB", ammo = 1},
+			{name = "WEAPON_BALL", ammo = 1},
+			{name = "WEAPON_SMOKEGRENADE", ammo = 2},
+			{name = "WEAPON_FLARE", ammo = 3},
+
+
+			-- Miscellaneous
+			{name = "WEAPON_PETROLCAN", ammo = 1},
+			{name = "WEAPON_PARACHUTE", ammo = 1},
+			{name = "WEAPON_FIREEXTINGUISHER", ammo = 1},
+			{name = "WEAPON_HAZARDCAN", ammo = 1},]]
+
         },
         Ammo = {
             {name = "9mm_rounds", weaponhash = "WEAPON_PISTOL", ammo = 24},
@@ -268,15 +381,100 @@ Config.localWeight = {
 	Cottageleaves_box = 25,
 	marijuana = 25,
 	cannabis = 25,
-	WEAPON_SMG = 50,
-	WEAPON_CARBINERIFLE = 3000,
-	WEAPON_SPECIALCARBINE = 3000,
-	WEAPON_ASSAULTRIFLE = 3000,
-	WEAPON_PUMPSHOTGUN = 2000,
-	WEAPON_PISTOL = 1000,
-	WEAPON_APPISTOL = 1000,
-	WEAPON_MACHINEPISTOL = 1500,
-	WEAPON_COMBATPISTOL = 1000
+	WEAPONN_MARKSMANPISTOL = 250,
+	WEAPON_ADVANCEDRIFLE = 250,
+	WEAPON_APPISTOL = 250,
+	WEAPON_ASSAULTRIFLE = 250,
+	WEAPON_ASSAULTRIFLE_MK2 = 250,
+	WEAPON_ASSAULTSHOTGUN = 250,
+	WEAPON_ASSAULTSMG = 250,
+	WEAPON_AUTOSHOTGUN = 250,
+	WEAPON_BALL = 250,
+	WEAPON_BAT = 250,
+	WEAPON_BATTLEAXE = 250,
+	WEAPON_BOTTLE = 250,
+	WEAPON_BULLPUPRIFLE = 250,
+	WEAPON_BULLPUPRIFLE_MK2 = 250,
+	WEAPON_BULLPUPSHOTGUN = 250,
+	WEAPON_BZGAS = 250,
+	WEAPON_CARBINERIFL = 250,
+	WEAPON_CARBINERIFLE_MK2 = 250,
+	WEAPON_CERAMICPISTOL = 250,
+	WEAPON_COMBATMG = 250,
+	WEAPON_COMBATMG_MK2 = 250,
+	WEAPON_COMBATPDW = 250,
+	WEAPON_COMBATPISTOL = 250,
+	WEAPON_COMPACTLAUNCHER = 250,
+	WEAPON_COMPACTRIFLE = 250,
+	WEAPON_CROWBAR = 250,
+	WEAPON_DAGGER = 250,
+	WEAPON_DBSHOTGUN = 250,
+	WEAPON_DOUBLEACTION = 250,
+	WEAPON_FIREEXTINGUISHER = 250,
+	WEAPON_FIREWORK = 250,
+	WEAPON_FLARE = 250,
+	WEAPON_FLAREGUN = 250,
+	WEAPON_FLASHLIGHT = 250,
+	WEAPON_GOLFCLUB = 250,
+	WEAPON_GRENADE = 250,
+	WEAPON_GRENADELAUNCH = 250,
+	WEAPON_GRENADELAUNCHER_SMOKE = 250,
+	WEAPON_GUSENBERG = 250,
+	WEAPON_HAMMER = 250,
+	WEAPON_HATCHET = 250,
+	WEAPON_HAZARDCAN = 250,
+	WEAPON_HEAVYPISTOL = 250,
+	WEAPON_HEAVYSHOTGUN = 250,
+	WEAPON_HEAVYSNIPER = 250,
+	WEAPON_HEAVYSNIPER_MK2 = 250,
+	WEAPON_HOMINGLAUNCHER = 250,
+	WEAPON_KNIFE = 250,
+	WEAPON_KNUCKLE = 250,
+	WEAPON_MACHETE = 250,
+	WEAPON_MACHINEPISTOL = 250,
+	WEAPON_MARKSMANRIFLE = 250,
+	WEAPON_MARKSMANRIFLE_MK2 = 250,
+	WEAPON_MG = 250,
+	WEAPON_MICROSMG = 250,
+	WEAPON_MINIGUN = 250,
+	WEAPON_MINISMG = 250,
+	WEAPON_MOLOTOV = 250,
+	WEAPON_MUSKET = 250,
+	WEAPON_NAVYREVOLVER = 250,
+	WEAPON_PARACHUTE = 250,
+	WEAPON_PETROLCAN = 250,
+	WEAPON_PIPEBOMB = 250,
+	WEAPON_PISTOL = 250,
+	WEAPON_PISTOL50 = 250,
+	WEAPON_PISTOL_MK2 = 250,
+	WEAPON_POOLCUE = 250,
+	WEAPON_PROXMINE = 250,
+	WEAPON_PUMPSHOTGUN = 250,
+	WEAPON_PUMPSHOTGUN_MK2 = 250,
+	WEAPON_RAILGUN = 250,
+	WEAPON_RAYCARBINE = 250,
+	WEAPON_RAYMINIGUN = 250,
+	WEAPON_RAYPISTOL = 250,
+	WEAPON_REVOLVER = 250,
+	WEAPON_REVOLVER_MK2 = 250,
+	WEAPON_RPG = 250,
+	WEAPON_SAWNOFFSHOTGUN = 250,
+	WEAPON_SMG = 250,
+	WEAPON_SMG_MK2 = 250,
+	WEAPON_SMOKEGRENADE = 250,
+	WEAPON_SNIPERRIFLE = 250,
+	WEAPON_SNOWBALL = 250,
+	WEAPON_SNSPISTOL = 250,
+	WEAPON_SNSPISTOL_MK2 = 250,
+	WEAPON_SPECIALCARBINE = 250,
+	WEAPON_SPECIALCARBINE_MK2 = 250,
+	WEAPON_STICKYBOMB = 250,
+	WEAPON_STONE_HATCHET = 250,
+	WEAPON_STUNGUN = 250,
+	WEAPON_SWITCHBLADE = 250,
+	WEAPON_VINTAGEPISTOL = 250,
+	WEAPON_WRENCH = 250
+
 }
 
 Config.VehicleLimit = {

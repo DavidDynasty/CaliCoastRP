@@ -141,24 +141,24 @@ Config.Shops = {
 			{name = "WEAPON_POOLCUE", ammo = 1},]]
 
             -- Handgus
-			{name = "WEAPON_PISTOL", ammo = 1},
-			{name = "WEAPON_PISTOL_MK2", ammo = 1},
-			{name = "WEAPON_COMBATPISTOL", ammo = 1},
-			{name = "WEAPON_APPISTOL", ammo = 1},
-			{name = "WEAPON_STUNGUN", ammo = 1},
-			{name = "WEAPON_PISTOL50", ammo = 1},
-			{name = "WEAPON_SNSPISTOL", ammo = 1},
-			{name = "WEAPON_SNSPISTOL_MK2", ammo = 1},
-			{name = "WEAPON_HEAVYPISTOL", ammo = 1},
-			{name = "WEAPON_VINTAGEPISTOL", ammo = 1},
-			{name = "WEAPON_FLAREGUN", ammo = 1},
-			{name = "WEAPON_MARKSMANPISTOL", ammo = 1},
-			{name = "WEAPON_REVOLVER", ammo = 1},
-			{name = "WEAPON_REVOLVER_MK2", ammo = 1},
-			{name = "WEAPON_DOUBLEACTION", ammo = 1},
-			{name = "WEAPON_RAYPISTOL", ammo = 1},
-			{name = "WEAPON_CERAMICPISTOL", ammo = 1},
-			{name = "WEAPON_NAVYREVOLVER", ammo = 1},
+			{name = "WEAPON_PISTOL", ammo = 17}, -- M92 A1
+			--{name = "WEAPON_PISTOL_MK2", ammo = 1},
+			{name = "WEAPON_COMBATPISTOL", ammo = 8}, -- S&W M&P Shield
+			--{name = "WEAPON_APPISTOL", ammo = 27},  -- Pernach OTs-33    Black Market Weapon
+			{name = "WEAPON_STUNGUN", ammo = 1},  -- Taser Pulse
+			{name = "WEAPON_PISTOL50", ammo = 7}, -- Desert Eagle
+			{name = "WEAPON_SNSPISTOL", ammo = 8}, -- P7M8
+			--{name = "WEAPON_SNSPISTOL_MK2", ammo = 1},
+			{name = "WEAPON_HEAVYPISTOL", ammo = 18},  -- TP9SFx
+			--{name = "WEAPON_VINTAGEPISTOL", ammo = 1},
+			--{name = "WEAPON_FLAREGUN", ammo = 1},
+			--{name = "WEAPON_MARKSMANPISTOL", ammo = 1},
+			{name = "WEAPON_REVOLVER", ammo = 6}, -- Raging Bull
+			--{name = "WEAPON_REVOLVER_MK2", ammo = 1},
+			--{name = "WEAPON_DOUBLEACTION", ammo = 1},
+			--{name = "WEAPON_RAYPISTOL", ammo = 1},
+			--{name = "WEAPON_CERAMICPISTOL", ammo = 1},
+			--{name = "WEAPON_NAVYREVOLVER", ammo = 1},
 
 			--[[ Submachine Guns
 			{name = "WEAPON_MICROSMG", ammo = 1},
@@ -247,6 +247,7 @@ Config.Shops = {
             {name = "shotgun_shells", weaponhash = "WEAPON_PUMPSHOTGUN", ammo = 12}
         },
         Items = {
+			{name = 'clip'}
         }},
 }
 

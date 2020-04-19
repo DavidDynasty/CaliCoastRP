@@ -7,25 +7,6 @@ Config.DoorList = {
 	-- Mission Row First Floor
 	--
 
-	-- Entrance Doors
---	{
---		objName = 'v_ilev_ph_door01',
---		objCoords  = {x = 434.747, y = -980.618, z = 30.839},
---		textCoords = {x = 434.747, y = -981.50, z = 31.50},
---		authorizedJobs = { 'police' },
---		locked = false,
---		distance = 2.5
---	},
---
---	{
---		objName = 'v_ilev_ph_door002',
---		objCoords  = {x = 434.747, y = -983.215, z = 30.839},
---		textCoords = {x = 434.747, y = -982.50, z = 31.50},
---		authorizedJobs = { 'police' },
---		locked = false,
---		distance = 2.5
---	},
-
 	-- To locker room & roof
 	{
 		objName = 'v_ilev_ph_gendoor004',

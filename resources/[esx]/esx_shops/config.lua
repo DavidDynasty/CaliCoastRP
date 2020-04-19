@@ -65,13 +65,13 @@ Config.Zones = {
 		}
 	},
 
-	BahamaMama = {
+	--[[BahamaMama = {
 		Items = {},
 		Pos = {
 			{x = -1380.2, y = -628.87, z = 30.28}, -- Back Bar
 			{x = -1391.43, y = -608.81, z = 30.32} -- Front Bar
 		}
-	},
+	},]]--
 
 	TequilaLaLa = {
 		Items = {},

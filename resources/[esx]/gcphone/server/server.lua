@@ -4,7 +4,7 @@
 --====================================================================================
 math.randomseed(os.time()) 
 
---- Pour les numero du style XXX-XXXX
+--- For style numbers XXX-XXXX
 function getPhoneRandomNumber()
     local numBase0 = math.random(100,999)
     local numBase1 = math.random(0,9999)
@@ -12,15 +12,15 @@ function getPhoneRandomNumber()
 	return num
 end
 
---- Exemple pour les numero du style 06XXXXXXXX
+--- Exemple for style numbers 06XXXXXXXX
 -- function getPhoneRandomNumber()
 --     return '0' .. math.random(600000000,699999999)
 -- end
 
 
 --[[
-  Ouverture du téphone lié a un item
-  Un solution ESC basé sur la solution donnée par HalCroves
+  Opening of the telephone linked to an item
+  An ESC solution based on the solution given by HalCroves
   https://forum.fivem.net/t/tutorial-for-gcphone-with-call-and-job-message-other/177904
 --]]
 
@@ -300,7 +300,7 @@ AddEventHandler('gcPhone:deleteALL', function()
 end)
 
 --====================================================================================
---  Gestion des appels
+--  Call management
 --====================================================================================
 local AppelsEnCours = {}
 local PhoneFixeInfo = {}
@@ -771,7 +771,7 @@ ESX.RegisterUsableItem('sim', function(source)
 			['@label']   = "SIM "..phoneNumber,
 		},
 		function (rowsChanged)
-			TriggerClientEvent('esx:showNotification', _source, "Vous avez une nouvelle carte sim: ~g~"..phoneNumber)
+			TriggerClientEvent('esx:showNotification', _source, "You have a new sim card: ~g~"..phoneNumber)
 		end
 	)
 end)
@@ -783,8 +783,8 @@ AddEventHandler('esx_cartesim:sim_give', function (simcardid, playerid, numberin
 	if playerid ~= 0 then
 		local xPlayer2 = ESX.GetPlayerFromId(playerid)
 		local number, identifier = GetNummerFromId(simcardid)
-		TriggerClientEvent('esx:showNotification', _source, "Vous avez donné la carte sim ~o~" .. number)
-		TriggerClientEvent('esx:showNotification', playerid, "Vous avez recu la carte sim ~o~" .. number)
+		TriggerClientEvent('esx:showNotification', _source, "You gave the sim card ~o~" .. number)
+		TriggerClientEvent('esx:showNotification', playerid, "You have received the sim card ~o~" .. number)
 		MySQL.Async.execute(
 			'UPDATE sim SET identifier = @identifier WHERE id = @id',
 			{
@@ -806,7 +806,7 @@ AddEventHandler('esx_cartesim:sim_give', function (simcardid, playerid, numberin
 	end
 end)
 
---supprimer la carte sim
+-- delete sim card
 RegisterServerEvent('esx_cartesim:sim_delete')
 AddEventHandler('esx_cartesim:sim_delete', function (simcardid)
 	local _source = source
@@ -829,7 +829,7 @@ AddEventHandler('esx_cartesim:sim_delete', function (simcardid)
 	
 end)
 
---changer de carte sim (need change identifier inside phone_users_contacts)
+-- change sim card (need change identifier inside phone_users_contacts)
 RegisterServerEvent('esx_cartesim:sim_use')
 AddEventHandler('esx_cartesim:sim_use', function (sim)
 	local _source = source
@@ -845,7 +845,7 @@ AddEventHandler('esx_cartesim:sim_use', function (sim)
 	)
 end)
 
---Recupere les cartes sim
+-- Recover sim cards
 ESX.RegisterServerCallback('esx_cartesim:GetList', function(source, cb)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)

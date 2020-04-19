@@ -21,13 +21,13 @@ local KeyToucheCloseEvent = {
   { code = 176, event = 'Enter' },
   { code = 177, event = 'Backspace' },
 }
-local KeyOpenClose = Keys["F1"] -- F2
+local KeyOpenClose = Keys["F1"] -- F1
 local KeyTakeCall = Keys["E"] -- E
 local KeySimMenu = Keys["N9"] -- N9
 local menuIsOpen = false
 local contacts = {}
 local messages = {}
-local myPhoneNumber = ''
+local myPhoneNumber = '-'
 local isDead = false
 local USE_RTC = false
 local useMouse = false
@@ -67,8 +67,8 @@ Citizen.CreateThread(function()
     if takePhoto ~= true then
       if IsControlJustPressed(1, KeyOpenClose) and GetLastInputMethod(2) and not simmenuopen then
 		CheckPhone()
-      -- elseif IsControlJustPressed(1, KeySimMenu) and GetLastInputMethod(2) and not menuIsOpen then
-		-- OpenSimMenu()
+       elseif IsControlJustPressed(1, KeySimMenu) and GetLastInputMethod(2) and not menuIsOpen then
+		 OpenSimMenu()
 			  
 								
 			 
@@ -101,7 +101,7 @@ end)
 
 
 --====================================================================================
---  Active ou Deactive une application (appName => config.json)
+--  Activate or deactivate an application (appName => config.json)
 --====================================================================================
 RegisterNetEvent('gcPhone:setEnableApp')
 AddEventHandler('gcPhone:setEnableApp', function(appName, enable)
@@ -109,7 +109,7 @@ AddEventHandler('gcPhone:setEnableApp', function(appName, enable)
 end)
 
 --====================================================================================
---  Gestion des appels fixe
+--  Fixed call management
 --====================================================================================
 function startFixeCall (fixeNumber)
   local number = ''
@@ -139,7 +139,7 @@ AddEventHandler("gcPhone:notifyFixePhoneChange", function(_PhoneInCall)
 end)
 
 --[[
-  Affiche les imformations quant le joueurs est proche d'un fixe
+  Displays information when the player is close to a landline
 --]]
 function showFixePhoneHelper (coords)
   for number, data in pairs(FixePhone) do
@@ -563,7 +563,7 @@ end)
 
 
 --====================================================================================
---  Gestion des evenements NUI
+--  NUI event management
 --==================================================================================== 
 RegisterNUICallback('log', function(data, cb)
   print(data)
@@ -926,27 +926,27 @@ function OpenSimMenu()
 			  table.insert(elements, {label = tostring(v.label), value = v})			  
 			end
 		  else
-		    table.insert(elements, {label = "Pas de carte sim enregistré", value = nil})
+		    table.insert(elements, {label = "No sim card registered", value = nil})
 		  end
 		
 		  ESX.UI.Menu.Open(
 		  'default', GetCurrentResourceName(), 'sim_list',
 		  {
-			  title    = 'Liste des cartes sim',
+			  title    = 'List of sim cards',
 			  align    = 'top-left',
 			  elements = elements,
 		  },
 		  function(data, menu)
 			if data.current.value ~= nil then
 				local elements2 = {
-					{label = 'Utiliser', value = 'sim_use'},
-					{label = 'Renommer', value = 'sim_rename'},
-					{label = 'Donner', value = 'sim_give'},
-					{label = 'Jeter', value = 'sim_delete'}
+					{label = 'Use', value = 'sim_use'},
+					{label = 'Rename', value = 'sim_rename'},
+					{label = 'Give', value = 'sim_give'},
+					{label = 'Delete', value = 'sim_delete'}
 				  }
 		  
 				  ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'sim_change', {
-					title    = "Que voulez vous faire de cette carte sim?",
+					title    = "What do you want to do with this sim card?",
 					align    = 'top-left',
 					elements = elements2,
 		  
@@ -956,16 +956,16 @@ function OpenSimMenu()
 					if data2.current.value == 'sim_use' then
 						ESX.UI.Menu.CloseAll()
 						TriggerServerEvent('esx_cartesim:sim_use', data.current.value.number)
-						ESX.ShowNotification("Vous avez activé la carte sim ~o~" .. data.current.value.number)
+						ESX.ShowNotification("You have activated the sim card ~o~" .. data.current.value.number)
 						menu2.close()
 						simmenuopen = false
 					elseif data2.current.value == 'sim_rename' then
 						ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'rename_simcard', {
-							title = 'Nom de carte sim souhaité'
+							title = 'Desired sim card name'
 						}, function(data3, menu3)
 							local text = tostring(data3.value)
 							TriggerServerEvent("esx_cartesim:sim_rename", data.current.value.id, text)
-							ESX.ShowNotification("Vous avez renommer "..data.current.value.label.." en "..text)
+							ESX.ShowNotification("You rename "..data.current.value.label.." en "..text)
 							TriggerServerEvent('gcphone:allUpdate')
 							OpenSimMenu()
 						end, function(data3, menu3)
@@ -976,7 +976,7 @@ function OpenSimMenu()
 						local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
 						if closestPlayer ~= -1 and closestDistance <= 3.0 then
 						    if IsPedSittingInAnyVehicle(closestPlayer) then
-								ESX.ShowNotification('~r~Vous ne pouvez pas donner quelque chose à quelqu\'un dans un véhicule')
+								ESX.ShowNotification('~r~You cant give something to someone\'one in a vehicle')
 								return
 							end
 							if myPhoneNumber == data.current.value.number then
@@ -985,14 +985,14 @@ function OpenSimMenu()
 								TriggerServerEvent('esx_cartesim:sim_give', data.current.value.id, GetPlayerServerId(closestPlayer), false)
 							end
 						else
-							ESX.ShowNotification('Aucun joueur à proximité')
+							ESX.ShowNotification('No player nearby')
 						end
 						TriggerServerEvent('gcphone:allUpdate')
 						ESX.UI.Menu.CloseAll()
 						OpenSimMenu()
 					elseif data2.current.value == 'sim_delete' then
 						TriggerServerEvent('esx_cartesim:sim_delete', data.current.value.id)
-						ESX.ShowNotification("Vous avez supprimé la carte sim ~o~" .. data.current.value.label)
+						ESX.ShowNotification("You have deleted the sim card ~o~" .. data.current.value.label)
 						TriggerServerEvent('gcphone:allUpdate')
 						OpenSimMenu()
 					end
@@ -1025,12 +1025,12 @@ function CheckPhone()
 			-- k = ESX.GetPlayerData().accounts[1].money
 			-- SendNUIMessage({event = 'updateBankbalance', banking = k})
 		  else
-			--UpMiniMapNotification("Pas de ~r~téléphone~s~")
-			TriggerEvent('esx_extended:showNotification', "Pas de ~r~téléphone~s~", 'CHAR_CHAT_CALL','LS Telecom')
+			--UpMiniMapNotification("No ~r~phone~s~")
+			TriggerEvent('esx_extended:showNotification', "No ~r~phone~s~", 'CHAR_CHAT_CALL','LS Telecom')
 		  end
 	  end, 'phone')
 	else
-	  -- UpMiniMapNotification("Pas de ~r~carte sim lié~s~, F1 ou en acheter une")
-	  TriggerEvent('esx_extended:showNotification', "Pas de ~r~carte sim lié~s~, N9 ou en acheter une", 'CHAR_CHAT_CALL','LS Telecom')
+	  -- UpMiniMapNotification("No ~r~linked sim card~s~, F1 or buy one")
+	  TriggerEvent('esx_extended:showNotification', "No ~r~linked sim card~s~, N9 or buy one", 'CHAR_CHAT_CALL','LS Telecom')
 	end
 end

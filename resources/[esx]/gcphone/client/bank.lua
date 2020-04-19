@@ -4,7 +4,7 @@
 
 --[[
       Appeller SendNUIMessage({event = 'updateBankbalance', banking = xxxx})
-      à la connection & à chaque changement du compte
+      at connection & at each account change
 --]]
 
 -- ES / ESX Implementation
@@ -61,7 +61,7 @@ RegisterNUICallback('transfer', function(data)
 end)
 
 --===============================================
---==             Ad ve Soyad                   ==
+--==             Aad vaid                 ==
 --===============================================
 
 RegisterNetEvent("gcPhone:firstname")

@@ -34,7 +34,7 @@
     background-color: rgba(235, 235, 235, 0.01);
 }
 
-#playerInventory {
+#playerInventory, #otherInventory {
     width: 620px;
     height: 600px;
     float: left;
@@ -61,10 +61,6 @@
 }
 
 #otherInventory {
-    width: 620px;
-    height: 600px;
-    float: left;
-    overflow-y: scroll;
     position: absolute;
 	top: 0%;
     left: 138%;

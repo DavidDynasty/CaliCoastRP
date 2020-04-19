@@ -51,7 +51,8 @@ Config.Shops = {
         Items = {
             {name = 'bread'},
 			{name = 'water'},
-			{name = 'phone'}
+			{name = 'phone'},
+            {name = 'binoculars'}
      }},
 
     RobsLiquor = {
@@ -65,12 +66,12 @@ Config.Shops = {
 			{x = -1393.409, y = -606.624,  z = 29.319}
         },
         Items = {
-            {name = 'beer'},
-            {name = 'wine'},
-            {name = 'vodka'},
-            {name = 'tequila'},
-            {name = 'whisky'},
-            {name = 'grand_cru'}
+            {name = 'beer'}, -- Doesn't work
+            {name = 'wine'}, -- Doesn't work
+            {name = 'vodka'}, -- Doesn't work
+            {name = 'tequila'}, -- Doesn't work
+            {name = 'whisky'}, -- Doesn't work
+            {name = 'grand_cru'} -- Doesn't work
     }},
 
     YouTool = {

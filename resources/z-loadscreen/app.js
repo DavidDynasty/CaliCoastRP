@@ -11,14 +11,14 @@ if (config.music === true) {
 
 $(function () {
 
-    var llllll = config.images.forEach(appen)
-    function appen(i) {
-        document.getElementById("bg").innerHTML= document.getElementById("bg").innerHTML + `
-        <!-- <img width="100%"height="100%" src=imgs/${i}> -->
-        <video autoplay muted loop id="myVideo">
-            <source src="${i}" type="video/mp4">
-        </video>`;
-}
+    // var llllll = config.images.forEach(appen)
+    // function appen(i) {
+    //     document.getElementById("bg").innerHTML= document.getElementById("bg").innerHTML + `
+    //     <!-- <img width="100%"height="100%" src=imgs/${i}> -->
+    //     <video autoplay muted loop id="myVideo">
+    //         <source src="${i}" type="video/mp4">
+    //     </video>`;
+    // }
     function random(pp) {
         return Math.floor(Math.random() * pp);
     }

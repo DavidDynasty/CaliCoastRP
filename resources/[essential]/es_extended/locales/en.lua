@@ -130,13 +130,13 @@ Locales['en'] = {
   ['weapon_navyrevolver'] = 'navy revolver',
 
   -- Submachine Guns
-  ['weapon_microsmg'] = 'micro smg',
-  ['weapon_smg'] = 'smg',
+  ['weapon_microsmg'] = 'Uzi',
+  ['weapon_smg'] = 'MP5',
   ['weapon_smg_mk2'] = 'smg mk ll',
   ['weapon_assaultsmg'] = 'assault smg',
   ['weapon_combatpdw'] = 'combat pdw',
-  ['weapon_machinepistol'] = 'machine pistol',
-  ['weapon_minismg'] = 'mini smg',
+  ['weapon_machinepistol'] = 'TEC-9',
+  ['weapon_minismg'] = 'Škorpion',
   ['weapon_raycarbine'] = 'unholy hellbringer',
 
   -- Shotguns

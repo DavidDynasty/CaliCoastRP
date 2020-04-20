@@ -18,11 +18,14 @@ Config.YouToolBlipID = 402
 Config.PrisonShopBlipID = 52
 Config.WeedStoreBlipID = 140
 Config.WeaponShopBlipID = 110
+Config.MeleeShopBlipID = 110
+Config.WeaponShop1BlipID = 110
 
 Config.ShopLength = 14
 Config.LiquorLength = 10
 Config.YouToolLength = 2
 Config.PrisonShopLength = 2
+Config.WeaponShopLenght = 2
 
 Config.Color = 2
 Config.WeaponColor = 1
@@ -111,45 +114,45 @@ Config.Shops = {
 
     WeaponShop = {
         Locations = {
-            { x = -662.180, y = -934.961, z = 20.829 },
-            { x = 810.25, y = -2157.60, z = 28.62 },
-            { x = 1693.44, y = 3760.16, z = 33.71 },
-            { x = -330.24, y = 6083.88, z = 30.45 },
-            { x = 252.63, y = -50.00, z = 68.94 },
-            { x = 22.09, y = -1107.28, z = 28.80 },
+            --{ x = -662.180, y = -934.961, z = 20.829 },
+            --{ x = 810.25, y = -2157.60, z = 28.62 },
+            --{ x = 1693.44, y = 3760.16, z = 33.71 },
+            --{ x = -330.24, y = 6083.88, z = 30.45 },
+            --{ x = 252.63, y = -50.00, z = 68.94 },
+            --{ x = 22.09, y = -1107.28, z = 28.80 },
             { x = 2567.69, y = 294.38, z = 107.73 },
             { x = -1117.58, y = 2698.61, z = 17.55 },
             { x = 842.44, y = -1033.42, z = 27.19 },
         },
         Weapons = {
 
-			--[[ Melee
-			{name = "WEAPON_DAGGER", ammo = 1},
-			{name = "WEAPON_BAT", ammo = 1},
-			{name = "WEAPON_BOTTLE", ammo = 1},
+			-- Melee
+			--{name = "WEAPON_DAGGER", ammo = 1},
+			--{name = "WEAPON_BAT", ammo = 1},
+			--{name = "WEAPON_BOTTLE", ammo = 1},
 			{name = "WEAPON_CROWBAR", ammo = 1},
-			{name = "WEAPON_FLASHLIGHT", ammo = 1},
-			{name = "WEAPON_GOLFCLUB", ammo = 1},
+			--{name = "WEAPON_FLASHLIGHT", ammo = 1},
+			--{name = "WEAPON_GOLFCLUB", ammo = 1},
 			{name = "WEAPON_HAMMER", ammo = 1},
-			{name = "WEAPON_HATCHET", ammo = 1},
-			{name = "WEAPON_KNUCKLE", ammo = 1},
+			--{name = "WEAPON_HATCHET", ammo = 1},
+			--{name = "WEAPON_KNUCKLE", ammo = 1},
 			{name = "WEAPON_KNIFE", ammo = 1},
-			{name = "WEAPON_MACHETE", ammo = 1},
-			{name = "WEAPON_SWITCHBLADE", ammo = 1},
-			{name = "WEAPON_WRENCH", ammo = 1},
-			{name = "WEAPON_BATTLEAXE", ammo = 1},
-			{name = "WEAPON_POOLCUE", ammo = 1},]]
+			--{name = "WEAPON_MACHETE", ammo = 1},
+			--{name = "WEAPON_SWITCHBLADE", ammo = 1},
+			--{name = "WEAPON_WRENCH", ammo = 1},
+			--{name = "WEAPON_BATTLEAXE", ammo = 1},
+			--{name = "WEAPON_POOLCUE", ammo = 1},
 
             -- Handgus
-			{name = "WEAPON_PISTOL", ammo = 17}, -- M92 A1
+			--{name = "WEAPON_PISTOL", ammo = 17}, -- M92 A1
 			--{name = "WEAPON_PISTOL_MK2", ammo = 1},
 			{name = "WEAPON_COMBATPISTOL", ammo = 8}, -- S&W M&P Shield
 			--{name = "WEAPON_APPISTOL", ammo = 27},  -- Pernach OTs-33    Black Market Weapon
-			{name = "WEAPON_STUNGUN", ammo = 1},  -- Taser Pulse
-			{name = "WEAPON_PISTOL50", ammo = 7}, -- Desert Eagle
+			--{name = "WEAPON_STUNGUN", ammo = 1},  -- Taser Pulse
+			--{name = "WEAPON_PISTOL50", ammo = 7}, -- Desert Eagle
 			{name = "WEAPON_SNSPISTOL", ammo = 8}, -- P7M8
 			--{name = "WEAPON_SNSPISTOL_MK2", ammo = 1},
-			{name = "WEAPON_HEAVYPISTOL", ammo = 18},  -- TP9SFx
+			--{name = "WEAPON_HEAVYPISTOL", ammo = 18},  -- TP9SFx
 			--{name = "WEAPON_VINTAGEPISTOL", ammo = 1},
 			--{name = "WEAPON_FLAREGUN", ammo = 1},
 			--{name = "WEAPON_MARKSMANPISTOL", ammo = 1},
@@ -248,7 +251,294 @@ Config.Shops = {
         },
         Items = {
 			{name = 'clip'}
-        }},
+		}
+	},
+
+	MeleeShop = {
+        Locations = {
+			--{ x = -662.180, y = -934.961, z = 20.829 },
+            --{ x = 810.25, y = -2157.60, z = 28.62 },
+            --{ x = 1693.44, y = 3760.16, z = 33.71 },
+            { x = -330.24, y = 6083.88, z = 30.45 },
+            { x = 252.63, y = -50.00, z = 68.94 },
+            { x = 22.09, y = -1107.28, z = 28.80 },
+            --{ x = 2567.69, y = 294.38, z = 107.73 },
+            --{ x = -1117.58, y = 2698.61, z = 17.55 },
+            --{ x = 842.44, y = -1033.42, z = 27.19 },
+            
+        },
+        Weapons = {
+
+			-- Melee
+			--{name = "WEAPON_DAGGER", ammo = 1},
+			{name = "WEAPON_BAT", ammo = 1},
+			--{name = "WEAPON_BOTTLE", ammo = 1},
+			--{name = "WEAPON_CROWBAR", ammo = 1},
+			{name = "WEAPON_FLASHLIGHT", ammo = 1},
+			--{name = "WEAPON_GOLFCLUB", ammo = 1},
+			--{name = "WEAPON_HAMMER", ammo = 1},
+			{name = "WEAPON_HATCHET", ammo = 1},
+			--{name = "WEAPON_KNUCKLE", ammo = 1},
+			{name = "WEAPON_KNIFE", ammo = 1},
+			--{name = "WEAPON_MACHETE", ammo = 1},
+			--{name = "WEAPON_SWITCHBLADE", ammo = 1},
+			--{name = "WEAPON_WRENCH", ammo = 1},
+			{name = "WEAPON_BATTLEAXE", ammo = 1},
+			--{name = "WEAPON_POOLCUE", ammo = 1},
+
+            -- Handgus
+			{name = "WEAPON_PISTOL", ammo = 17}, -- M92 A1
+			--{name = "WEAPON_PISTOL_MK2", ammo = 1},
+			--{name = "WEAPON_COMBATPISTOL", ammo = 8}, -- S&W M&P Shield
+			--{name = "WEAPON_APPISTOL", ammo = 27},  -- Pernach OTs-33    Black Market Weapon
+			{name = "WEAPON_STUNGUN", ammo = 1},  -- Taser Pulse
+			--{name = "WEAPON_PISTOL50", ammo = 7}, -- Desert Eagle
+			{name = "WEAPON_SNSPISTOL", ammo = 8}, -- P7M8
+			--{name = "WEAPON_SNSPISTOL_MK2", ammo = 1},
+			--{name = "WEAPON_HEAVYPISTOL", ammo = 18},  -- TP9SFx
+			--{name = "WEAPON_VINTAGEPISTOL", ammo = 1},
+			--{name = "WEAPON_FLAREGUN", ammo = 1},
+			--{name = "WEAPON_MARKSMANPISTOL", ammo = 1},
+			--{name = "WEAPON_REVOLVER", ammo = 6}, -- Raging Bull
+			--{name = "WEAPON_REVOLVER_MK2", ammo = 1},
+			--{name = "WEAPON_DOUBLEACTION", ammo = 1},
+			--{name = "WEAPON_RAYPISTOL", ammo = 1},
+			--{name = "WEAPON_CERAMICPISTOL", ammo = 1},
+			--{name = "WEAPON_NAVYREVOLVER", ammo = 1},
+
+			-- Submachine Guns
+			{name = "WEAPON_MICROSMG", ammo = 1},
+			{name = "WEAPON_SMG", ammo = 1},
+			--{name = "WEAPON_SMG_MK2", ammo = 1},
+			{name = "WEAPON_ASSAULTSMG", ammo = 1},
+			{name = "WEAPON_COMBATPDW", ammo = 1},
+			{name = "WEAPON_MACHINEPISTOL", ammo = 1}, --     Black Market Weapon
+			{name = "WEAPON_MINISMG", ammo = 1},
+			--{name = "WEAPON_RAYCARBINE", ammo = 1},
+
+
+			--[[ Shotguns
+			{name = "WEAPON_PUMPSHOTGUN", ammo = 1},
+			{name = "WEAPON_PUMPSHOTGUN_MK2", ammo = 1},
+			{name = "WEAPON_SAWNOFFSHOTGUN", ammo = 1},
+			{name = "WEAPON_ASSAULTSHOTGUN", ammo = 1},
+			{name = "WEAPON_BULLPUPSHOTGUN", ammo = 1},
+			{name = "WEAPON_MUSKET", ammo = 1},
+			{name = "WEAPON_HEAVYSHOTGUN", ammo = 1},
+			{name = "WEAPON_DBSHOTGUN", ammo = 1},
+			{name = "WEAPON_AUTOSHOTGUN", ammo = 1},
+
+
+			-- Assault Rifles
+			{name = "WEAPON_ASSAULTRIFE", ammo = 1},
+			{name = "WEAPON_ASSAULTRIFLE_MK2", ammo = 1},
+			{name = "WEAPON_CARBINERIFLE", ammo = 1},
+			{name = "WEAPON_CARBINERIFLE_MK2", ammo = 1},
+			{name = "WEAPON_ADVANCEDRIFLE", ammo = 1},
+			{name = "WEAPON_SPECIALCARBINE", ammo = 1},
+			{name = "WEAPON_SPECIALCARBINE_MK2", ammo = 1},
+			{name = "WEAPON_BULLPUPRIFLE", ammo = 1},
+			{name = "WEAPON_BULLPUPRIFLE_MKS", ammo = 1},
+			{name = "WEAPON_COMPACTRIFLE", ammo = 1},
+
+
+			-- Light Machine Guns
+			{name = "WEAPON_MG", ammo = 1},
+			{name = "WEAPON_COMBATMG", ammo = 1},
+			{name = "WEAPON_COMBATMG_MK2", ammo = 1},
+			{name = "WEAPON_GUSENBERG", ammo = 1},
+
+
+			-- Sniper Rifles
+			{name = "WEAPON_SNIPERRIFLE", ammo = 1},
+			{name = "WEAPON_HEAVYSNIPER", ammo = 1},
+			{name = "WEAPON_HEAVYSNIPER_MK2", ammo = 1},
+			{name = "WEAPON_MARKSMANRIFLE", ammo = 1},
+			{name = "WEAPON_MARKSMANRIFLE_MK2", ammo = 1},
+
+
+			-- Heavy Weapons
+			{name = "WEAPON_RPG", ammo = 1},
+			{name = "WEAPON_GRENADELAUNCHER", ammo = 1},
+			{name = "WEAPON_GRENADELAUNCHER_SMOKE", ammo = 1},
+			{name = "WEAPON_MINIGUN", ammo = 1},
+			{name = "WEAPON_FIREWORK", ammo = 1},
+			{name = "WEAPON_RAILGUN", ammo = 1},
+			{name = "WEAPON_HOMINGLAUNCHER", ammo = 1},
+			{name = "WEAPON_COMPACTLAUNCHER", ammo = 1},
+			{name = "WEAPON_RAYMINIGUN", ammo = 1},
+
+
+			-- Throwables
+			{name = "WEAPON_GRENADE", ammo = 2},
+			{name = "WEAPON_BZGAS", ammo = 2},
+			{name = "WEAPON_MOLOTOV", ammo = 3},
+			{name = "WEAPON_STICKYBOMB", ammo = 1},
+			{name = "WEAPON_PROXMINE", ammo = 1},
+			{name = "WEAPON_PIPEBOMB", ammo = 1},
+			{name = "WEAPON_BALL", ammo = 1},
+			{name = "WEAPON_SMOKEGRENADE", ammo = 2},
+			{name = "WEAPON_FLARE", ammo = 3},
+
+
+			-- Miscellaneous
+			{name = "WEAPON_PETROLCAN", ammo = 1},
+			{name = "WEAPON_PARACHUTE", ammo = 1},
+			{name = "WEAPON_FIREEXTINGUISHER", ammo = 1},
+			{name = "WEAPON_HAZARDCAN", ammo = 1},]]
+
+        },
+        Ammo = {
+            {name = "9mm_rounds", weaponhash = "WEAPON_PISTOL", ammo = 24},
+            {name = "shotgun_shells", weaponhash = "WEAPON_PUMPSHOTGUN", ammo = 12}
+        },
+        Items = {
+			{name = 'clip'}
+		}
+	},
+
+	WeaponShop1 = {
+        Locations = {
+			{ x = -662.180, y = -934.961, z = 20.829 },
+            { x = 810.25, y = -2157.60, z = 28.62 },
+            { x = 1693.44, y = 3760.16, z = 33.71 },
+            --{ x = -330.24, y = 6083.88, z = 30.45 },
+            --{ x = 252.63, y = -50.00, z = 68.94 },
+        	--{ x = 22.09, y = -1107.28, z = 28.80 },
+            --{ x = 2567.69, y = 294.38, z = 107.73 },
+            --{ x = -1117.58, y = 2698.61, z = 17.55 },
+            --{ x = 842.44, y = -1033.42, z = 27.19 },
+            
+        },
+        Weapons = {
+
+			-- Melee
+			--{name = "WEAPON_DAGGER", ammo = 1},
+			{name = "WEAPON_BAT", ammo = 1},
+			--{name = "WEAPON_BOTTLE", ammo = 1},
+			--{name = "WEAPON_CROWBAR", ammo = 1},
+			{name = "WEAPON_FLASHLIGHT", ammo = 1},
+			--{name = "WEAPON_GOLFCLUB", ammo = 1},
+			--{name = "WEAPON_HAMMER", ammo = 1},
+			{name = "WEAPON_HATCHET", ammo = 1},
+			--{name = "WEAPON_KNUCKLE", ammo = 1},
+			{name = "WEAPON_KNIFE", ammo = 1},
+			--{name = "WEAPON_MACHETE", ammo = 1},
+			--{name = "WEAPON_SWITCHBLADE", ammo = 1},
+			--{name = "WEAPON_WRENCH", ammo = 1},
+			{name = "WEAPON_BATTLEAXE", ammo = 1},
+			--{name = "WEAPON_POOLCUE", ammo = 1},
+
+            -- Handgus
+			{name = "WEAPON_PISTOL", ammo = 17}, -- M92 A1
+			--{name = "WEAPON_PISTOL_MK2", ammo = 1},
+			--{name = "WEAPON_COMBATPISTOL", ammo = 8}, -- S&W M&P Shield
+			--{name = "WEAPON_APPISTOL", ammo = 27},  -- Pernach OTs-33    Black Market Weapon
+			{name = "WEAPON_STUNGUN", ammo = 1},  -- Taser Pulse
+			--{name = "WEAPON_PISTOL50", ammo = 7}, -- Desert Eagle
+			{name = "WEAPON_SNSPISTOL", ammo = 8}, -- P7M8
+			--{name = "WEAPON_SNSPISTOL_MK2", ammo = 1},
+			--{name = "WEAPON_HEAVYPISTOL", ammo = 18},  -- TP9SFx
+			--{name = "WEAPON_VINTAGEPISTOL", ammo = 1},
+			--{name = "WEAPON_FLAREGUN", ammo = 1},
+			--{name = "WEAPON_MARKSMANPISTOL", ammo = 1},
+			--{name = "WEAPON_REVOLVER", ammo = 6}, -- Raging Bull
+			--{name = "WEAPON_REVOLVER_MK2", ammo = 1},
+			--{name = "WEAPON_DOUBLEACTION", ammo = 1},
+			--{name = "WEAPON_RAYPISTOL", ammo = 1},
+			--{name = "WEAPON_CERAMICPISTOL", ammo = 1},
+			--{name = "WEAPON_NAVYREVOLVER", ammo = 1},
+
+			--[[ Submachine Guns
+			{name = "WEAPON_MICROSMG", ammo = 1},
+			{name = "WEAPON_SMG", ammo = 1},
+			{name = "WEAPON_SMG_MK2", ammo = 1},
+			{name = "WEAPON_ASSAULTSMG", ammo = 1},
+			{name = "WEAPON_COMBATPDW", ammo = 1},
+			{name = "WEAPON_MACHINEPISTOL", ammo = 1},
+			{name = "WEAPON_MINISMG", ammo = 1},
+			{name = "WEAPON_RAYCARBINE", ammo = 1},
+
+
+			--Shotguns
+			{name = "WEAPON_PUMPSHOTGUN", ammo = 1},
+			{name = "WEAPON_PUMPSHOTGUN_MK2", ammo = 1},
+			{name = "WEAPON_SAWNOFFSHOTGUN", ammo = 1},
+			{name = "WEAPON_ASSAULTSHOTGUN", ammo = 1},
+			{name = "WEAPON_BULLPUPSHOTGUN", ammo = 1},
+			{name = "WEAPON_MUSKET", ammo = 1},
+			{name = "WEAPON_HEAVYSHOTGUN", ammo = 1},
+			{name = "WEAPON_DBSHOTGUN", ammo = 1},
+			{name = "WEAPON_AUTOSHOTGUN", ammo = 1},
+
+
+			-- Assault Rifles
+			{name = "WEAPON_ASSAULTRIFE", ammo = 1},
+			{name = "WEAPON_ASSAULTRIFLE_MK2", ammo = 1},
+			{name = "WEAPON_CARBINERIFLE", ammo = 1},
+			{name = "WEAPON_CARBINERIFLE_MK2", ammo = 1},
+			{name = "WEAPON_ADVANCEDRIFLE", ammo = 1},
+			{name = "WEAPON_SPECIALCARBINE", ammo = 1},
+			{name = "WEAPON_SPECIALCARBINE_MK2", ammo = 1},
+			{name = "WEAPON_BULLPUPRIFLE", ammo = 1},
+			{name = "WEAPON_BULLPUPRIFLE_MKS", ammo = 1},
+			{name = "WEAPON_COMPACTRIFLE", ammo = 1},
+
+
+			-- Light Machine Guns
+			{name = "WEAPON_MG", ammo = 1},
+			{name = "WEAPON_COMBATMG", ammo = 1},
+			{name = "WEAPON_COMBATMG_MK2", ammo = 1},
+			{name = "WEAPON_GUSENBERG", ammo = 1},
+
+
+			-- Sniper Rifles
+			{name = "WEAPON_SNIPERRIFLE", ammo = 1},
+			{name = "WEAPON_HEAVYSNIPER", ammo = 1},
+			{name = "WEAPON_HEAVYSNIPER_MK2", ammo = 1},
+			{name = "WEAPON_MARKSMANRIFLE", ammo = 1},
+			{name = "WEAPON_MARKSMANRIFLE_MK2", ammo = 1},
+
+
+			-- Heavy Weapons
+			{name = "WEAPON_RPG", ammo = 1},
+			{name = "WEAPON_GRENADELAUNCHER", ammo = 1},
+			{name = "WEAPON_GRENADELAUNCHER_SMOKE", ammo = 1},
+			{name = "WEAPON_MINIGUN", ammo = 1},
+			{name = "WEAPON_FIREWORK", ammo = 1},
+			{name = "WEAPON_RAILGUN", ammo = 1},
+			{name = "WEAPON_HOMINGLAUNCHER", ammo = 1},
+			{name = "WEAPON_COMPACTLAUNCHER", ammo = 1},
+			{name = "WEAPON_RAYMINIGUN", ammo = 1},
+
+
+			-- Throwables
+			{name = "WEAPON_GRENADE", ammo = 2},
+			{name = "WEAPON_BZGAS", ammo = 2},
+			{name = "WEAPON_MOLOTOV", ammo = 3},
+			{name = "WEAPON_STICKYBOMB", ammo = 1},
+			{name = "WEAPON_PROXMINE", ammo = 1},
+			{name = "WEAPON_PIPEBOMB", ammo = 1},
+			{name = "WEAPON_BALL", ammo = 1},
+			{name = "WEAPON_SMOKEGRENADE", ammo = 2},
+			{name = "WEAPON_FLARE", ammo = 3},
+
+
+			-- Miscellaneous
+			{name = "WEAPON_PETROLCAN", ammo = 1},
+			{name = "WEAPON_PARACHUTE", ammo = 1},
+			{name = "WEAPON_FIREEXTINGUISHER", ammo = 1},
+			{name = "WEAPON_HAZARDCAN", ammo = 1},]]
+
+        },
+        Ammo = {
+            {name = "9mm_rounds", weaponhash = "WEAPON_PISTOL", ammo = 24},
+            {name = "shotgun_shells", weaponhash = "WEAPON_PUMPSHOTGUN", ammo = 12}
+        },
+        Items = {
+			{name = 'clip'}
+		}
+	},
 }
 
 -- Limit, unit can be whatever you want. Originally grams (as average people can hold 25kg)

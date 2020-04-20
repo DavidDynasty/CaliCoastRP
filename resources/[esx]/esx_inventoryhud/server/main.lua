@@ -202,6 +202,109 @@ ESX.RegisterServerCallback("suku:getShopItems", function(source, cb, shoptype)
 				end
 			end
 		end
+		if shoptype == "meleeshop" then
+			local weapons = Config.Shops.MeleeShop.Weapons
+			for _, v in pairs(Config.Shops.MeleeShop.Weapons) do
+				if v.name == itemResult[i].name then
+					table.insert(itemShopList, {
+						type = "item_weapon",
+						name = itemInformation[itemResult[i].name].name,
+						label = itemInformation[itemResult[i].name].label,
+						limit = 1,
+						ammo = v.ammo,
+						rare = itemInformation[itemResult[i].name].rare,
+						can_remove = itemInformation[itemResult[i].name].can_remove,
+						price = itemInformation[itemResult[i].name].price,
+						count = 99999999
+					})
+				end
+			end
+
+			local ammo = Config.Shops.MeleeShop.Ammo
+			for _,v in pairs(Config.Shops.MeleeShop.Ammo) do
+				if v.name == itemResult[i].name then
+					table.insert(itemShopList, {
+						type = "item_ammo",
+						name = itemInformation[itemResult[i].name].name,
+						label = itemInformation[itemResult[i].name].label,
+						limit = 1,
+						weaponhash = v.weaponhash,
+						ammo = v.ammo,
+						rare = itemInformation[itemResult[i].name].rare,
+						can_remove = itemInformation[itemResult[i].name].can_remove,
+						price = itemInformation[itemResult[i].name].price,
+						count = 99999999
+					})
+				end
+			end
+
+			for _, v in pairs(Config.Shops.MeleeShop.Items) do
+				if v.name == itemResult[i].name then
+					table.insert(itemShopList, {
+						type = "item_standard",
+						name = itemInformation[itemResult[i].name].name,
+						label = itemInformation[itemResult[i].name].label,
+						limit = itemInformation[itemResult[i].name].limit,
+						rare = itemInformation[itemResult[i].name].rare,
+						can_remove = itemInformation[itemResult[i].name].can_remove,
+						price = itemInformation[itemResult[i].name].price,
+						count = 99999999
+					})
+				end
+			end
+		end
+
+		if shoptype == "weaponshop1" then
+			local weapons = Config.Shops.WeaponShop1.Weapons
+			for _, v in pairs(Config.Shops.WeaponShop1.Weapons) do
+				if v.name == itemResult[i].name then
+					table.insert(itemShopList, {
+						type = "item_weapon",
+						name = itemInformation[itemResult[i].name].name,
+						label = itemInformation[itemResult[i].name].label,
+						limit = 1,
+						ammo = v.ammo,
+						rare = itemInformation[itemResult[i].name].rare,
+						can_remove = itemInformation[itemResult[i].name].can_remove,
+						price = itemInformation[itemResult[i].name].price,
+						count = 99999999
+					})
+				end
+			end
+
+			local ammo = Config.Shops.WeaponShop1.Ammo
+			for _,v in pairs(Config.Shops.WeaponShop1.Ammo) do
+				if v.name == itemResult[i].name then
+					table.insert(itemShopList, {
+						type = "item_ammo",
+						name = itemInformation[itemResult[i].name].name,
+						label = itemInformation[itemResult[i].name].label,
+						limit = 1,
+						weaponhash = v.weaponhash,
+						ammo = v.ammo,
+						rare = itemInformation[itemResult[i].name].rare,
+						can_remove = itemInformation[itemResult[i].name].can_remove,
+						price = itemInformation[itemResult[i].name].price,
+						count = 99999999
+					})
+				end
+			end
+
+			for _, v in pairs(Config.Shops.WeaponShop1.Items) do
+				if v.name == itemResult[i].name then
+					table.insert(itemShopList, {
+						type = "item_standard",
+						name = itemInformation[itemResult[i].name].name,
+						label = itemInformation[itemResult[i].name].label,
+						limit = itemInformation[itemResult[i].name].limit,
+						rare = itemInformation[itemResult[i].name].rare,
+						can_remove = itemInformation[itemResult[i].name].can_remove,
+						price = itemInformation[itemResult[i].name].price,
+						count = 99999999
+					})
+				end
+			end
+		end
 	end
 	cb(itemShopList)
 end)

@@ -7,7 +7,7 @@ Citizen.CreateThread(function()
         Citizen.Wait(0)
         player = GetPlayerPed(-1)
         coords = GetEntityCoords(player)
-        if IsInRegularShopZone(coords) or IsInRobsLiquorZone(coords) or IsInYouToolZone(coords) or IsInPrisonShopZone(coords) or IsInWeaponShopZone(coords) then
+        if IsInRegularShopZone(coords) or IsInRobsLiquorZone(coords) or IsInYouToolZone(coords) or IsInPrisonShopZone(coords) or IsInWeaponShopZone(coords) or IsInMeleeShopZone(coords) or IsInWeaponShop1Zone(coords) then
             if IsInRegularShopZone(coords) then
                 if IsControlJustReleased(0, 38) then
                     OpenShopInv("regular")
@@ -40,6 +40,28 @@ Citizen.CreateThread(function()
                 if IsControlJustReleased(0, 38) then
                     if Licenses['weapon'] ~= nil then
                         OpenShopInv("weaponshop")
+                        TriggerScreenblurFadeIn(0)
+                        Citizen.Wait(2000)
+                    else
+                        exports['mythic_notify']:SendAlert('error', 'You need a Fire Arms license before you can buy weapons')
+                    end
+                end
+            end
+            if IsInMeleeShopZone(coords) then
+                if IsControlJustReleased(0, 38) then
+                    if Licenses['weapon'] ~= nil then
+                        OpenShopInv("meleeshop")
+                        TriggerScreenblurFadeIn(0)
+                        Citizen.Wait(2000)
+                    else
+                        exports['mythic_notify']:SendAlert('error', 'You need a Fire Arms license before you can buy weapons')
+                    end
+                end
+            end
+            if IsInWeaponShop1Zone(coords) then
+                if IsControlJustReleased(0, 38) then
+                    if Licenses['weapon'] ~= nil then
+                        OpenShopInv("weaponshop1")
                         TriggerScreenblurFadeIn(0)
                         Citizen.Wait(2000)
                     else
@@ -177,6 +199,26 @@ function IsInWeaponShopZone(coords)
     return false
 end
 
+function IsInMeleeShopZone(coords)
+    MeleeShop = Config.Shops.MeleeShop.Locations
+    for i = 1, #MeleeShop, 1 do
+        if GetDistanceBetweenCoords(coords, MeleeShop[i].x, MeleeShop[i].y, MeleeShop[i].z, true) < 1.5 then
+            return true
+        end
+    end
+    return false
+end
+
+function IsInWeaponShop1Zone(coords)
+    WeaponShop1 = Config.Shops.WeaponShop1.Locations
+    for i = 1, #WeaponShop1, 1 do
+        if GetDistanceBetweenCoords(coords, WeaponShop1[i].x, WeaponShop1[i].y, WeaponShop1[i].z, true) < 1.5 then
+            return true
+        end
+    end
+    return false
+end
+
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
@@ -245,6 +287,14 @@ Citizen.CreateThread(function()
         CreateBlip(vector3(Config.Shops.WeaponShop.Locations[k].x, Config.Shops.WeaponShop.Locations[k].y, Config.Shops.WeaponShop.Locations[k].z), "Ammunation", 3.0, Config.WeaponColor, Config.WeaponShopBlipID)
     end
 
+    for k, v in pairs(Config.Shops.MeleeShop.Locations) do
+        CreateBlip(vector3(Config.Shops.MeleeShop.Locations[k].x, Config.Shops.MeleeShop.Locations[k].y, Config.Shops.MeleeShop.Locations[k].z), "Ammunation", 3.0, Config.WeaponColor, Config.MeleeShopBlipID)
+    end
+
+    for k, v in pairs(Config.Shops.WeaponShop1.Locations) do
+        CreateBlip(vector3(Config.Shops.WeaponShop1.Locations[k].x, Config.Shops.WeaponShop1.Locations[k].y, Config.Shops.WeaponShop1.Locations[k].z), "Ammunation", 3.0, Config.WeaponColor, Config.WeaponShop1BlipID)
+    end
+
     CreateBlip(vector3(-755.79, 5596.07, 41.67), "Cablecart", 3.0, 4, 36)
 end)
 
@@ -281,6 +331,18 @@ Citizen.CreateThread(function()
         for k, v in pairs(Config.Shops.WeaponShop.Locations) do
             if GetDistanceBetweenCoords(coords, Config.Shops.WeaponShop.Locations[k].x, Config.Shops.WeaponShop.Locations[k].y, Config.Shops.WeaponShop.Locations[k].z, true) < 3.0 then
                 ESX.Game.Utils.DrawText3D(vector3(Config.Shops.WeaponShop.Locations[k].x, Config.Shops.WeaponShop.Locations[k].y, Config.Shops.WeaponShop.Locations[k].z + 1.0), "Press ~r~[E]~s~ to open shop", 0.6)
+            end
+        end
+
+        for k, v in pairs(Config.Shops.MeleeShop.Locations) do
+            if GetDistanceBetweenCoords(coords, Config.Shops.MeleeShop.Locations[k].x, Config.Shops.MeleeShop.Locations[k].y, Config.Shops.MeleeShop.Locations[k].z, true) < 3.0 then
+                ESX.Game.Utils.DrawText3D(vector3(Config.Shops.MeleeShop.Locations[k].x, Config.Shops.MeleeShop.Locations[k].y, Config.Shops.MeleeShop.Locations[k].z + 1.0), "Press ~r~[E]~s~ to open shop", 0.6)
+            end
+        end
+
+        for k, v in pairs(Config.Shops.WeaponShop1.Locations) do
+            if GetDistanceBetweenCoords(coords, Config.Shops.WeaponShop1.Locations[k].x, Config.Shops.WeaponShop1.Locations[k].y, Config.Shops.WeaponShop1.Locations[k].z, true) < 3.0 then
+                ESX.Game.Utils.DrawText3D(vector3(Config.Shops.WeaponShop1.Locations[k].x, Config.Shops.WeaponShop1.Locations[k].y, Config.Shops.WeaponShop1.Locations[k].z + 1.0), "Press ~r~[E]~s~ to open shop", 0.6)
             end
         end
     end

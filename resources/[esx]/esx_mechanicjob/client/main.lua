@@ -816,7 +816,7 @@ Citizen.CreateThread(function()
 
 	SetBlipSprite (blip, 446)
 	SetBlipDisplay(blip, 4)
-	SetBlipScale  (blip, 0.8)
+	SetBlipScale  (blip, 1.8)
 	SetBlipColour (blip, 5)
 	SetBlipAsShortRange(blip, true)
 
@@ -1000,6 +1000,6 @@ AddEventHandler('esx:onPlayerDeath', function(data)
 	isDead = true
 end)
 
-AddEventHandler('playerSpawned', function(spawn)
+AddEventHandler('esx:onPlayerSpawn', function(spawn)
 	isDead = false
 end)

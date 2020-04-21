@@ -26,8 +26,8 @@ end)
 
 function OpenBankActionsMenu()
 	local elements = {
-		{ label = _U('customers'), value = 'customers' },
-		{ label = _U('billing'),   value = 'billing' }
+		{label = _U('customers'), value = 'customers'},
+		{label = _U('billing'),   value = 'billing'}
 	}
 
 	if ESX.PlayerData.job.grade_name == 'boss' then
@@ -162,7 +162,7 @@ end)
 Citizen.CreateThread(function()
 	local blip = AddBlipForCoord(Config.Zones.BankActions.Coords)
 
-	SetBlipSprite(blip, 457)
+	SetBlipSprite(blip, 108)
 	SetBlipColour(blip, 30)
 	SetBlipAsShortRange(blip, true)
 

@@ -1,11 +1,6 @@
 Citizen.CreateThread(function()
-	-- internal variables
-	ESX               = nil
-	local Timeouts    = {}
-	local GUI         = {}
-	GUI.Time          = 0
-	local MenuType    = 'dialog'
-	local OpenedMenus = {}
+	ESX = nil
+	local Timeouts, OpenedMenus, MenuType = {}, {}, 'dialog'
 
 	while ESX == nil do
 		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
@@ -20,10 +15,10 @@ Citizen.CreateThread(function()
 		OpenedMenus[namespace .. '_' .. name] = true
 
 		SendNUIMessage({
-			action    = 'openMenu',
+			action = 'openMenu',
 			namespace = namespace,
-			name      = name,
-			data      = data,
+			name = name,
+			data = data
 		})
 
 		local timeoutId = ESX.SetTimeout(200, function()
@@ -35,22 +30,15 @@ Citizen.CreateThread(function()
 
 	local closeMenu = function(namespace, name)
 		OpenedMenus[namespace .. '_' .. name] = nil
-		local OpenedMenuCount                 = 0
 
 		SendNUIMessage({
-			action    = 'closeMenu',
+			action = 'closeMenu',
 			namespace = namespace,
-			name      = name,
-			data      = data,
+			name = name,
+			data = data
 		})
 
-		for k,v in pairs(OpenedMenus) do
-			if v == true then
-				OpenedMenuCount = OpenedMenuCount + 1
-			end
-		end
-
-		if OpenedMenuCount == 0 then
+		if ESX.Table.SizeOf(OpenedMenus) == 0 then
 			SetNuiFocus(false)
 		end
 
@@ -58,67 +46,53 @@ Citizen.CreateThread(function()
 
 	ESX.UI.Menu.RegisterType(MenuType, openMenu, closeMenu)
 
-	RegisterNUICallback('menu_submit', function(data, cb)
+	AddEventHandler('esx_menu_dialog:message:menu_submit', function(data)
 		local menu = ESX.UI.Menu.GetOpened(MenuType, data._namespace, data._name)
-		local post = true
+		local cancel = false
 
-		if menu.submit ~= nil then
+		if menu.submit then
+			-- is the submitted data a number?
+			if tonumber(data.value) then
+				data.value = ESX.Math.Round(tonumber(data.value))
 
-			-- Is the submitted data a number?
-			if tonumber(data.value) ~= nil then
-
-				-- Round float values
-				data.value = round(tonumber(data.value))
-
-				-- Check for negative value
+				-- check for negative value
 				if tonumber(data.value) <= 0 then
-					post = false
+					cancel = true
 				end
 			end
 
-			-- Don't post if the value is negative or if it's 0
-			if post then
-				menu.submit(data, menu)
+			data.value = ESX.Math.Trim(data.value)
+
+			-- don't submit if the value is negative or if it's 0
+			if cancel then
+				ESX.ShowNotification('That input is not allowed!')
 			else
-				ESX.ShowNotification('That input is invalid!')
+				menu.submit(data, menu)
 			end
 		end
-
-		cb('OK')
 	end)
 
-	RegisterNUICallback('menu_cancel', function(data, cb)
+	AddEventHandler('esx_menu_dialog:message:menu_cancel', function(data)
 		local menu = ESX.UI.Menu.GetOpened(MenuType, data._namespace, data._name)
 
 		if menu.cancel ~= nil then
 			menu.cancel(data, menu)
 		end
-
-		cb('OK')
 	end)
 
-	RegisterNUICallback('menu_change', function(data, cb)
+	AddEventHandler('esx_menu_dialog:message:menu_change', function(data)
 		local menu = ESX.UI.Menu.GetOpened(MenuType, data._namespace, data._name)
 
 		if menu.change ~= nil then
 			menu.change(data, menu)
 		end
-
-		cb('OK')
 	end)
 
 	Citizen.CreateThread(function()
 		while true do
 			Citizen.Wait(10)
-			local OpenedMenuCount = 0
 
-			for k,v in pairs(OpenedMenus) do
-				if v == true then
-					OpenedMenuCount = OpenedMenuCount + 1
-				end
-			end
-
-			if OpenedMenuCount > 0 then
+			if ESX.Table.SizeOf(OpenedMenus) > 0 then
 				DisableControlAction(0, 1,   true) -- LookLeftRight
 				DisableControlAction(0, 2,   true) -- LookUpDown
 				DisableControlAction(0, 142, true) -- MeleeAttackAlternate
@@ -128,11 +102,9 @@ Citizen.CreateThread(function()
 				DisableControlAction(0, 15, true) -- WeaponWheelPrev
 				DisableControlAction(0, 16, true) -- SelectNextWeapon
 				DisableControlAction(0, 17, true) -- SelectPrevWeapon
+			else
+				Citizen.Wait(500)
 			end
 		end
 	end)
-
-	function round(x)
-		return x>=0 and math.floor(x+0.5) or math.ceil(x-0.5)
-	end
 end)

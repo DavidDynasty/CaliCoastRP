@@ -1,60 +1,55 @@
 Config                            = {}
 
-Config.DrawDistance               = 100.0
+Config.DrawDistance               = 100
 
 Config.NPCJobEarnings             = {min = 300, max = 600}
 Config.MinimumDistance            = 3000 -- Minimum NPC job destination distance from the pickup in GTA units, a higher number prevents nearby destionations.
 
 Config.MaxInService               = -1
-Config.EnablePlayerManagement     = false
-Config.EnableSocietyOwnedVehicles = true
+Config.EnablePlayerManagement     = true
+Config.EnableSocietyOwnedVehicles = false
 
-Config.Locale                     = 'en'
+Config.Locale                     = 'fr'
 
 Config.AuthorizedVehicles = {
-
-	{
-		model = 'taxi',
-		label = 'Taxi'
-	}
-
+	{model = 'taxi', label = 'Taxi'}
 }
 
 Config.Zones = {
 
 	VehicleSpawner = {
-		Pos   = {x = 906.90, y = -153.90, z = 83.30},
-		Size  = {x = 0.5, y = 0.5, z = 0.6},
+		Pos   = {x = 915.039, y = -162.187, z = 74.5},
+		Size  = {x = 1.0, y = 1.0, z = 1.0},
 		Color = {r = 204, g = 204, b = 0},
 		Type  = 36, Rotate = true
 	},
 
 	VehicleSpawnPoint = {
-		Pos     = {x = 902.85, y = -142.28, z = 76.21},
+		Pos     = {x = 911.108, y = -177.867, z = 74.283},
 		Size    = {x = 1.5, y = 1.5, z = 1.0},
 		Type    = -1, Rotate = false,
-		Heading = 329.5
+		Heading = 225.0
 	},
 
 	VehicleDeleter = {
-		Pos   = {x = 901.0, y = -145.46, z = 75.50},
+		Pos   = {x = 908.317, y = -183.070, z = 73.201},
 		Size  = {x = 3.0, y = 3.0, z = 0.25},
 		Color = {r = 255, g = 0, b = 0},
-		Type  = 27, Rotate = false
+		Type  = 1, Rotate = false
 	},
 
 	TaxiActions = {
-		Pos   = {x = 890.06, y = -178.31, z = 80.50},
+		Pos   = {x = 903.32, y = -170.55, z = 74.0},
 		Size  = {x = 1.0, y = 1.0, z = 1.0},
 		Color = {r = 204, g = 204, b = 0},
-		Type  = 27, Rotate = true
+		Type  = 20, Rotate = true
 	},
 
 	Cloakroom = {
-		Pos     = {x = 896.52, y = -163.31, z = 80.59},
-		Size    = {x = 1.80, y = 1.80, z = 1.0},
+		Pos     = {x = 894.88, y = -180.23, z = 74.5},
+		Size    = {x = 1.0, y = 1.0, z = 1.0},
 		Color   = {r = 204, g = 204, b = 0},
-		Type    = 27, Rotate = true
+		Type    = 21, Rotate = true
 	}
 }
 

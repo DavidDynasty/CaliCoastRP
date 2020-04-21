@@ -32,16 +32,7 @@ end)
 RegisterNetEvent('esx_outlawalert:outlawNotify')
 AddEventHandler('esx_outlawalert:outlawNotify', function(alert)
 	if isPlayerWhitelisted then
-		if Config.UseMythic then
-			exports['mythic_notify']:SendAlert('error', alert, 10000)
-		end
-
-		if Config.UseChat then
-			TriggerEvent('chat:addMessage', {
-				template = '<div style="padding: 0.5vw; margin: 0.5vw; background-color: rgba(255, 0, 0, 0.616); border-radius: 10px;">{0}</div>',
-				args = { alert }
-			})
-		end
+		ESX.ShowNotification(alert)
 	end
 end)
 

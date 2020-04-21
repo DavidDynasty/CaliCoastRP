@@ -1,9 +1,9 @@
 Config = {}
 
-Config.Locale = 'en'
+Config.Locale = 'fr'
 
 -- Set the time (in minutes) during the player is outlaw
-Config.Timer = 2
+Config.Timer = 1
 
 -- Set if show alert when player use gun
 Config.GunshotAlert = true
@@ -12,25 +12,25 @@ Config.GunshotAlert = true
 Config.CarJackingAlert = true
 
 -- Set if show when player fight in melee
-Config.MeleeAlert = false
+Config.MeleeAlert = true
 
 -- In seconds
-Config.BlipGunTime = 20
+Config.BlipGunTime = 5
 
 -- Blip radius, in float value!
-Config.BlipGunRadius = 200.0
+Config.BlipGunRadius = 50.0
 
 -- In seconds
-Config.BlipMeleeTime = 30
+Config.BlipMeleeTime = 7
 
 -- Blip radius, in float value!
 Config.BlipMeleeRadius = 50.0
 
 -- In seconds
-Config.BlipJackingTime = 30
+Config.BlipJackingTime = 10
 
 -- Blip radius, in float value!
-Config.BlipJackingRadius = 200.0
+Config.BlipJackingRadius = 50.0
 
 -- Show notification when cops steal too?
 Config.ShowCopsMisbehave = true
@@ -39,6 +39,3 @@ Config.ShowCopsMisbehave = true
 Config.WhitelistedCops = {
 	'police'
 }
-
-Config.UseMythic = true
-Config.UseChat = false

@@ -1,5 +1,5 @@
 Locales['en'] = {
-  ['not_in_whitelist'] = 'This server is using a whitelist. To talk about it, join us here : %s',
+  ['not_in_whitelist'] = 'Whitelist Server. To join contact us at : %s',
   ['missing_steam_id'] = 'Unable to find your steamID',
   ['banned_from_server'] = 'You are banned from this server',
   ['waiting_queue_message'] = 'You are in the waiting queue (%i/%i)',

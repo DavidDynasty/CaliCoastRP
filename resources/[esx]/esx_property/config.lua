@@ -11,5 +11,5 @@ Config.SellModifier = 2   -- sell price: <property price> / <sell modifier> (rou
 
 Config.Properties = {}
 
-Config.EnablePlayerManagement = false -- If set to true you use esx_realestateagentjob
-Config.Locale = 'fr'
+Config.EnablePlayerManagement = true -- If set to true you use esx_realestateagentjob
+Config.Locale = 'en'

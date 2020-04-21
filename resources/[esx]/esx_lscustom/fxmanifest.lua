@@ -1,4 +1,6 @@
-resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
+fx_version 'adamant'
+
+game 'gta5'
 
 description 'ESX LS Customs'
 
@@ -11,6 +13,7 @@ server_scripts {
 	'locales/fr.lua',
 	'locales/pl.lua',
 	'locales/br.lua',
+	'locales/de.lua',
 	'config.lua',
 	'server/main.lua'
 }
@@ -21,6 +24,7 @@ client_scripts {
 	'locales/fr.lua',
 	'locales/pl.lua',
 	'locales/br.lua',
+	'locales/de.lua',
 	'config.lua',
 	'client/main.lua'
 }

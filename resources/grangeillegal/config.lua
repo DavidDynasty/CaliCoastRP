@@ -1,6 +1,6 @@
 Config = {}
 
-Config.ArgentSale = false  --true if use of black money, false for regular money
+Config.ArgentSale = true  --true if use of black money, false for regular money
 
 Config.Weapons = {
     {weapon = "weapon_assaultrifle", price = 250000},

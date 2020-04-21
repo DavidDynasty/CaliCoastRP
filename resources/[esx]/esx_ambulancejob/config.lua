@@ -8,7 +8,7 @@ Config.ReviveReward               = 700  -- revive reward, set to 0 if you don't
 Config.AntiCombatLog              = true -- enable anti-combat logging?
 Config.LoadIpl                    = true -- disable if you're using fivem-ipl or other IPL loaders
 
-Config.Locale                     = 'fr'
+Config.Locale                     = 'en'
 
 Config.EarlyRespawnTimer          = 60000 * 1  -- time til respawn is available
 Config.BleedoutTimer              = 60000 * 10 -- time til the player bleeds out
@@ -20,7 +20,7 @@ Config.RemoveCashAfterRPDeath     = true
 Config.RemoveItemsAfterRPDeath    = true
 
 -- Let the player pay for respawning early, only if he can afford it.
-Config.EarlyRespawnFine           = false
+Config.EarlyRespawnFine           = true
 Config.EarlyRespawnFineAmount     = 5000
 
 Config.RespawnPoint = {coords = vector3(341.0, -1397.3, 32.5), heading = 48.5}

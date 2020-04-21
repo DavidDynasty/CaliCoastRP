@@ -4,7 +4,7 @@
 
 local Shop = {x = 2555.45,  y = 4663.12,  z = 33.07}
 local NPC = {
-    {seller = true, model = "ig_g", x = 2555.45,  y = 4663.12,  z = 33.07, h = 200.0},
+    {seller = false, model = "ig_g", x = 2555.45,  y = 4663.12,  z = 33.07, h = 200.0},
     {seller = false, model = "csb_mweather", x = 2553.45,  y = 4665.32,  z = 33.08, h = 205.0},
     {seller = false, model = "csb_mweather", x = 2557.54,  y = 4665.99,  z = 32.97, h = 140.0},
 }

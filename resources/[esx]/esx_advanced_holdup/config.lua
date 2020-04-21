@@ -1,5 +1,5 @@
 Config              = {}
-Config.Locale       = 'fr'
+Config.Locale       = 'en'
 Config.DrawDistance = 25.0
 
 Config.PercentCurrentMoney = 40 -- % of store current money to transfert to bank

@@ -1,4 +1,6 @@
-resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
+fx_version 'adamant'
+
+game 'gta5'
 
 description 'ESX Barber Shop'
 
@@ -12,6 +14,7 @@ server_scripts {
 	'locales/fi.lua',
 	'locales/fr.lua',
 	'locales/es.lua',
+	'locales/cs.lua',
 	'config.lua',
 	'server/main.lua'
 }
@@ -24,6 +27,7 @@ client_scripts {
 	'locales/fi.lua',
 	'locales/fr.lua',
 	'locales/es.lua',
+	'locales/cs.lua',
 	'config.lua',
 	'client/main.lua'
 }

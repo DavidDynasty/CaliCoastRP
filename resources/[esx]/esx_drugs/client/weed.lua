@@ -2,17 +2,13 @@ local spawnedWeeds = 0
 local weedPlants = {}
 local isPickingUp, isProcessing = false, false
 
-
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(10)
+		Citizen.Wait(500)
 		local coords = GetEntityCoords(PlayerPedId())
 
 		if GetDistanceBetweenCoords(coords, Config.CircleZones.WeedField.coords, true) < 50 then
 			SpawnWeedPlants()
-			Citizen.Wait(500)
-		else
-			Citizen.Wait(500)
 		end
 	end
 end)
@@ -28,8 +24,7 @@ Citizen.CreateThread(function()
 				ESX.ShowHelpNotification(_U('weed_processprompt'))
 			end
 
-			if IsControlJustReleased(0, Keys['E']) and not isProcessing then
-
+			if IsControlJustReleased(0, 38) and not isProcessing then
 				if Config.LicenseEnable then
 					ESX.TriggerServerCallback('esx_license:checkLicense', function(hasProcessingLicense)
 						if hasProcessingLicense then
@@ -41,7 +36,6 @@ Citizen.CreateThread(function()
 				else
 					ProcessWeed()
 				end
-
 			end
 		else
 			Citizen.Wait(500)
@@ -52,31 +46,20 @@ end)
 function ProcessWeed()
 	isProcessing = true
 
-	local timeLeft = Config.Delays.WeedProcessing
-	TriggerEvent("mythic_progbar:client:progress", {
-		name = "weedpack",
-		duration = Config.Delays.WeedProcessing,
-		label = "Bagging the Weed",
-		useWhileDead = false,
-		canCancel = true,
-		controlDisables = {
-			disableMovement = true,
-			disableCarMovement = true,
-			disableMouse = false,
-			disableCombat = true,
-		},
-	}, function(status)
-		if not status then
-			-- Do Something If Event Wasn't Cancelled
-		end
-	end)
+	ESX.ShowNotification(_U('weed_processingstarted'))
 	TriggerServerEvent('esx_drugs:processCannabis')
+	local timeLeft = Config.Delays.WeedProcessing / 1000
+	local playerPed = PlayerPedId()
 
-	Citizen.Wait(timeLeft)
+	while timeLeft > 0 do
+		Citizen.Wait(1000)
+		timeLeft = timeLeft - 1
 
-	if GetDistanceBetweenCoords(GetEntityCoords(playerPed), Config.CircleZones.WeedProcessing.coords, false) > 4 then
-		ESX.ShowNotification(_U('weed_processingtoofar'))
-		TriggerServerEvent('esx_drugs:cancelProcessing')
+		if GetDistanceBetweenCoords(GetEntityCoords(playerPed), Config.CircleZones.WeedProcessing.coords, false) > 4 then
+			ESX.ShowNotification(_U('weed_processingtoofar'))
+			TriggerServerEvent('esx_drugs:cancelProcessing')
+			break
+		end
 	end
 
 	isProcessing = false
@@ -85,6 +68,7 @@ end
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
+
 		local playerPed = PlayerPedId()
 		local coords = GetEntityCoords(playerPed)
 		local nearbyObject, nearbyID
@@ -96,60 +80,38 @@ Citizen.CreateThread(function()
 		end
 
 		if nearbyObject and IsPedOnFoot(playerPed) then
-
 			if not isPickingUp then
 				ESX.ShowHelpNotification(_U('weed_pickupprompt'))
 			end
 
-			if IsControlJustReleased(0, Keys['E']) and not isPickingUp then
+			if IsControlJustReleased(0, 38) and not isPickingUp then
 				isPickingUp = true
 
 				ESX.TriggerServerCallback('esx_drugs:canPickUp', function(canPickUp)
-
 					if canPickUp then
 						TaskStartScenarioInPlace(playerPed, 'world_human_gardener_plant', 0, false)
-						DisableControlAction(0, Keys['LEFTCTRL'], true)
-						DisableControlAction(0, Keys['T'], true)
-						TriggerEvent("mythic_progbar:client:progress", {
-								name = "weedpick",
-								duration = 2000,
-								label = "Picking Weed",
-								useWhileDead = false,
-								canCancel = false,
-								controlDisables = {
-									disableMovement = true,
-									disableCarMovement = true,
-									disableMouse = false,
-									disableCombat = true,
-								},
-						}, function(status)
-							if not status then
-								-- Do Something If Event Wasn't Cancelled
-							end
-						end)
-						ESX.Game.DeleteObject(nearbyObject)
+
+						Citizen.Wait(2000)
 						ClearPedTasks(playerPed)
+						Citizen.Wait(1500)
+		
+						ESX.Game.DeleteObject(nearbyObject)
+		
 						table.remove(weedPlants, nearbyID)
 						spawnedWeeds = spawnedWeeds - 1
-
+		
 						TriggerServerEvent('esx_drugs:pickedUpCannabis')
-						DisableControlAction(0, Keys['LEFTCTRL'], false)
-						DisableControlAction(0, Keys['T'], false)
 					else
 						ESX.ShowNotification(_U('weed_inventoryfull'))
 					end
 
 					isPickingUp = false
-
-				end, 'weed')
+				end, 'cannabis')
 			end
-
 		else
 			Citizen.Wait(500)
 		end
-
 	end
-
 end)
 
 AddEventHandler('onResourceStop', function(resource)
@@ -202,12 +164,12 @@ function GenerateWeedCoords()
 		local weedCoordX, weedCoordY
 
 		math.randomseed(GetGameTimer())
-		local modX = math.random(-45, 45)
+		local modX = math.random(-90, 90)
 
 		Citizen.Wait(100)
 
 		math.randomseed(GetGameTimer())
-		local modY = math.random(-45, 45)
+		local modY = math.random(-90, 90)
 
 		weedCoordX = Config.CircleZones.WeedField.coords.x + modX
 		weedCoordY = Config.CircleZones.WeedField.coords.y + modY

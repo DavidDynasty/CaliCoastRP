@@ -1622,7 +1622,7 @@ canvas {
     width: 300%;
     height: 300%;
     overflow: hidden;
-    background-image: url(../img/film-grain.png);
+    background-image: none;
     animation-name: film-grain;
     animation-duration: 5s;
     -webkit-animation-timing-function: steps(10, end);

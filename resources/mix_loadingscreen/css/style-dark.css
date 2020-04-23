@@ -417,6 +417,14 @@ h6 {
     text-align: center;
     margin: 41px auto 43px auto;
     padding: 0
+    -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       1px 1px 10px #000,
+     -5px -5px 10px #000,  
+      5px -5px 10px #000,
+      -5px 5px 10px #000,
+       5px 5px 10px #000;
 }
 
 .fin-subheading {

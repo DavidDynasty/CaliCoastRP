@@ -16,9 +16,10 @@ end)
 
 RegisterNetEvent('esx_basicneeds:healPlayer')
 AddEventHandler('esx_basicneeds:healPlayer', function()
-	-- restore hunger & thirst
+	-- restore hunger & thirst & stress 
 	TriggerEvent('esx_status:set', 'hunger', 1000000)
 	TriggerEvent('esx_status:set', 'thirst', 1000000)
+	TriggerEvent('esx_status:set', 'stress', 0)
 
 	-- restore hp
 	local playerPed = PlayerPedId()
@@ -29,7 +30,7 @@ AddEventHandler('esx:onPlayerDeath', function()
 	IsDead = true
 end)
 
-AddEventHandler('esx:onPlayerSpawn', function(spawn)
+AddEventHandler('playerSpawned', function(spawn)
 	if IsDead then
 		TriggerEvent('esx_basicneeds:resetStatus')
 	end
@@ -131,6 +132,13 @@ AddEventHandler('esx_basicneeds:onDrink', function(prop_name)
 
 			ESX.Streaming.RequestAnimDict('mp_player_intdrink', function()
 				TaskPlayAnim(playerPed, 'mp_player_intdrink', 'loop_bottle', 1.0, -1.0, 2000, 0, 1, true, true, true)
+				EnableControlAction(0, 32, true) -- w
+				EnableControlAction(0, 34, true) -- a
+				EnableControlAction(0, 8, true) -- s
+				EnableControlAction(0, 9, true) -- d
+				EnableControlAction(0, 22, true) -- space
+				EnableControlAction(0, 36, true) -- ctrl
+				EnableControlAction(0, 21, true) -- SHIFT
 
 				Citizen.Wait(3000)
 				IsAnimated = false

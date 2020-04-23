@@ -1,0 +1,77 @@
+#statusHud {
+	width: 14%;
+	position: absolute;
+	bottom: 0.25%;
+	left: 1.5%;
+	/* border: 1px solid red; */
+}
+
+#varHealth {
+	width: calc(25% - 2px - 4px);
+	margin-left: 0px !important;
+} 
+#varArmor {
+	width: calc(25% - 4px - 4px);
+
+}
+#varHealth > .barIcon,
+#varArmor > .barIcon {
+	width: 10%;
+}
+#varStress {
+	margin-right: 0px !important;
+}
+
+#varHealth > #boxSetHealth {
+	background: linear-gradient(90deg, rgba(96,236,77,0.5) 50%, rgba(96,236,77,1) 100%);
+}
+#varArmor > #boxSetArmour {
+	background: linear-gradient(90deg, rgba(65,138,255,0.5) 50%, rgba(65,138,255,1) 100%);
+}
+
+#varHunger > #boxSetHunger {
+	background: linear-gradient(0deg, rgba(168, 119, 34) 50%, rgb(224, 159, 46) 100%);
+}
+
+#varThirst > #boxSetThirst {
+	background: linear-gradient(0deg, rgba(62, 110, 158) 50%, rgba(89, 159, 230) 100%);
+}
+
+#varOxygen > #boxSetOxygen {
+	background: linear-gradient(0deg, rgba(142,69,74) 50%, rgb(223, 109, 116) 100%);
+}
+
+#varStress > #boxSetStress {
+	background: linear-gradient(0deg, rgba(106, 70, 145) 50%, rgb(154, 103, 209) 100%);
+}
+/*Background of Bar */
+.bar {
+	background-color: rgba(255, 255, 255, 0.089);
+	width: calc(12.5% - 4px - 4px);
+	min-height: 25.5px;
+	float: left;
+
+	/* padding: 2px; */
+	border: 2px solid rgba(255, 255, 255, 0.219);
+	margin-right: 2px;
+	margin-left: 2px;
+}
+
+#boxSetHealth, #boxSetArmour, #boxSetHunger, #boxSetThirst, #boxSetOxygen, #boxSetStress {
+	width: 100%;
+	height: 26.5px;
+	background: linear-gradient(0deg, rgba(101,101,101,0.5) 0%, rgba(150,150,150,1) 100%);
+	position: relative;
+	bottom: 0;
+	z-index: 98;
+}
+
+.barIcon {
+	width: calc(12.5% - 4px - 4px);
+	height: 21.0px; /*21.0 is max image size without box resizing*/
+	padding-top: 5px; /*default = 5 */
+	position: absolute;
+	z-index: 99;
+	/* padding: 5px; */
+}
+

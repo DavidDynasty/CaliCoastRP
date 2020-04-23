@@ -20,8 +20,8 @@ allIpls = {
 
 	{
 		interiorsProps = {
-			--"weed_drying",
-			--"weed_production",
+			"weed_drying",
+			"weed_production",
 			--"weed_set_up",
 			--"weed_standard_equip",
 			--"weed_upgrade_equip",
@@ -70,19 +70,19 @@ allIpls = {
 			--"light_growthg_stage23_standard",
 			--"light_growthh_stage23_standard",
 			--"light_growthi_stage23_standard",
-			--"light_growtha_stage23_upgrade",
-			--"light_growthb_stage23_upgrade",
-			--"light_growthc_stage23_upgrade",
-			--"light_growthc_stage23_upgrade",
-			--"light_growthd_stage23_upgrade",
-			--"light_growthe_stage23_upgrade",
-			--"light_growthf_stage23_upgrade",
-			--"light_growthg_stage23_upgrade",
-			--"light_growthh_stage23_upgrade",
-			--"light_growthi_stage23_upgrade",
-			--"weed_low_security",
+			"light_growtha_stage23_upgrade",
+			"light_growthb_stage23_upgrade",
+			"light_growthc_stage23_upgrade",
+			"light_growthc_stage23_upgrade",
+			"light_growthd_stage23_upgrade",
+			"light_growthe_stage23_upgrade",
+			"light_growthf_stage23_upgrade",
+			"light_growthg_stage23_upgrade",
+			"light_growthh_stage23_upgrade",
+			"light_growthi_stage23_upgrade",
+			"weed_low_security",
 			--"weed_security_upgrade",
-			--"weed_chairs"
+			"weed_chairs"
 		},
 		coords={{1051.491, -3196.536, -39.14842}}
 	},

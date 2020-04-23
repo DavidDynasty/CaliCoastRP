@@ -417,6 +417,19 @@ h6 {
     text-align: center;
     margin: 41px auto 43px auto;
     padding: 0
+    -webkit-text-stroke: 1px black;
+   color: white;
+   /* text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00; */
+   text-shadow:
+       1px 1px 10px #000,
+     -5px -5px 10px #000,  
+      5px -5px 10px #000,
+      -5px 5px 10px #000,
+       5px 5px 10px #000;
+}
+
+.fin-heading sup{
+    font-size: 60px;
 }
 
 .fin-subheading {
@@ -1622,7 +1635,7 @@ canvas {
     width: 300%;
     height: 300%;
     overflow: hidden;
-    background-image: url(../img/film-grain.png);
+    background-image: none;
     animation-name: film-grain;
     animation-duration: 5s;
     -webkit-animation-timing-function: steps(10, end);

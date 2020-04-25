@@ -5,10 +5,10 @@ Config.SpeedMultiplier = 3.6
 Config.Locale          = 'en'
 
 Config.Prices = {
-	dmv         = 500,
-	drive       = 2500,
-	drive_bike  = 3000,
-	drive_truck = 5000
+	dmv         = 250,
+	drive       = 500,
+	drive_bike  = 1000,
+	drive_truck = 2500
 }
 
 Config.VehicleModels = {
@@ -26,17 +26,17 @@ Config.SpeedLimits = {
 Config.Zones = {
 
 	DMVSchool = {
-		Pos   = {x = 239.471, y = -1380.960, z = 32.741},
+		Pos   = {x = 239.471, y = -1380.960, z = 32.750},
 		Size  = {x = 1.5, y = 1.5, z = 1.0},
 		Color = {r = 204, g = 204, b = 0},
-		Type  = 1
+		Type  = 27
 	},
 
 	VehicleSpawnPoint = {
 		Pos   = {x = 249.409, y = -1407.230, z = 30.4094, h = 317.0},
 		Size  = {x = 1.5, y = 1.5, z = 1.0},
 		Color = {r = 204, g = 204, b = 0},
-		Type  = -1
+		Type  = 27
 	}
 
 }

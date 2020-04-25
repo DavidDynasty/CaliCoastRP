@@ -8,24 +8,14 @@ version '1.0.4'
 
 server_scripts {
 	'@es_extended/locale.lua',
-	'locales/br.lua',
-	'locales/fi.lua',
-	'locales/fr.lua',
 	'locales/en.lua',
-	'locales/pl.lua',
-	'locales/sv.lua',
 	'config.lua',
 	'server/main.lua'
 }
 
 client_scripts {
 	'@es_extended/locale.lua',
-	'locales/br.lua',
-	'locales/fi.lua',
-	'locales/fr.lua',
 	'locales/en.lua',
-	'locales/pl.lua',
-	'locales/sv.lua',
 	'config.lua',
 	'client/main.lua'
 }

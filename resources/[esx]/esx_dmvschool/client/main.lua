@@ -197,9 +197,9 @@ end)
 Citizen.CreateThread(function()
 	local blip = AddBlipForCoord(Config.Zones.DMVSchool.Pos.x, Config.Zones.DMVSchool.Pos.y, Config.Zones.DMVSchool.Pos.z)
 
-	SetBlipSprite (blip, 408)
+	SetBlipSprite (blip, 498)
 	SetBlipDisplay(blip, 4)
-	SetBlipScale  (blip, 1.2)
+	SetBlipScale  (blip, 0.9)
 	SetBlipAsShortRange(blip, true)
 
 	BeginTextCommandSetBlipName("STRING")

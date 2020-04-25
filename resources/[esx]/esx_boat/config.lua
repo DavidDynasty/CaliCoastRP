@@ -3,71 +3,78 @@ Config               = {}
 Config.Locale        = 'en'
 
 Config.LicenseEnable = true -- enable boat license? Requires esx_license
-Config.LicensePrice  = 50000
+Config.LicensePrice  = 2000
 
-Config.MarkerType    = 1
-Config.DrawDistance  = 100.0
+Config.MarkerType    = 35
+Config.DrawDistance  = 200.0
 
 Config.Marker = {
-	r = 100, g = 204, b = 100, -- blue-ish color
-	x = 1.5, y = 1.5, z = 1.0  -- standard size circle
+	r = 255, g = 255, b = 255, -- color
+	x = 0.5, y = 0.5, z = 0.5  -- standard size circle
 }
 
 Config.StoreMarker = {
-	r = 255, g = 0, b = 0,     -- red color
-	x = 5.0, y = 5.0, z = 1.0  -- big circle for storing boat
+	r = 225, g = 225, b = 225,     -- color
+	x = 1.0, y = 1.0, z = 1.0  -- big circle for storing boat
 }
 
 Config.Zones = {
 
 	Garages = {
-		{ -- Shank St, nearby campaign boat garage
-			GaragePos  = vector3(-772.4, -1430.9, 0.5),
-			SpawnPoint = vector4(-785.39, -1426.3, 0.0, 146.0),
-			StorePos   = vector3(-798.4, -1456.0, 0.0),
-			StoreTP    = vector4(-791.4, -1452.5, 1.5, 318.9)
+		{ -- Shank St  boat garage  Done
+			GaragePos  = vector3(-727.39, -1332.19, 1.6),
+			SpawnPoint = vector4(-729.38, -1334.13, 0.31, 230.09),
+			StorePos   = vector3(-729.38, -1334.13, 0.31),
+			StoreTP    = vector4(-727.39, -1332.19, 1.6, 46.78)
 		},
 
-		{ -- Catfish View
-			GaragePos  = vector3(3864.9, 4463.9, 1.6),
-			SpawnPoint = vector4(3854.4, 4477.2, 0.0, 273.0),
-			StorePos   = vector3(3857.0, 4446.9, 0.0),
-			StoreTP    = vector4(3854.7, 4458.6, 1.8, 355.3)
+		{ -- Navy Creek boat garage  DONE
+			GaragePos  = vector3(-2078.8, 2603.63, 2.0),
+			SpawnPoint = vector4(-2084.99, 2601.4, 0.0, 200.58),
+			StorePos   = vector3(-2084.99, 2601.4, 0.0),
+			StoreTP    = vector4(-2078.8, 2603.65, 2.0, 60.12)
 		},
 
-		{ -- Great Ocean Highway
-			GaragePos  = vector3(-1614.0, 5260.1, 2.8),
-			SpawnPoint = vector4(-1622.5, 5247.1, 0.0, 21.0),
-			StorePos   = vector3(-1600.3, 5261.9, 0.0),
-			StoreTP    = vector4(-1605.7, 5259.0, 2.0, 25.0)
+		{ -- Catfish View  DONE
+			GaragePos  = vector3(3857.91, 4459.43, 1.82),
+			SpawnPoint = vector4(3858.4, 4454.46, 0.0, 268.44),
+			StorePos   = vector3(3858.4, 4454.46, 0.0),
+			StoreTP    = vector4(3857.31, 4459.43, 1.82, 86.62)
 		},
 
-		{ -- North Calafia Way
-			GaragePos  = vector3(712.6, 4093.3, 33.7),
-			SpawnPoint = vector4(712.8, 4080.2, 29.3, 181.0),
-			StorePos   = vector3(705.1, 4110.1, 30.2),
-			StoreTP    = vector4(711.9, 4110.5, 31.3, 180.0)
+		{ -- Great Ocean Highway   DONE
+			GaragePos  = vector3(-1604.88, 5257.21, 2.0),
+			SpawnPoint = vector4(-1600.45, 5258.08, 0.0, 19.4),
+			StorePos   = vector3(-1600.45, 5258.08, 0.5),
+			StoreTP    = vector4(-1604.76, 5257.19, 2.0, 25.74)
 		},
 
-		{ -- Elysian Fields, nearby the airport
-			GaragePos  = vector3(23.8, -2806.8, 4.8),
-			SpawnPoint = vector4(23.3, -2828.6, 0.8, 181.0),
-			StorePos   = vector3(-1.0, -2799.2, 0.5),
-			StoreTP    = vector4(12.6, -2793.8, 2.5, 355.2)
+		{ -- North Calafia Way   DONE
+			GaragePos  = vector3(1336.71, 4269.73, 31.5),
+			SpawnPoint = vector4(1333.54, 4264.12, 30.2, 259.25),
+			StorePos   = vector3(1333.54, 4264.12, 30.9),
+			StoreTP    = vector4(1336.71, 4269.73, 31.5, 74.1)
 		},
 
-		{ -- Barbareno Rd
-			GaragePos  = vector3(-3427.3, 956.9, 7.3),
-			SpawnPoint = vector4(-3448.9, 953.8, 0.0, 75.0),
-			StorePos   = vector3(-3436.5, 946.6, 0.3),
-			StoreTP    = vector4(-3427.0, 952.6, 8.3, 0.0)
+		{ -- Elysian Fields     DONE
+			GaragePos  = vector3(13.59, -2799.87, 2.53),
+			SpawnPoint = vector4(6.85, -2798.59, 1.37, 180.68),
+			StorePos   = vector3(6.85, -2798.59, 1.37),
+			StoreTP    = vector4(13.59, -2799.87, 2.53, 358.57)
+		},
+
+		{ -- Barbareno Rd     DONE
+			GaragePos  = vector3(-3424.85, 981.8, 8.35),
+			SpawnPoint = vector4(-3424.38, 986.36, 0.3, 269.63),
+			StorePos   = vector3(-3424.38, 986.36, 0.3),
+			StoreTP    = vector4(-3424.85, 981.8, 8.35, 176.63)
 		}
 	},
 
 	BoatShops = {
-		{ -- Shank St, nearby campaign boat garage
-			Outside = vector3(-773.7, -1495.2, 1.6),
-			Inside = vector4(-798.5, -1503.1, -0.4, 120.0)
+		{ -- Millars Boat Shop
+			Outside = vector3(1309.34, 4362.07, 41.50),
+			Inside = vector4(1315.3, 4238.92, 29.9, 264.09)
 		}
 	}
 
@@ -83,6 +90,5 @@ Config.Vehicles = {
 	{model = 'dinghy', label = 'Dinghy 2 (Random Color)', price = 40000},
 	{model = 'speeder', label = 'Speeder', price = 85000},
 	{model = 'squalo', label = 'Squalo (Random Color)', price = 61000},
-	{model = 'toro', label = 'Toro', price = 200000},
-	{model = 'submersible', label = 'Submersible', price = 750000}
+	{model = 'toro', label = 'Toro', price = 200000}
 }

@@ -145,7 +145,7 @@ Citizen.CreateThread(function()
 
 				SetBlipSprite (blip, v.Blip.sprite)
 				SetBlipDisplay(blip, 4)
-				SetBlipScale  (blip, 1.0)
+				SetBlipScale  (blip, 0.7)
 				SetBlipColour (blip, v.Blip.color)
 				SetBlipAsShortRange(blip, true)
 

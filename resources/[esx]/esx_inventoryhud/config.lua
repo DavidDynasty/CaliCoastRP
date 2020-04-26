@@ -76,7 +76,6 @@ Config.Shops = {
 			{name = 'fanta'},
 			{name = 'fries'},
 			{name = 'gatorade'},
-			{name = 'grapperaisin'},
 			{name = 'hamburger'},
 			{name = 'heartstopper'},
 			{name = 'ice'},

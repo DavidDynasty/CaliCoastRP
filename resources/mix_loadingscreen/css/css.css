@@ -1,5 +1,6 @@
-#muzica {
+#music {
   position: absolute;
+  opacity: 0.2;
   left: 31%;
   top: 235%;
   padding: 0 20px;

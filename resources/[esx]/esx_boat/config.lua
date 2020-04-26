@@ -6,7 +6,7 @@ Config.LicenseEnable = true -- enable boat license? Requires esx_license
 Config.LicensePrice  = 2000
 
 Config.MarkerType    = 35
-Config.DrawDistance  = 200.0
+Config.DrawDistance  = 100.0
 
 Config.Marker = {
 	r = 255, g = 255, b = 255, -- color

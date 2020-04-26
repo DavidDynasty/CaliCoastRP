@@ -509,6 +509,7 @@ AddEventHandler('esx_ambulancejob:setDeadPlayers', function(_deadPlayers)
 
 				SetBlipSprite(blip, 303)
 				SetBlipColour(blip, 1)
+				SetBlipScale  (blip, 0.7)
 				SetBlipFlashes(blip, true)
 				SetBlipCategory(blip, 7)
 

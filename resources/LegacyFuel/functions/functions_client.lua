@@ -44,7 +44,7 @@ function CreateBlip(coords)
 	local blip = AddBlipForCoord(coords)
 
 	SetBlipSprite(blip, 361)
-	SetBlipScale(blip, 0.7)
+	SetBlipScale(blip, 0.6)
 	SetBlipColour(blip, 75)
 	SetBlipDisplay(blip, 4)
 	SetBlipAsShortRange(blip, true)

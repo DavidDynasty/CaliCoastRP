@@ -13,6 +13,7 @@ Citizen.CreateThread(function()
 
 		local blip = AddBlipForCoord(carWashLocation)
 		SetBlipSprite(blip, 100)
+		SetBlipScale  (blip, 0.7)
 		SetBlipAsShortRange(blip, true)
 
 		BeginTextCommandSetBlipName('STRING')

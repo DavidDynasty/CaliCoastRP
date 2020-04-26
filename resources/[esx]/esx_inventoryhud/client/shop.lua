@@ -279,9 +279,9 @@ Citizen.CreateThread(function()
         CreateBlip(vector3(Config.Shops.YouTool.Locations[k].x, Config.Shops.YouTool.Locations[k].y, Config.Shops.YouTool.Locations[k].z ), "YouTool", 3.0, Config.Color, Config.YouToolBlipID)
     end
 
-    for k, v in pairs(Config.Shops.YouTool.Locations) do
+    --[[for k, v in pairs(Config.Shops.YouTool.Locations) do
         CreateBlip(vector3(Config.Shops.PrisonShop.Locations[k].x, Config.Shops.PrisonShop.Locations[k].y, Config.Shops.PrisonShop.Locations[k].z), "Prison Commissary", 3.0, Config.Color, Config.PrisonShopBlipID)
-    end
+    end]]
 
     for k, v in pairs(Config.Shops.WeaponShop.Locations) do
         CreateBlip(vector3(Config.Shops.WeaponShop.Locations[k].x, Config.Shops.WeaponShop.Locations[k].y, Config.Shops.WeaponShop.Locations[k].z), "Ammunation", 3.0, Config.WeaponColor, Config.WeaponShopBlipID)

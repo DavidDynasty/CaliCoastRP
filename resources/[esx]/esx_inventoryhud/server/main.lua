@@ -489,7 +489,7 @@ RegisterServerEvent('suku:buyLicense')
 AddEventHandler('suku:buyLicense', function ()
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(source)
-	if xPlayer.get('money') >= Config.LicensePrice then
+	if xPlayer.get('cash') >= Config.LicensePrice then
 		xPlayer.removeMoney(Config.LicensePrice)
 		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'success', text = 'You registered a Fire Arms license.' })
 		TriggerEvent('esx_license:addLicense', _source, 'weapon', function ()

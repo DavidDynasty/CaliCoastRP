@@ -3,8 +3,8 @@
 --====================================================================================
 
 --[[
-      Appeller SendNUIMessage({event = 'updateBankbalance', banking = xxxx})
-      à la connection & à chaque changement du compte
+      Call SendNUIMessage({event = 'updateBankbalance', banking = xxxx})
+      at connection & at each account change
 --]]
 
 -- ES / ESX Implementation

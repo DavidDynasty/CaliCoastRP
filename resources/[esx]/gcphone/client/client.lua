@@ -500,65 +500,6 @@ AddEventHandler('gcphone:autoAcceptCall', function(infoCall)
 end)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 --====================================================================================
 --  Gestion des evenements NUI
 --==================================================================================== 
@@ -713,19 +654,6 @@ RegisterNUICallback('setIgnoreFocus', function (data, cb)
   ignoreFocus = data.ignoreFocus
   cb()
 end)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 RegisterNUICallback('takePhoto', function(data, cb)

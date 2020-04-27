@@ -295,7 +295,7 @@ Citizen.CreateThread(function()
         CreateBlip(vector3(Config.Shops.WeaponShop1.Locations[k].x, Config.Shops.WeaponShop1.Locations[k].y, Config.Shops.WeaponShop1.Locations[k].z), "Ammunation", 3.0, Config.WeaponColor, Config.WeaponShop1BlipID)
     end
 
-    --CreateBlip(vector3(-755.79, 5596.07, 41.67), "Cablecart", 3.0, 4, 36)
+    CreateBlip(vector3(-755.79, 5596.07, 41.67), "Cablecart", 3.0, 4, 36)
 end)
 
 Citizen.CreateThread(function()

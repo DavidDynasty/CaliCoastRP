@@ -30,20 +30,20 @@ local soundDistanceMax = 8.0
 
 
 --====================================================================================
---  Check si le joueurs poséde un téléphone
+--  Check if players have a phone
 --  Callback true or false
 --====================================================================================
 function hasPhone (cb)
   cb(true)
 end
 --====================================================================================
---  Que faire si le joueurs veut ouvrir sont téléphone n'est qu'il en a pas ?
+--  What if the player wants to open his phone is that he doesn't have one?
 --====================================================================================
 function ShowNoPhoneWarning ()
 end
 
 --[[
-  Ouverture du téphone lié a un item
+  Opening of the telephone linked to an item
   An ESC solution based on the solution given by HalCroves
   https://forum.fivem.net/t/tutorial-for-gcphone-with-call-and-job-message-other/177904
 --]]
@@ -500,65 +500,6 @@ AddEventHandler('gcphone:autoAcceptCall', function(infoCall)
 end)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 --====================================================================================
 --  Gestion des evenements NUI
 --==================================================================================== 
@@ -713,19 +654,6 @@ RegisterNUICallback('setIgnoreFocus', function (data, cb)
   ignoreFocus = data.ignoreFocus
   cb()
 end)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 RegisterNUICallback('takePhoto', function(data, cb)

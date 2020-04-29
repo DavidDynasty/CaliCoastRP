@@ -128,7 +128,7 @@ Citizen.CreateThread(function()
       Wait(0)
       local pos = GetEntityCoords(GetPlayerPed(-1))
       if CloseToVehicle then
-        local vehicle = GetClosestVehicle(pos["x"], pos["y"], pos["z"], 2.0, 0, 70)
+        local vehicle = GetClosestVehicle(pos["x"], pos["y"], pos["z"], 3.5, 0, 70)
         if DoesEntityExist(vehicle) then
           CloseToVehicle = true
         else

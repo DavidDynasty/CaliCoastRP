@@ -5,20 +5,20 @@ Config.MenuAlign = 'top-left'
 Config.DrawDistance = 100
 
 Config.UseCommand = false -- Will allow players to do /getproperties instead of having to log out & back in to see Private Garages.
-Config.ParkVehicles = true -- true = Automatically Park all Vehicles in Garage on Server/Script Restart | false = Opposite of true but players will have to go to Pound to get their Vehicle Back.
+Config.ParkVehicles = false -- true = Automatically Park all Vehicles in Garage on Server/Script Restart | false = Opposite of true but players will have to go to Pound to get their Vehicle Back.
 Config.KickPossibleCheaters = true -- true = Kick Player that tries to Cheat Garage by changing Vehicle Hash/Plate.
 Config.UseCustomKickMessage = false -- true = Sets Custom Kick Message for those that try to Cheat. Note: "Config.KickPossibleCheaters" must be true.
 
 Config.GiveSocietyMoney = false -- true = Gives money to society_mechanic. Note: REQUIRES esx_mechanicjob.
-Config.ShowVehicleLocation = true -- true = Will show Location of Vehicles in the Garage Menus.
+Config.ShowVehicleLocation = false -- true = Will show Location of Vehicles in the Garage Menus.
 Config.ShowSpacers = true -- true = Shows Spacers in Menus.
 
-Config.PointMarker = {Type = 1, r = 0, g = 255, b = 0, x = 1.5, y = 1.5, z = 1.0} -- Green Color / Standard Size Circle.
-Config.DeleteMarker = {Type = 1, r = 255, g = 0, b = 0, x = 5.0, y = 5.0, z = 1.0} -- Red Color / Big Size Circle.
+Config.PointMarker = {Type = 27, r = 165, g = 165, b = 165, x = 1.2, y = 1.2, z = 1.0} -- Green Color / Standard Size Circle.
+Config.DeleteMarker = {Type = 27, r = 165, g = 165, b = 165, x = 5.0, y = 5.0, z = 1.0} -- Red Color / Big Size Circle.
 Config.PoundMarker = {Type = 1, r = 0, g = 0, b = 100, x = 1.5, y = 1.5, z = 1.0} -- Blue Color / Standard Size Circle.
 Config.JPoundMarker = {Type = 1, r = 255, g = 0, b = 0, x = 1.5, y = 1.5, z = 1.0} -- Red Color / Standard Size Circle.
 
-Config.GarageBlip = {Sprite = 290, Color = 38, Display = 2, Scale = 1.0} -- Public Garage Blip.
+Config.GarageBlip = {Sprite = 524, Color = 38, Display = 2, Scale = 0.7} -- Public Garage Blip.
 Config.PGarageBlip = {Sprite = 290, Color = 53, Display = 2, Scale = 1.0} -- Private Garage Blip.
 Config.PoundBlip = {Sprite = 67, Color = 64, Display = 2, Scale = 1.0} -- Pound Blip.
 Config.JGarageBlip = {Sprite = 290, Color = 49, Display = 2, Scale = 1.0} -- Job Garage Blip.
@@ -43,7 +43,7 @@ Config.UsePoliceBlips = false -- true = Use Police Blips.
 Config.PolicePoundPrice = 80 -- How much it Costs to get Vehicle from Police Pound.
 
 Config.UseAircraftGarages = true -- true = Allows use of Aircraft Garages.
-Config.UseAircraftBlips = true -- true = Use Aircraft Blips.
+Config.UseAircraftBlips = false -- true = Use Aircraft Blips.
 Config.AircraftPoundPrice = 2500 -- How much it Costs to get Vehicle from Aircraft Pound.
 
 Config.UseBoatGarages = false -- true = Allows use of Boat Garages.
@@ -136,7 +136,7 @@ Config.AircraftPounds = {
 
 -- Start of Boats
 Config.BoatGarages = {
-	Los_Santos_Dock = {
+	--[[Los_Santos_Dock = {
 		Marker = vector3(-735.87, -1325.08, 0.6),
 		Spawner = vector3(-718.87, -1320.18, -0.47),
 		Deleter = vector3(-731.15, -1334.71, -0.47),
@@ -153,16 +153,16 @@ Config.BoatGarages = {
 		Spawner = vector3(-290.46, 6622.72, -0.47),
 		Deleter = vector3(-304.66, 6607.36, -0.47),
 		Heading = 52.0
-	}
+	}]]--
 }
 
 Config.BoatPounds = {
-	Los_Santos_Dock = {
+	--[[Los_Santos_Dock = {
 		Marker = vector3(-738.67, -1400.43, 4.0),
 		Spawner = vector3(-738.33, -1381.51, 0.12),
 		Heading = 137.85
 	}
-	--[[Sandy_Shores_Dock = {
+	Sandy_Shores_Dock = {
 		Marker = vector3(1299.36, 4217.93, 32.91),
 		Spawner = vector3(1294.35, 4226.31, 29.86),
 		Heading = 345.0
@@ -178,10 +178,10 @@ Config.BoatPounds = {
 -- Start of Cars
 Config.CarGarages = {
 	Los_Santos = {
-		Marker = vector3(215.80, -810.06, 29.73),
-		Spawner = vector3(229.70, -800.12, 29.57),
-		Deleter = vector3(223.80, -760.42, 29.65),
-		Heading = 157.84
+		Marker = vector3(387.31, -1680.9, 31.55),
+		Spawner = vector3(380.14, -1685.97, 31.55),
+		Deleter = vector3(389.58, -1674.61, 31.55),
+		Heading = 139.11
 	},
 	--[[Los_Santos_RaceTrack = {
 		Marker = vector3(1212.32, 339.94, 80.99),

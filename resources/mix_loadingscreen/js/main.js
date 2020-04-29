@@ -153,6 +153,13 @@
             return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows())
         }
     }
+    $('#music').bind("mouseenter", function() {
+        $('#music').stop(true).fadeTo(600, 0.5);
+    });
+
+    $('#music').bind("mouseleave", function() {
+        $('#music').stop(true).fadeTo(600, 0.02);
+    });
 })(jQuery);
 
 function demo() {

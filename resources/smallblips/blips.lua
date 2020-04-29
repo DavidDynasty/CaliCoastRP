@@ -8,6 +8,9 @@ local blips = {
      {title="Local Bars", colour=48, id=93, x = -1388.42, y = -586.93, z = 30.22},
      {title="Local Bars", colour=48, id=93, x = 1990.87, y = 3053.75, z = 47.21},
      {title="Life Invader", colour=26, id=102, x = -1081.99, y = -259.96, z = 37.81},
+     {title="Diamond Casino", colour=67, id=304, x = 924.74, y = 46.61, z = 81.11},
+     {title="City Hall", colour=0, id=419, x = -544.6, y = -205.06, z = 38.22},
+     {title="California State Prison", colour=0, id=188, x = 1848.84, y = 2585.85, z = 45.67},
   }
       
 Citizen.CreateThread(function()

@@ -50,8 +50,8 @@ menuConfigs = {
                     navAngle = 290,                 -- Oritentation of wheel
                     minRadiusPercent = 0.750,         -- Minimum radius of wheel in percentage
                     maxRadiusPercent = 0.9,         -- Maximum radius of wheel in percentage
-                    labels =   {  "",   "",   "",   "",   "",   "",   "",   "",   "",   "",   "",   ""},
-                    commands = {"e ", "e ", "e ", "e ", "e ", "e ", "e ", "e ", "e ", "e ", "e ", "e "}
+                    labels =   {  "Calculator",   "",   "",   "",   "",   "",   "",   "",   "",   "",   "",   ""},
+                    commands = {"calc", "e ", "e ", "e ", "e ", "e ", "e ", "e ", "e ", "e ", "e ", "e "}
                 }
             }
         }

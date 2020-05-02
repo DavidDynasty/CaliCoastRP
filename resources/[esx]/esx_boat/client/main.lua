@@ -44,7 +44,7 @@ function OpenBoatShop(shop)
 				{label = _U('confirm_yes'), value = 'yes'}
 		}}, function (data2, menu2)
 			if data2.current.value == 'yes' then
-				local plate = exports['esx_vehicleshop']:GeneratePlate()
+				local plate = exports['esx_advancedvehicleshop']:GeneratePlate()
 				local vehicle = GetVehiclePedIsIn(playerPed, false)
 				local props = ESX.Game.GetVehicleProperties(vehicle)
 				props.plate = plate

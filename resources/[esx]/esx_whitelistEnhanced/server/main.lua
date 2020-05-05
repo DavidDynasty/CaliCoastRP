@@ -203,7 +203,7 @@ AddEventHandler("playerConnecting", function(playerName, reason, deferrals)
 	end
 end)
 
-RegisterServerEvent("esx_whitelistExtended:removePlayerToInConnect")
+--[[RegisterServerEvent("esx_whitelistExtended:removePlayerToInConnect")
 AddEventHandler("esx_whitelistExtended:removePlayerToInConnect", function()
 	local _source = source
 	if _source ~= nil then
@@ -230,7 +230,7 @@ function checkOnlinePlayers()
 
 		checkOnlinePlayers()
 	end)
-end
+end]]--
 
 checkOnlinePlayers()
 

@@ -2,11 +2,11 @@
 --Dev by Thom512#0990 for Patoche#4702--
 ----------------------------------------
 
-local Shop = {x = 2555.45,  y = 4663.12,  z = 33.07}
+local Shop = {x = -35.13,  y = 1950.81,  z = 190.55}
 local NPC = {
-    {seller = false, model = "ig_g", x = 2555.45,  y = 4663.12,  z = 33.07, h = 200.0},
-    {seller = false, model = "csb_mweather", x = 2553.45,  y = 4665.32,  z = 33.08, h = 205.0},
-    {seller = false, model = "csb_mweather", x = 2557.54,  y = 4665.99,  z = 32.97, h = 140.0},
+    --{seller = false, model = "a_m_y_acult_02", x = -1150.42,  y = 4940.63,  z = 221.30, h = 237.55},
+    --{seller = false, model = "csb_mweather", x = 2553.45,  y = 4665.32,  z = 33.08, h = 205.0},
+    --{seller = false, model = "csb_mweather", x = 2557.54,  y = 4665.99,  z = 32.97, h = 140.0},
 }
 
 
@@ -36,13 +36,13 @@ Citizen.CreateThread(function()
             end
             TaskPlayAnim(npc, "missfbi_s4mop" ,"guard_idle_a" ,8.0, 1, -1, 49, 0, false, false, false)
         else
-            GiveWeaponToPed(npc, GetHashKey("WEAPON_ADVANCEDRIFLE"), 2800, true, true)
+            GiveWeaponToPed(npc, GetHashKey(""), 2800, true, true)
         end
     end
 end)
     
 _menuPool = NativeUI.CreatePool()
-mainMenu = NativeUI.CreateMenu("Weapons","~b~Heavy weapons", 5, 100,"shopui_title_gr_gunmod", "shopui_title_gr_gunmod",nil,255,255,255,230)
+mainMenu = NativeUI.CreateMenu("Black Market","", 5, 100,"shopui_title_gr_gunmod", "shopui_title_gr_gunmod",nil,255,255,255,230)
 _menuPool:Add(mainMenu)
 
 function AddShopsIllegalMenu()
@@ -93,9 +93,9 @@ Citizen.CreateThread(function()
         isNearShop = false
         local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
         local dist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, Shop.x, Shop.y, Shop.z)
-        if dist <= 2.5 then
+        if dist <= 1.5 then
             isNearShop = true
-            ESX.ShowHelpNotification("~INPUT_TALK~ to talk to the ~r~seller")
+            ESX.ShowHelpNotification("~INPUT_TALK~ ~y~Knock On Door")
             if IsControlJustPressed(1,51) then 
                 AddShopsIllegalMenu()
             end

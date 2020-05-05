@@ -15,7 +15,7 @@ ESX.RegisterServerCallback('weapon512:buyWeapon', function(source, cb, weaponNam
 
 			cb(true)
 		else
-			TriggerClientEvent('esx:showAdvancedNotification', _source, "Seller", "", "You don't have enough black money" , "CHAR_MP_MERRYWEATHER", 1)
+			TriggerClientEvent('esx:showAdvancedNotification', _source, "Black Market", "", "You are broke bitch, get out of here" , "CHAR_LESTER", 1)
 			cb(false)
 		end
 	else
@@ -25,7 +25,7 @@ ESX.RegisterServerCallback('weapon512:buyWeapon', function(source, cb, weaponNam
 
 			cb(true)
 		else
-			TriggerClientEvent('esx:showAdvancedNotification', _source, "Seller", "", "You don't have enough money" , "CHAR_MP_MERRYWEATHER", 1)
+			TriggerClientEvent('esx:showAdvancedNotification', _source, "Black Market", "", "You are broke bitch, get out of here" ,  "CHAR_LESTER", 1)
 			cb(false)
 		end
 	end

@@ -171,16 +171,16 @@ Locales['en'] = {
   ['weapon_autoshotgun'] = 'Armsel Striker',
 
   -- Assault Rifles
-  ['weapon_assaultrifle'] = 'assault rifle',
+  ['weapon_assaultrifle'] = 'AK-47',
   ['weapon_assaultrifle_mk2'] = 'assault rifle mk ll',
-  ['weapon_carbinerifle'] = 'carbine rifle',
+  ['weapon_carbinerifle'] = 'M4',
   ['weapon_carbinerifle_mk2'] = 'carbine rifle mk ll',
   ['weapon_advancedrifle'] = 'advanced rifle',
   ['weapon_specialcarbine'] = 'special carbine',
   ['weapon_specialcarbine_mk2'] = 'special carbine mk ll',
   ['weapon_bullpuprifle'] = 'bullpup rifle',
   ['weapon_bullpuprifle_mk2'] = 'bullpup rifle mk ll',
-  ['weapon_compactrifle'] = 'compact rifle',
+  ['weapon_compactrifle'] = 'Draco',
 
   -- Light Machine Guns
   ['weapon_mg'] = 'MG',

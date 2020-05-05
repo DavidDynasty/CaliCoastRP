@@ -115,17 +115,17 @@ function DeletePeds()
 	end
 end
 
---[[function LoadBahamas()
+[function LoadBahamas()
 	CreatePeds()
 	if IsPedArmed(PlayerPedId(), 7) then
 		SetCurrentPedWeapon(PlayerPedId(), "WEAPON_UNARMED" ,true)
 	end
-	showClubNotification("We don't tolerate any violence around here. We will be holding onto your weapons until you leave.")
+	--showClubNotification("We don't tolerate any violence around here. We will be holding onto your weapons until you leave.")
 	Citizen.Wait(1000)
 	for k,v in pairs(Config.InsidePeds) do
 		FreezeEntityPosition(v[1], true)
 	end
-end]]--
+end
 
 function LeaveBahamas()
 	DeletePeds()

@@ -128,7 +128,7 @@ function OpenBuyLicenseMenu(licenseName)
 	end)
 end
 
-function CreateBlipCircle(coords, text, radius, color, sprite)
+--[[function CreateBlipCircle(coords, text, radius, color, sprite)
 	local blip = AddBlipForRadius(coords, radius)
 
 	SetBlipHighDetail(blip, true)
@@ -153,4 +153,4 @@ Citizen.CreateThread(function()
 	for k,zone in pairs(Config.CircleZones) do
 		CreateBlipCircle(zone.coords, zone.name, zone.radius, zone.color, zone.sprite)
 	end
-end)
+end)]]--

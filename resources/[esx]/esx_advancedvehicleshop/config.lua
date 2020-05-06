@@ -17,7 +17,7 @@ Config.PoliceHeli = 'polmav'
 
 Config.UseAircraftShop = true -- true = Use Aircraft Shop | false = Does Opposite
 Config.UseAircraftBlip = true -- true = Use Aircraft Blip | false = Does Opposite
-Config.AircraftBlip = {Coords = vector3(-940.0, -2963.1, 18.8), Sprite = 90, Color = 4, Display = 4, Scale = 1.0}
+Config.AircraftBlip = {Coords = vector3(-940.0, -2963.1, 18.8), Sprite = 90, Color = 4, Display = 4, Scale = 0.7}
 
 Config.UseBoatShop = false -- true = Use Boat Shop | false = Does Opposite
 Config.UseBoatBlip = false -- true = Use Boat Blip | false = Does Opposite
@@ -25,11 +25,11 @@ Config.BoatBlip = {Coords = vector3(-714.3, -1297.3, 4.1), Sprite = 410, Color =
 
 Config.UseCarShop = true -- true = Use Car Shop | false = Does Opposite
 Config.UseCarBlip = true -- true = Use Car Blip | false = Does Opposite
-Config.CarBlip = {Coords = vector3(-33.7, -1102.0, 25.4), Sprite = 326, Color = 2, Display = 4, Scale = 1.0}
+Config.CarBlip = {Coords = vector3(-33.7, -1102.0, 25.4), Sprite = 326, Color = 2, Display = 4, Scale = 0.7}
 
 Config.UseTruckShop = true -- true = Use Truck Shop | false = Does Opposite
 Config.UseTruckBlip = true -- true = Use Truck Blip | false = Does Opposite
-Config.TruckBlip = {Coords = vector3(900.4, -1155.0, 24.1), Sprite = 67, Color = 2, Display = 4, Scale = 1.0}
+Config.TruckBlip = {Coords = vector3(900.4, -1155.0, 24.1), Sprite = 67, Color = 2, Display = 4, Scale = 0.7}
 
 -- You will need to setup your own callback for VIP Shop
 Config.UseVIPShop = false -- true = Use VIP Shop | false = Does Opposite

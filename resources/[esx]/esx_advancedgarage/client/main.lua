@@ -1240,8 +1240,8 @@ function refreshBlips()
 		for k,v in pairs(Config.AircraftGarages) do
 			table.insert(blipList, {
 				coords = { v.GaragePoint.x, v.GaragePoint.y },
-				text   = _U('blip_garage'),
-				sprite = Config.BlipGarage.Sprite,
+				text   = _U('blip_aircraft_garage'),
+				sprite = 569,
 				color  = Config.BlipGarage.Color,
 				scale  = Config.BlipGarage.Scale
 			})

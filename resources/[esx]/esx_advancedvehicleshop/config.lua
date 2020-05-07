@@ -29,7 +29,7 @@ Config.CarBlip = {Coords = vector3(-61.1, -1093.38, 25.4), Sprite = 523, Color =
 
 Config.UseTruckShop = true -- true = Use Truck Shop | false = Does Opposite
 Config.UseTruckBlip = true -- true = Use Truck Blip | false = Does Opposite
-Config.TruckBlip = {Coords = vector3(900.4, -1155.0, 24.1), Sprite = 67, Color = 2, Display = 4, Scale = 0.7}
+Config.TruckBlip = {Coords = vector3(1224.77, 2728.73, 24.1), Sprite = 67, Color = 2, Display = 4, Scale = 0.7}
 
 -- You will need to setup your own callback for VIP Shop
 Config.UseVIPShop = false -- true = Use VIP Shop | false = Does Opposite
@@ -224,31 +224,31 @@ Config.Zones = {
 	},
 	-- Truck Shop
 	ShopEnteringTruck = {
-		Pos    = vector3(900.4, -1155.0, 24.1),
+		Pos    = vector3(1229.32, 2733.86, 37.6),
 		Marker = {r = 0, g = 255, b = 0},
-		Size   = {x = 1.5, y = 1.5, z = 1.0},
-		Type   = 1,
+		Size   = {x = 1.0, y = 1.5, z = 1.0},
+		Type   = 36,
 		ShopId = 6
 	},
 	ShopInsideTruck = {
-		Pos     = vector3(927.5, -1226.8, 24.6),
+		Pos     = vector3(1223.69, 2714.62, 37.6),
 		Size    = {x = 1.5, y = 1.5, z = 1.0},
-		Heading = 102.93,
+		Heading = 162.55,
 		Type    = -1,
 		ShopId  = 6
 	},
 	ShopOutsideTruck = {
-		Pos     = vector3(994.7, -1186.4, 24.5),
+		Pos     = vector3(1218.11, 2721.09, 37.5),
 		Size    = {x = 1.5, y = 1.5, z = 1.0},
 		Heading = 93.19,
 		Type    = -1,
 		ShopId  = 6
 	},
 	ResellVehicleTruck = {
-		Pos    = vector3(879.2, -1168.5, 24.0),
+		Pos    = vector3(1235.53, 2736.05, 36.9),
 		Marker = {r = 0, g = 255, b = 0},
 		Size   = {x = 3.0, y = 3.0, z = 1.0},
-		Type   = 1,
+		Type   = 25,
 		ShopId = 6
 	}
 	-- VIP Shop

@@ -29,7 +29,7 @@ Config.CarBlip = {Coords = vector3(-61.1, -1093.38, 25.4), Sprite = 523, Color =
 
 Config.UseTruckShop = true -- true = Use Truck Shop | false = Does Opposite
 Config.UseTruckBlip = true -- true = Use Truck Blip | false = Does Opposite
-Config.TruckBlip = {Coords = vector3(1224.77, 2728.73, 24.1), Sprite = 67, Color = 2, Display = 4, Scale = 0.7}
+Config.TruckBlip = {Coords = vector3(1224.77, 2728.73, 24.1), Sprite = 659, Color = 2, Display = 4, Scale = 0.7}
 
 -- You will need to setup your own callback for VIP Shop
 Config.UseVIPShop = false -- true = Use VIP Shop | false = Does Opposite

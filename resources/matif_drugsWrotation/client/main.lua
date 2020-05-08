@@ -71,7 +71,7 @@ Citizen.CreateThread(function()
 
     if dist < 5 then
       if crafting == false then
-        DrawText3Ds(Config.Mixer.coords.x, Config.Mixer.coords.y, Config.Mixer.coords.z, 'Press [~g~E~s~] to start crafting', 0.4)
+        DrawText3Ds(Config.Mixer.coords.x, Config.Mixer.coords.y, Config.Mixer.coords.z, '[~g~E~s~] To Start', 0.4)
         if dist < 2 then
           if IsControlJustPressed(0, 38) then
             startCrafting()

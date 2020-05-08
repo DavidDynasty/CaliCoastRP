@@ -44,7 +44,7 @@ Config.Prices = {
 }
 
 Config.Mixer = {
-    coords = {x = 1397.4422607422, y = 3606.4963378906, z = 38.991928863525},
+    coords = {x = -1078.62, y = -1679.73, z = 4.58},
     craft = {
         [1] = {name = 'methamphetamine', quantity = 1},
         [2] = {name = 'amphetamine', quantity = 2},

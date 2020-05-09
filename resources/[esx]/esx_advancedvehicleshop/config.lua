@@ -231,9 +231,9 @@ Config.Zones = {
 		ShopId = 6
 	},
 	ShopInsideTruck = {
-		Pos     = vector3(1223.69, 2714.62, 37.6),
+		Pos     = vector3(1225.03, 2721.21, 37.6),
 		Size    = {x = 1.5, y = 1.5, z = 1.0},
-		Heading = 162.55,
+		Heading = 85.59,
 		Type    = -1,
 		ShopId  = 6
 	},

@@ -303,10 +303,10 @@ Citizen.CreateThread(function()
         Citizen.Wait(0)
         player = GetPlayerPed(-1)
         coords = GetEntityCoords(player)
-
         for k, v in pairs(Config.Shops.RegularShop.Locations) do
             if GetDistanceBetweenCoords(coords, Config.Shops.RegularShop.Locations[k].x, Config.Shops.RegularShop.Locations[k].y, Config.Shops.RegularShop.Locations[k].z, true) < 3.0 then
-                ESX.Game.Utils.DrawText3D(vector3(Config.Shops.RegularShop.Locations[k].x, Config.Shops.RegularShop.Locations[k].y, Config.Shops.RegularShop.Locations[k].z + 1.0), "Press ~r~[E]~s~ to open shop", 0.6)
+                --ESX.Game.Utils.DrawText3D(vector3(Config.Shops.RegularShop.Locations[k].x, Config.Shops.RegularShop.Locations[k].y, Config.Shops.RegularShop.Locations[k].z + 1.0), "Press ~r~[E]~s~ to open shop", 0.6)
+                ESX.Game.Utils.DrawMarker(5, Config.Shops.RegularShop.Locations[k].x, Config.Shops.RegularShop.Locations[k].y, Config.Shops.RegularShop.Locations[k].z + 1.0,  0, 0, 0, 0, 0, 0, 0.75,0.75,0.5, 255, 0, 0,255, 0, 0, 0,0)
             end
         end
 

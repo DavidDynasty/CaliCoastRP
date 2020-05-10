@@ -64,8 +64,8 @@ Config.Locations1 = { -- Some Shop & Interior NPCs
 	{ x = -55.63,   y = -1098.01, z = 25.42, heading = 24.49 },     -- Cardealer1
 	{ x = 1230.2,   y = 2733.86,  z = 37.01, heading = 88.4 },      -- Cardealer2
 
-	-- Food Spots --
-	--{ x = -1196.19, y = -892.78,  z = 13.00, heading = 300.42 },    -- Burgershot
+	-- DMV --
+	{ x = -934.2, y = -2040.17,  z = 9.4, heading = 225.76 },    -- 1
 
 	-- Drug Dealers --
 	--{ x = 85.88,    y = -1959.85, z = 20.12, heading = 27.20 },     -- Grove Str Cannabis Dealer

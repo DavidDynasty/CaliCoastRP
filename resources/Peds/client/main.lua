@@ -15,8 +15,8 @@ Citizen.CreateThread(function()
 			local npc = CreatePed(4, 0xA1435105, item.x, item.y, item.z, item.heading, false, true)
 			
 			SetEntityHeading(npc, item.heading)
-			FreezeEntityPosition(npc, true)
-			SetEntityInvincible(npc, true)
+			FreezeEntityPosition(npc, false)
+			SetEntityInvincible(npc, false)
 			SetBlockingOfNonTemporaryEvents(npc, true)
 		end
 	end

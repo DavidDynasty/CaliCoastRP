@@ -10,7 +10,7 @@ Config.AmbulanceBlip = {Coords = vector3(371.66, -1611.45, 28.29), Sprite = 326,
 Config.AmbulanceHeli = 'polmav'
 Config.AmbulanceHeli2 = 'firehawk'
 
-Config.UsePoliceShop = false -- true = Use Police Shop | false = Does Opposite
+Config.UsePoliceShop = true -- true = Use Police Shop | false = Does Opposite
 Config.UsePoliceBlip = false -- true = Use Police Blip | false = Does Opposite
 Config.PoliceBlip = {Coords = vector3(374.14, -1608.57, 28.29), Sprite = 326, Color = 3, Display = 4, Scale = 1.0}
 Config.PoliceHeli = 'polmav'
@@ -94,45 +94,45 @@ Config.Zones = {
 	},
 	-- Police Shop
 	ShopEnteringPolice = {
-		Pos    = vector3(374.14, -1608.57, 28.29),
+		Pos    = vector3(457.69, -1007.88, 27.20),
 		Marker = {r = 0, g = 0, b = 255},
 		Size   = {x = 1.5, y = 1.5, z = 1.0},
-		Type   = 1,
+		Type   = 27,
 		ShopId = 2
 	},
 	ShopInsidePolice = {
-		Pos     = vector3(334.89, -1639.38, 98.5),
+		Pos     = vector3(454.83, -1014.86, 28.43),
 		Size    = {x = 1.5, y = 1.5, z = 1.0},
-		Heading = 320.14,
+		Heading = 90.88,
 		Type    = -1,
 		ShopId  = 2
 	},
 	ShopOutsidePolice = {
-		Pos     = vector3(391.74, -1619.0, 28.29),
+		Pos     = vector3(455.08, -1020.03, 28.02),
 		Size    = {x = 1.5, y = 1.5, z = 1.0},
-		Heading = 318.34,
+		Heading = 91.66,
 		Type    = -1,
 		ShopId  = 2
 	},
 	ShopOutsidePoliceHeli = {
-		Pos     = vector3(362.75, -1598.33, 35.95),
+		Pos     = vector3(449.57, -981.54, 43.38),
 		Size    = {x = 1.5, y = 1.5, z = 1.0},
-		Heading = 311.87,
+		Heading = 90.83,
 		Type    = -1,
 		ShopId  = 2
 	},
 	ResellVehiclePolice = {
-		Pos    = vector3(387.82, -1636.33, 28.29),
+		Pos    = vector3(455.08, -1020.03, 27.25),
 		Marker = {r = 0, g = 0, b = 255},
 		Size   = {x = 3.0, y = 3.0, z = 1.0},
-		Type   = 1,
+		Type   = 27,
 		ShopId = 2
 	},
 	ResellVehiclePoliceHeli = {
-		Pos    = vector3(371.38, -1592.91, 35.95),
+		Pos    = vector3(449.57, -981.54, 42.60),
 		Marker = {r = 0, g = 0, b = 255},
 		Size   = {x = 3.0, y = 3.0, z = 1.0},
-		Type   = 1,
+		Type   = 27,
 		ShopId = 2
 	},
 	-- Aircraft Shop

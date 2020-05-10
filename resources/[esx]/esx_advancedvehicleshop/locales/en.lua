@@ -19,10 +19,10 @@ Locales['en'] = {
   ['ambulance_belongs'] = 'an Ambulance with plate ~y~%s~s~ now belongs to ~b~you~s~',
   ['ambulance_purchased'] = 'you bought a Ambulance',
   -- Police Shop
-  ['police_menu'] = 'press ~INPUT_CONTEXT~ to access the ~b~Police Shop',
-  ['police_dealer'] = 'dealership | Police',
-  ['police_belongs'] = 'an Police Vehicle with plate ~y~%s~s~ now belongs to ~b~you~s~',
-  ['police_purchased'] = 'you bought a Police Vehicle',
+  ['police_menu'] = '~INPUT_CONTEXT~ ~b~Police Garage',
+  ['police_dealer'] = 'Police Garage',
+  ['police_belongs'] = 'Police Cruiser ~y~%s~s~',
+  ['police_purchased'] = 'Signed out Police Cruiser',
   -- Aircraft Shop
   ['aircraft_menu'] = '~INPUT_CONTEXT~ ~b~Aircraft Shop',
   ['aircraft_dealer'] = 'Aircraft Dealership',

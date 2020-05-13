@@ -9,9 +9,10 @@ Config.DoorList = {
 
 	-- Entrance Doors
 	{
-		textCoords = vector3(434.7, -982.0, 31.5),
+		textCoords = vector3(434.7, -981.93, 32.15),
 		authorizedJobs = {'police'},
 		locked = false,
+		size = 0.7,
 		maxDistance = 2.5,
 		doors = {
 			{objHash = GetHashKey('v_ilev_ph_door01'), objHeading = 270.0, objCoords = vector3(434.7, -980.6, 30.8)},
@@ -24,9 +25,22 @@ Config.DoorList = {
 		objHash = GetHashKey('v_ilev_ph_gendoor004'),
 		objHeading = 90.0,
 		objCoords = vector3(449.6, -986.4, 30.6),
-		textCoords = vector3(450.1, -986.3, 31.7),
+		textCoords = vector3(450.1, -986.4, 32.15),
 		authorizedJobs = {'police'},
 		locked = true,
+		size = 0.7,
+		maxDistance = 1.50
+	},
+
+	-- Hallway to roof
+	{
+		objHash = GetHashKey('v_ilev_arm_secdoor'),
+		objHeading = 90.0,
+		objCoords = vector3(461.2, -985.3, 30.8),
+		textCoords = vector3(461.3, -985.9, 32.15),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
 		maxDistance = 1.25
 	},
 
@@ -35,29 +49,19 @@ Config.DoorList = {
 		objHash = GetHashKey('v_ilev_gtdoor02'),
 		objHeading = 90.0,
 		objCoords = vector3(464.3, -984.6, 43.8),
-		textCoords = vector3(464.3, -984.0, 44.8),
+		textCoords = vector3(464.3, -984.0, 45.1),
 		authorizedJobs = {'police'},
 		locked = true,
+		size = 0.7,
 		maxDistance = 1.25
 	},
 
-	-- Hallway to roof
-	{
-		objHash = GetHashKey('v_ilev_arm_secdoor'),
-		objHeading = 90.0,
-		objCoords = vector3(461.2, -985.3, 30.8),
-		textCoords = vector3(461.5, -986.0, 31.5),
-		authorizedJobs = {'police'},
-		locked = true,
-		maxDistance = 1.25
-	},
-
-	-- Armory
+	-- Armory  Needs editing
 	{
 		objHash = GetHashKey('v_ilev_arm_secdoor'),
 		objHeading = 270.0,
 		objCoords = vector3(452.6, -982.7, 30.6),
-		textCoords = vector3(453.0, -982.6, 31.7),
+		textCoords = vector3(453.0, -982.6, 32.15),
 		authorizedJobs = {'police'},
 		locked = true,
 		maxDistance = 1.25
@@ -68,17 +72,19 @@ Config.DoorList = {
 		objHash = GetHashKey('v_ilev_ph_gendoor002'),
 		objHeading = 180.0,
 		objCoords = vector3(447.2, -980.6, 30.6),
-		textCoords = vector3(447.2, -980.0, 31.7),
+		textCoords = vector3(447.2, -980.0, 32.15),
 		authorizedJobs = {'police'},
 		locked = true,
+		size = 0.7,
 		maxDistance = 1.25
 	},
 
 	-- To downstairs (double doors)
 	{
-		textCoords = vector3(444.6, -989.4, 31.7),
+		textCoords = vector3(444.6, -989.4, 32.15),
 		authorizedJobs = {'police'},
 		locked = true,
+		size = 0.7,
 		maxDistance = 4,
 		doors = {
 			{objHash = GetHashKey('v_ilev_ph_gendoor005'), objHeading = 180.0, objCoords = vector3(443.9, -989.0, 30.6)},

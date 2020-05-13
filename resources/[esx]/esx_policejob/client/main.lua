@@ -229,7 +229,7 @@ function OpenArmoryMenu(station)
 		CurrentActionData = {station = station}
 	end)
 end
-
+  
 function OpenPoliceActionsMenu()
 	ESX.UI.Menu.CloseAll()
 
@@ -244,6 +244,7 @@ function OpenPoliceActionsMenu()
 		if data.current.value == 'citizen_interaction' then
 			local elements = {
 				{label = _U('id_card'), value = 'identity_card'},
+				{label = _U('jail'), value = 'jailmenu'},
 				{label = _U('search'), value = 'search'},
 				{label = _U('handcuff'), value = 'handcuff'},
 				{label = _U('drag'), value = 'drag'},
@@ -268,6 +269,8 @@ function OpenPoliceActionsMenu()
 
 					if action == 'identity_card' then
 						OpenIdentityCardMenu(closestPlayer)
+					elseif action == 'jailmenu' then
+						openJailMenu(GetPlayerServerId(closestPlayer))
 					elseif action == 'search' then
 						OpenBodySearchMenu(closestPlayer)
 					elseif action == 'handcuff' then
@@ -430,6 +433,59 @@ function OpenIdentityCardMenu(player)
 		end)
 	end, GetPlayerServerId(player))
 end
+
+function openJailMenu(playerid)
+	local elements = {
+	  {label = "Cellule 1",     value = 'JailPoliceStation1'},
+	  {label = "Cellule 2",     value = 'JailPoliceStation2'},
+	  {label = "Cellule 3",     value = 'JailPoliceStation3'},
+	  {label = "Cellule fédérale",     value = 'FederalJail'},
+	  {label = "Libérer de cellule",     value = 'FreePlayer'},
+	}
+	ESX.UI.Menu.Open(
+	  'default', GetCurrentResourceName(), 'jail_menu',
+	  {
+		title    = 'Mettre en prison',
+		align    = 'top-left',
+		elements = elements,
+	  },
+	  function(data3, menu)
+		  if data3.current.value ~= "FreePlayer" then
+			  maxLength = 4
+			  AddTextEntry('FMMC_KEY_TIP8', "Nombre d'heures en prison")
+			  DisplayOnscreenKeyboard(1, "FMMC_KEY_TIP8", "", "", "", "", "", maxLength)
+			  ESX.ShowNotification("~b~Entrez le nombre d'heures que vous voulez mettre la personne en prison.")
+			  blockinput = true
+  
+			  while UpdateOnscreenKeyboard() ~= 1 and UpdateOnscreenKeyboard() ~= 2 do
+				  Citizen.Wait( 0 )
+			  end
+  
+			  local jailtime = GetOnscreenKeyboardResult()
+  
+			  UnblockMenuInput()
+  
+			  if string.len(jailtime) >= 1 and tonumber(jailtime) ~= nil then
+				  TriggerServerEvent('esx_jb_jailer:PutInJail', playerid, data3.current.value, tonumber(jailtime)*60*60)
+			  else
+				  return false
+			  end
+		  else
+			  TriggerServerEvent('esx_jb_jailer:UnJailplayer', playerid)
+		  end
+	  end,
+	  function(data3, menu)
+		menu.close()
+	  end
+	)
+  end
+  
+  function UnblockMenuInput()
+	  Citizen.CreateThread( function()
+		  Citizen.Wait( 150 )
+		  blockinput = false 
+	  end )
+  end
 
 function OpenBodySearchMenu(player)
 	ESX.TriggerServerCallback('esx_policejob:getOtherPlayerData', function(data)
@@ -1431,7 +1487,7 @@ Citizen.CreateThread(function()
 			end
 		end -- CurrentAction end
 
-		if IsControlJustReleased(0, 167) and not isDead and ESX.PlayerData.job and ESX.PlayerData.job.name == 'police' and not ESX.UI.Menu.IsOpen('default', GetCurrentResourceName(), 'police_actions') then
+		if IsControlJustReleased(0, 57) and not isDead and ESX.PlayerData.job and ESX.PlayerData.job.name == 'police' and not ESX.UI.Menu.IsOpen('default', GetCurrentResourceName(), 'police_actions') then
 			if not Config.EnableESXService then
 				OpenPoliceActionsMenu()
 			elseif playerInService then

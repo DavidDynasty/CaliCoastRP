@@ -67,6 +67,7 @@ Locales['en'] = {
   ['object_spawner'] = 'object Spawner',
 
   ['id_card'] = 'ID Card',
+  ['jail'] = 'Jail',
   ['search'] = 'search',
   ['handcuff'] = 'cuff / Uncuff',
   ['drag'] = 'escort',

@@ -49,7 +49,7 @@ function jailing(Station, JailTime)
 				end
 				if JailTime % 10 == 0 then
 					if JailTime % 30 == 0 then
-						TriggerEvent('chatMessage', 'SYSTEM', { 0, 0, 0 }, math.floor(jaildays).." jours, "..math.floor(jailhours).." heures,"..math.floor(jailminutes).." minutes, "..math.floor(jailseconds).." secondes avant d'être libéré.")
+						TriggerEvent('chatMessage', 'SYSTEM', { 0, 0, 0 }, math.floor(jaildays).." days, "..math.floor(jailhours).." hours,"..math.floor(jailminutes).." minutes, "..math.floor(jailseconds).." seconds before being released.")
 					end
 				end
 				Citizen.Wait(1000)
@@ -60,7 +60,7 @@ function jailing(Station, JailTime)
 				end
 				JailTime = JailTime - 1.0
 			end
-			TriggerServerEvent('chatMessageEntered', "SYSTEM", { 0, 0, 0 }, GetPlayerName(PlayerId()) .." a été libéré de la prison.")
+			TriggerServerEvent('chatMessageEntered', "SYSTEM", { 0, 0, 0 }, GetPlayerName(PlayerId()) .." was released from prison.")
 			GetBackOriginalClothes()
 			local outsidecoords = {}
 			outsidecoords = SetPlayerSpawnLocationoutsidejail(Station)
@@ -80,7 +80,7 @@ function SetPlayerSpawnLocationjail(location)
 	elseif location == 'JailPoliceStation3' then
 		return {x=458.29275512695,y=-1001.5576782227,z=23.914852142334, distance = 2}	
 	elseif location == 'FederalJail' then
-		return {x=1643.7593994141,y=2530.9877929688,z=44.564888000488, distance = 80}
+		return {x=1700.00,y=2588.00,z=44.564888000488, distance = 80}
 	end
 end
 

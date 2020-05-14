@@ -436,25 +436,25 @@ end
 
 function openJailMenu(playerid)
 	local elements = {
-	  {label = "Cellule 1",     value = 'JailPoliceStation1'},
-	  {label = "Cellule 2",     value = 'JailPoliceStation2'},
-	  {label = "Cellule 3",     value = 'JailPoliceStation3'},
-	  {label = "Cellule fédérale",     value = 'FederalJail'},
-	  {label = "Libérer de cellule",     value = 'FreePlayer'},
+	  {label = "Cell 1",     value = 'JailPoliceStation1'},
+	  {label = "Cell 2",     value = 'JailPoliceStation2'},
+	  {label = "Cell 3",     value = 'JailPoliceStation3'},
+	  {label = "Cell federal",     value = 'FederalJail'},
+	  {label = "Release cell",     value = 'FreePlayer'},
 	}
 	ESX.UI.Menu.Open(
 	  'default', GetCurrentResourceName(), 'jail_menu',
 	  {
-		title    = 'Mettre en prison',
+		title    = 'Put in jail',
 		align    = 'top-left',
 		elements = elements,
 	  },
 	  function(data3, menu)
 		  if data3.current.value ~= "FreePlayer" then
 			  maxLength = 4
-			  AddTextEntry('FMMC_KEY_TIP8', "Nombre d'heures en prison")
+			  AddTextEntry('FMMC_KEY_TIP8', "Number of hours in prison")
 			  DisplayOnscreenKeyboard(1, "FMMC_KEY_TIP8", "", "", "", "", "", maxLength)
-			  ESX.ShowNotification("~b~Entrez le nombre d'heures que vous voulez mettre la personne en prison.")
+			  ESX.ShowNotification("~b~Enter the number of hours you want to put the person in jail.")
 			  blockinput = true
   
 			  while UpdateOnscreenKeyboard() ~= 1 and UpdateOnscreenKeyboard() ~= 2 do

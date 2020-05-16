@@ -33,7 +33,7 @@ local cruiseColorOn = {160, 255, 160}       -- Color used when seatbelt is on
 local cruiseColorOff = {255, 255, 255}      -- Color used when seatbelt is off
 
 -- LOCATION AND TIME PARAMETERS
-local locationAlwaysOn = false              -- Always display location and time
+local locationAlwaysOn = true             -- Always display location and time
 local locationColorText = {255, 255, 255}   -- Color used to display location and time
 
 -- Lookup tables for direction and zone
@@ -77,10 +77,10 @@ Citizen.CreateThread(function()
         -- Display Location and time when in any vehicle or on foot (if enabled)
         if pedInVeh or locationAlwaysOn then
             -- Get time and display
-            drawTxt(timeText, 4, locationColorText, 0.4, screenPosX, screenPosY + 0.048)
+            drawTxt(timeText, 4, locationColorText, 0.300, screenPosX + 0.0270, screenPosY + 0.073)
             
             -- Display heading, street name and zone when possible
-            drawTxt(locationText, 4, locationColorText, 0.5, screenPosX, screenPosY + 0.075)
+            drawTxt(locationText, 4, locationColorText, 0.350, screenPosX + -0.00, screenPosY + 0.090)
         
             -- Display remainder of HUD when engine is on and vehicle is not a bicycle
             local vehicleClass = GetVehicleClass(vehicle)
@@ -137,29 +137,29 @@ Citizen.CreateThread(function()
                     -- Get vehicle speed in KPH and draw speedometer
                     local speed = currSpeed*3.6
                     local speedColor = (speed >= speedLimit) and speedColorOver or speedColorUnder
-                    drawTxt(("%.3d"):format(math.ceil(speed)), 2, speedColor, 0.8, screenPosX + 0.000, screenPosY + 0.000)
-                    drawTxt("KPH", 2, speedColorText, 0.4, screenPosX + 0.030, screenPosY + 0.018)
+                    drawTxt(("%.3d"):format(math.ceil(speed)), 2, speedColor, 0.350, screenPosX + 0.000, screenPosY + 0.000)
+                    drawTxt("KPH", 2, speedColorText, 0.350, screenPosX + 0.030, screenPosY + 0.018)
                 else
                     -- Get vehicle speed in MPH and draw speedometer
                     local speed = currSpeed*2.23694
                     local speedColor = (speed >= speedLimit) and speedColorOver or speedColorUnder
-                    drawTxt(("%.3d"):format(math.ceil(speed)), 2, speedColor, 0.8, screenPosX + 0.000, screenPosY + 0.000)
-                    drawTxt("MPH", 2, speedColorText, 0.4, screenPosX + 0.030, screenPosY + 0.018)
+                    drawTxt(("%.3d"):format(math.ceil(speed)), 2, speedColor, 0.370, screenPosX + 0.018, screenPosY + 0.054)
+                    drawTxt("MPH", 2, speedColorText, 0.340, screenPosX + 0.003, screenPosY + 0.055)
                 end
                 
                 -- Draw fuel gauge
                 local fuelColor = (currentFuel >= fuelWarnLimit) and fuelColorOver or fuelColorUnder
-                drawTxt(("%.3d"):format(math.ceil(currentFuel)), 2, fuelColor, 0.8, screenPosX + 0.055, screenPosY + 0.000)
-                drawTxt("FUEL", 2, fuelColorText, 0.4, screenPosX + 0.085, screenPosY + 0.018)
+                drawTxt(("%.3d"):format(math.ceil(currentFuel)), 2, fuelColor, 0.370, screenPosX + 0.049, screenPosY + 0.054)
+                drawTxt("FUEL", 2, fuelColorText, 0.350, screenPosX + 0.063, screenPosY + 0.055)
 
                 -- Draw cruise control status
                 local cruiseColor = cruiseIsOn and cruiseColorOn or cruiseColorOff
-                drawTxt("CRUISE", 2, cruiseColor, 0.4, screenPosX + 0.040, screenPosY + 0.048)
+                drawTxt("CRUISE", 2, cruiseColor, 0.300, screenPosX + 0.00, screenPosY + 0.073)
 
                 -- Draw seatbelt status if not a motorcyle
                 if vehicleClass ~= 8 then
                     local seatbeltColor = seatbeltIsOn and seatbeltColorOn or seatbeltColorOff
-                    drawTxt("SEATBELT", 2, seatbeltColor, 0.4, screenPosX + 0.080, screenPosY + 0.048)
+                    drawTxt("SEATBELT", 2, seatbeltColor, 0.300, screenPosX + 0.057, screenPosY + 0.075)
                 end
             end
         end

@@ -1,0 +1,36 @@
+Version 165 32
+{
+	Shaders
+	{
+		default.sps
+		{
+			DiffuseSampler ch_prop_ch_wallart_01a\prop_wizards_d.otx
+			HardAlphaBlend 1.00000000
+			UseTessellation 0.00000000
+		}
+		default.sps
+		{
+			DiffuseSampler ch_prop_ch_wallart_01a\prop_ch_frame_d.otx
+			HardAlphaBlend 1.00000000
+			UseTessellation 0.00000000
+		}
+	}
+	Skeleton ch_prop_ch_wallart_01a\ch_prop_ch_wallart_01a.skel
+	LodGroup
+	{
+		Center -0.00021300 -0.02658700 0.00017500
+		Radius 0.60994000
+		AABBMin -0.37560700 -0.05158700 -0.47991000
+		AABBMax 0.37518100 -0.00158700 0.48026000
+		High 9998.00000000
+		{
+			ch_prop_ch_wallart_01a\ch_prop_ch_wallart_01a_high.mesh 0
+		}
+		Med 9998.00000000
+		Low 9998.00000000
+		Vlow 9998.00000000
+	}
+	Joints null
+	Light null
+	Bound ch_prop_ch_wallart_01a\ch_prop_ch_wallart_01a.bound
+}

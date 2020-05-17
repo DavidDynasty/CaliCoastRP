@@ -122,7 +122,7 @@ Config.Shops = {
 
     PrisonShop = {
         Locations = {
-            {x = 1728.41, y = 2584.31, z = 45.84},
+            {x = 1781.74, y = 2598.2, z = 45.8},
         },
         Items = {
             {name = 'bread'},

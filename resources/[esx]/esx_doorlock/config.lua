@@ -233,5 +233,242 @@ Config.DoorList = {
 		locked = true,
 		maxDistance = 12,
 		size = 2
+	},
+
+	--
+	-- Prison
+	--
+
+	-- Cell Entrance
+	{
+		objHash = 430324891,
+		objCoords = vector3(1786.08, 2590.04, 45.8),
+		textCoords = vector3(1787.22, 2589.60, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Kitchen Door From Cleaks Office
+	{
+		objHash = 1028191914,
+		objCoords = vector3(1783.78, 2598.4, 45.8),
+		textCoords = vector3(1783.78, 2598.55, 47.25),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- First Floor --
+
+	-- Cell 1
+	{
+		objHash = 430324891,
+		objCoords = vector3(1787.6, 2586.26, 45.8),
+		textCoords = vector3(1787.6, 2587.20, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Cell 2
+	{
+		objHash = 430324891,
+		objCoords = vector3(1787.55, 2582.3, 45.8),
+		textCoords = vector3(1787.55, 2583.25, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Cell 3
+	{
+		objHash = 430324891,
+		objCoords = vector3(1787.58, 2578.47, 45.8),
+		textCoords = vector3(1787.58, 2579.35, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Cell 4
+	{
+		objHash = 430324891,
+		objCoords = vector3(1787.57, 2574.64, 45.8),
+		textCoords = vector3(1787.58, 2575.45, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Left Back Exit
+	{
+		objHash = 430324891,
+		objCoords = vector3(1784.79, 2572.04, 45.8),
+		textCoords = vector3(1784.35, 2572.0, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Yard Cell Door
+	{
+		objHash = 430324891,
+		objCoords = vector3(1768.31, 2569.99, 45.8),
+		textCoords = vector3(1768.40, 2570.80, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Yard Door Exit
+	{
+		objHash = 1645000677,
+		objCoords = vector3(1765.78, 2567.08, 45.8),
+		textCoords = vector3(1765.65, 2566.60, 47.35),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Right Back Exit
+	{
+		objHash = 430324891,
+		objCoords = vector3(1773.3, 2572.07, 45.8),
+		textCoords = vector3(1772.20, 2572.07, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 2,
+	},
+
+	-- Cell 5
+	{
+		objHash = 430324891,
+		objCoords = vector3(1771.98, 2574.72, 45.8),
+		textCoords = vector3(1771.60, 2572.60, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Cell 6
+	{
+		objHash = 430324891,
+		objCoords = vector3(1771.58, 2577.39, 45.8),
+		textCoords = vector3(1771.60, 2576.53, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Cell 7
+	{
+		objHash = 430324891,
+		objCoords = vector3(1771.66, 2581.35, 45.8),
+		textCoords = vector3(1771.66, 2580.43, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Cell 8
+	{
+		objHash = 430324891,
+		objCoords = vector3(1771.64, 2585.32, 45.8),
+		textCoords = vector3(1771.64, 2584.40, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Workout Room
+	{
+		objHash = 430324891,
+		objCoords = vector3(1773.69, 2589.95, 45.8),
+		textCoords = vector3(1774.40, 2590.50, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Kitchen Door From Workout Room
+	{
+		objHash = 1028191914,
+		objCoords = vector3(1775.03, 2593.01, 45.8),
+		textCoords = vector3(1775.03, 2593.15, 47.25),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Showers
+	{
+		objHash = 430324891,
+		objCoords = vector3(1763.35, 2587.63, 45.8),
+		textCoords = vector3(1764.25, 2587.63, 45.90),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Security / Med Room Door
+	{
+		objHash = 1028191914,
+		objCoords = vector3(1785.92, 2566.8, 45.8),
+		textCoords = vector3(1785.30, 2566.90, 47.25),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Med Room Left Double Doors
+	{
+		objHash = 580361003,
+		objCoords = vector3(1783.08, 2558.29, 45.8),
+		textCoords = vector3(1783.08, 2558.29, 47.25),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Med Room Right Double Doors
+	{
+		objHash = 580361003,
+		objCoords = vector3(1783.15, 2558.34, 45.8),
+		textCoords = vector3(1783.08, 2558.29, 47.25),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
+	},
+
+	-- Yard Exit From Security / Med Room Door
+	{
+		objHash = 1645000677,
+		objCoords = vector3(1776.15, 2552.01, 45.8),
+		textCoords = vector3(1776.15, 2552.01, 47.35),
+		authorizedJobs = {'police'},
+		locked = true,
+		size = 0.7,
+		maxDistance = 3,
 	}
 }

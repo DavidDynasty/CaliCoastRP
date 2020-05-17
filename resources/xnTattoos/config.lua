@@ -20,6 +20,6 @@ Config.Shops = {
 }
 
 Config.interiorIds = {}
-for k, v in ipairs(Config.Shops) do
+--for k, v in ipairs(Config.Shops) do
     Config.interiorIds[#Config.interiorIds + 1] = GetInteriorAtCoords(v)
 end
